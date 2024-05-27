@@ -706,29 +706,21 @@ button {
 
 .about {
   margin-top: 100px;
-}
-
-.about__portrait img {
-  height: auto;
-  border-radius: 5px;
-}
-
-.about__text {
   max-width: 600px;
 }
-.about__text h2 {
+.about h2 {
   font-size: var(--font-size-h1);
   margin-top: -10px;
   margin-bottom: 30px;
   line-height: 1.4;
 }
-.about__text p {
+.about p {
   margin-bottom: 20px;
 }
-.about__text p:last-of-type {
+.about p:last-of-type {
   margin-bottom: 0;
 }
-.about__text span {
+.about span {
   color: var(--accent-color);
   font-weight: bold;
 }

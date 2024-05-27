@@ -9,34 +9,38 @@
 
   <body>
     <nav class="navigation">
-      <div class="navigation__container container">
-        <a class="navigation__logo" href="./index.html">
-          <img src="./img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
-        </a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a
-              href="./index.html"
-              class="navigation__link navigation__link--active"
-              >Projekte</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a href="./about_me.html" class="navigation__link">Über mich</a>
-          </li>
-          <li class="navigation__item">
-            <a href="./contact.html" class="navigation__link"> Kontakt </a>
-          </li>
-        </ul>
-        <button class="navigation__hamburger" aria-label="Hauptmenü">
-          <span class="navigation__bar"></span>
-          <span class="navigation__bar"></span>
-          <span class="navigation__bar"></span>
-        </button>
-      </div>
+      <section>
+        <h2 class="visually-hidden">Hauptnavigation</h2>
+        <div class="navigation__container container">
+          <a class="navigation__logo" href="./index.html">
+            <img src="./img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
+          </a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a
+                href="./index.html"
+                class="navigation__link navigation__link--active"
+                >Projekte</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./about_me.html" class="navigation__link">Über mich</a>
+            </li>
+            <li class="navigation__item">
+              <a href="./contact.html" class="navigation__link">Kontakt</a>
+            </li>
+          </ul>
+          <button class="navigation__hamburger" aria-label="Hauptmenü">
+            <span class="navigation__bar"></span>
+            <span class="navigation__bar"></span>
+            <span class="navigation__bar"></span>
+          </button>
+        </div>
+      </section>
     </nav>
     <header class="header">
       <section class="header__content">
+        <h1 class="visually-hidden">Leonid Domahalskyy - Portfolio</h1>
         <div class="header__container container">
           <video class="header__video-bg" autoplay muted loop>
             <source src="./video/bg-video.mp4" type="video/mp4" />
@@ -68,7 +72,7 @@
             >
               <g>
                 <polygon
-                  points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779 	"
+                  points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779"
                 ></polygon>
               </g>
             </svg>
@@ -80,77 +84,73 @@
     <main class="main-content" id="main">
       <div class="main__container container">
         <section class="projects" id="projects">
-          <h1 class="projects__title">Meine Projekte</h1>
+          <h2 class="projects__title">Meine Projekte</h2>
           <ul class="projects__list">
             <li class="project">
-              <a href="./project-audiventure.html">
-                <figure>
+              <figure>
+                <a href="./project-audiventure.html">
                   <img
                     src="./img/audiventure.png"
-                    alt="Screenshot des Audiventure-Projekts mit Mobile-App und Website"
+                    alt="Screenshot des Audiventure-Projekts, das die mobile App und die Website zeigt. Der Hintergrund ist lila-pink und es sind verschiedene App-Screenshots und ein Smartphone-Bildschirm zu sehen."
                     class="project__image"
                   />
-                  <figcaption class="project__hover-caption">
-                    Audiventure <br />
-                    <span>UI Design</span>
-                  </figcaption>
-                </figure>
+                </a>
+                <div class="project__hover-caption">
+                  Audiventure <br /><span>UI Design</span>
+                </div>
                 <figcaption class="project__caption">Audiventure</figcaption>
-              </a>
+              </figure>
             </li>
             <li class="project">
-              <a href="./project-angelas-dance-academy.html">
-                <figure>
+              <figure>
+                <a href="./project-angelas-dance-academy.html">
                   <img
                     src="img/angeles-dance-academy.png"
-                    alt="Screenshot der Website der Angeles Dance Academy"
+                    alt="Screenshot der Website der Angela's Dance Academy, dargestellt auf einem Laptop. Die Startseite zeigt das Logo der Academy und ein Bild von tanzenden Kindern."
                     class="project__image"
                   />
-                  <figcaption class="project__hover-caption">
-                    Angeles Dance Academy <br />
-                    <span>UI Design / Webseite</span>
-                  </figcaption>
-                </figure>
+                </a>
+                <div class="project__hover-caption">
+                  Angeles Dance Academy <br /><span>UI Design / Webseite</span>
+                </div>
                 <figcaption class="project__caption">
                   Angeles Dance Academy
                 </figcaption>
-              </a>
+              </figure>
             </li>
             <li class="project">
-              <a href="./project-photography.html">
-                <figure>
+              <figure>
+                <a href="./project-photography.html">
                   <img
                     src="img/photography-masterclass.png"
-                    alt="Screenshot der Website für die Photography Masterclass"
+                    alt="Screenshot der Website für die Photography Masterclass, dargestellt auf einem Laptop. Die Startseite zeigt ein großes Hintergrundbild einer Landschaft mit dem Titel 'Photography Masterclass' und dem Untertitel 'Master Landscape Photography in 10 Days'."
                     class="project__image"
                   />
-                  <figcaption class="project__hover-caption">
-                    Photography Masterclass <br />
-                    <span>HTML CSS Kurs</span>
-                  </figcaption>
-                </figure>
+                </a>
+                <div class="project__hover-caption">
+                  Photography Masterclass <br /><span>HTML CSS Kurs</span>
+                </div>
                 <figcaption class="project__caption">
                   Photography Masterclass
                 </figcaption>
-              </a>
+              </figure>
             </li>
             <li class="project">
-              <a href="./project-password-generator.html">
-                <figure>
+              <figure>
+                <a href="./project-password-generator.html">
                   <img
                     src="img/password-generator.png"
-                    alt="Screenshot des Password Generator-Tools"
+                    alt="Screenshot des Password Generator-Tools, dargestellt auf einem Laptop. Die Seite zeigt die Benutzeroberfläche des Tools, einschließlich Eingabefeldern und Auswahloptionen zur Generierung sicherer Passwörter."
                     class="project__image"
                   />
-                  <figcaption class="project__hover-caption">
-                    Password Generator <br />
-                    <span>Webseite</span>
-                  </figcaption>
-                </figure>
+                </a>
+                <div class="project__hover-caption">
+                  Password Generator <br /><span>Webseite</span>
+                </div>
                 <figcaption class="project__caption">
                   Password Generator
                 </figcaption>
-              </a>
+              </figure>
             </li>
           </ul>
         </section>
@@ -158,25 +158,27 @@
     </main>
 
     <footer class="footer">
-      <section class="footer__content">
+      <section>
+        <h2 class="visually-hidden">Footer</h2>
         <nav class="footer__social-media">
           <ul class="social-media__list">
             <li>
-              <a href="https://t.me/ledo9913" class="footer__link"
-                ><img src="./img/icons/telegram.svg" alt="Telegram Icon"
-              /></a>
+              <a href="https://t.me/ledo9913" class="footer__link">
+                <img src="./img/icons/telegram.svg" alt="Telegram Icon" />
+              </a>
             </li>
             <li>
               <a
                 href="https://discord.com/login?redirect_to=%2Fchannels%2F%40me"
                 class="footer__link"
-                ><img src="./img/icons/discord.svg" alt="Discord Icon"
-              /></a>
+              >
+                <img src="./img/icons/discord.svg" alt="Discord Icon" />
+              </a>
             </li>
             <li>
-              <a href="https://dribbble.com/ledo93" class="footer__link"
-                ><img src="./img/icons/dribbble.svg" alt="Dribbble Icon"
-              /></a>
+              <a href="https://dribbble.com/ledo93" class="footer__link">
+                <img src="./img/icons/dribbble.svg" alt="Dribbble Icon" />
+              </a>
             </li>
             <li>
               <a href="https://github.com/ledo9315" class="footer__link">
@@ -187,8 +189,9 @@
               <a
                 href="https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206/?originalSubdomain=de"
                 class="footer__link"
-                ><img src="./img/icons/linkedIn.svg" alt="LinkedIn Icon "
-              /></a>
+              >
+                <img src="./img/icons/linkedIn.svg" alt="LinkedIn Icon" />
+              </a>
             </li>
           </ul>
         </nav>

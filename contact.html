@@ -7,116 +7,125 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <nav class="navigation">
-      <div class="navigation__container container">
-        <a class="navigation__logo" href="./index.html">
-          <img src="./img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
-        </a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a
-              href="./index.html"
-              class="navigation__link navigation__link--active"
-              >Projekte</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a href="./about_me.html" class="navigation__link">Über mich</a>
-          </li>
-          <li class="navigation__item">
-            <a href="./contact.html" class="navigation__link">Kontakt</a>
-          </li>
-        </ul>
-        <button class="navigation__hamburger" aria-label="Hauptmenü">
-          <span class="navigation__bar"></span>
-          <span class="navigation__bar"></span>
-          <span class="navigation__bar"></span>
-        </button>
-      </div>
-    </nav>
-
-    <section class="contact">
-      <div class="contact__container container">
-        <h1 class="contact__title">Kontaktformular</h1>
-        <article class="contact__form-wrapper">
-          <section class="contact__form-section">
-            <form
-              class="contact__form"
-              action="https://mi.hs-flensburg.de/echo.php"
-              method="post"
-            >
-              <div class="contact__name-wrapper">
-                <div class="contact__form-group">
-                  <label
-                    for="first-name"
-                    class="contact__label contact__vorname"
-                    >Vorname</label
-                  >
-                  <input
-                    type="text"
-                    id="first-name"
-                    name="first-name"
-                    class="contact__input"
-                    required
-                  />
-                </div>
-                <div class="contact__form-group">
-                  <label
-                    for="last-name"
-                    class="contact__label contact__nachname"
-                    >Nachname</label
-                  >
-                  <input
-                    type="text"
-                    id="last-name"
-                    name="last-name"
-                    class="contact__input"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="contact__form-group">
-                <label for="email" class="contact__label">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="contact__input"
-                  required
-                />
-              </div>
-              <div class="contact__form-group">
-                <label for="message" class="contact__label"
-                  >Deine Nachricht</label
+    <header>
+      <nav class="navigation">
+        <section>
+          <h2 class="visually-hidden">Navigation</h2>
+          <div class="navigation__container container">
+            <a class="navigation__logo" href="./index.html">
+              <img src="./img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
+            </a>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link">Projekte</a>
+              </li>
+              <li class="navigation__item">
+                <a href="./about_me.html" class="navigation__link">Über mich</a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="./contact.html"
+                  class="navigation__link navigation__link--active"
+                  >Kontakt</a
                 >
-                <textarea
-                  id="message"
-                  name="message"
-                  class="contact__input contact__textarea"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="button contact__button">
-                Senden
-              </button>
-            </form>
-          </section>
-          <aside class="contact__info-section">
-            <h2 class="contact__info-title">
-              Lass uns über <span>Projekte</span> sprechen.
-            </h2>
-            <p class="contact__info-text">
-              Ich bin gespannt auf deine Ideen und freue mich darauf, mit dir
-              zusammenzuarbeiten. Schreib mir einfach eine Nachricht und ich
-              melde mich bei dir.
-            </p>
-          </aside>
-        </article>
-      </div>
-    </section>
+              </li>
+            </ul>
+            <button class="navigation__hamburger" aria-label="Hauptmenü">
+              <span class="navigation__bar"></span>
+              <span class="navigation__bar"></span>
+              <span class="navigation__bar"></span>
+            </button>
+          </div>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <section class="contact">
+        <div class="contact__container container">
+          <h1 class="contact__title">Kontaktformular</h1>
+          <article class="contact__form-wrapper">
+            <h2 class="visually-hidden">Kontaktformular</h2>
+            <section class="contact__form-section">
+              <h3 class="visually-hidden">Formular</h3>
+              <form
+                class="contact__form"
+                action="https://mi.hs-flensburg.de/echo.php"
+                method="post"
+              >
+                <div class="contact__name-wrapper">
+                  <div class="contact__form-group">
+                    <label
+                      for="first-name"
+                      class="contact__label contact__vorname"
+                      >Vorname</label
+                    >
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      class="contact__input"
+                      required
+                    />
+                  </div>
+                  <div class="contact__form-group">
+                    <label
+                      for="last-name"
+                      class="contact__label contact__nachname"
+                      >Nachname</label
+                    >
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      class="contact__input"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="contact__form-group">
+                  <label for="email" class="contact__label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="contact__input"
+                    required
+                  />
+                </div>
+                <div class="contact__form-group">
+                  <label for="message" class="contact__label"
+                    >Deine Nachricht</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="contact__input contact__textarea"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="button contact__button">
+                  Senden
+                </button>
+              </form>
+            </section>
+            <aside class="contact__info-section">
+              <h2 class="contact__info-title">
+                Lass uns über <span>Projekte</span> sprechen.
+              </h2>
+              <p class="contact__info-text">
+                Ich bin gespannt auf deine Ideen und freue mich darauf, mit dir
+                zusammenzuarbeiten. Schreib mir einfach eine Nachricht und ich
+                melde mich bei dir.
+              </p>
+            </aside>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
-      <section class="footer__content">
+      <section>
+        <h2 class="visually-hidden">Footer</h2>
         <nav class="footer__social-media">
           <ul class="social-media__list">
             <li>
@@ -139,7 +148,7 @@
             </li>
             <li>
               <a href="https://github.com/ledo9315" class="footer__link">
-                <img src="./img/icons/github.svg" alt="GitHub Icon" />
+                <img src="./img/icons/github.svg" alt="Github Icon" />
               </a>
             </li>
             <li>

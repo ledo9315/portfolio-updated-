@@ -246,8 +246,8 @@ button {
   --font-hanson: "Hanson", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   /* Font-size */
-  --font-size-h1: 2.3rem;
-  --font-size-h2: 1.9rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
   --font-size-text-small: 0.9rem;
   --header-height: 70px;
@@ -1011,4 +1011,69 @@ dd {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.privacy-policy {
+  max-width: 800px;
+  padding: 150px 0;
+}
+
+.privacy-policy__title {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.privacy-policy__section-title {
+  font-size: var(--font-size-h2);
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  line-height: 1.4;
+}
+
+.privacy-policy__subsection-title {
+  font-size: var(--font-size-h3);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.privacy-policy__text {
+  margin: 0 0 30px 0;
+}
+
+.privacy-policy__list {
+  list-style-type: disc;
+  margin: 10px 0 20px 20px;
+}
+
+.privacy-policy__list-item {
+  margin-bottom: 5px;
+}
+
+address {
+  font-style: normal;
+}
+
+.impressum__wrapper {
+  display: block;
+  height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
+  padding: 100px 0;
+}
+.impressum__wrapper address {
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.subsection-title {
+  font-size: var(--font-size-h2);
+  margin-bottom: 20px;
+  line-height: 1.4;
 }/*# sourceMappingURL=main.css.map */

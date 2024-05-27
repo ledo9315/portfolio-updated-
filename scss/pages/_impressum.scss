@@ -1,0 +1,21 @@
+.impressum__wrapper {
+  display: block;
+  height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
+  padding: 100px 0;
+
+  address {
+    margin-bottom: 80px;
+  }
+}
+
+.title {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.subsection-title {
+  font-size: var(--font-size-h2);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}

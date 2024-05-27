@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigation__container container">
+        <a class="navigation__logo" href="./index.html">
+          <img src="./img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
+        </a>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              href="./index.html"
+              class="navigation__link navigation__link--active"
+              >Projekte</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./about_me.html" class="navigation__link">Über mich</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./contact.html" class="navigation__link">Kontakt</a>
+          </li>
+        </ul>
+        <button class="navigation__hamburger" aria-label="Hauptmenü">
+          <span class="navigation__bar"></span>
+          <span class="navigation__bar"></span>
+          <span class="navigation__bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="contact">
+      <div class="contact__container container">
+        <h1 class="contact__title">Kontaktformular</h1>
+        <article class="contact__form-wrapper">
+          <section class="contact__form-section">
+            <form
+              class="contact__form"
+              action="https://mi.hs-flensburg.de/echo.php"
+              method="post"
+            >
+              <div class="contact__name-wrapper">
+                <div class="contact__form-group">
+                  <label
+                    for="first-name"
+                    class="contact__label contact__vorname"
+                    >Vorname</label
+                  >
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    class="contact__input"
+                    required
+                  />
+                </div>
+                <div class="contact__form-group">
+                  <label
+                    for="last-name"
+                    class="contact__label contact__nachname"
+                    >Nachname</label
+                  >
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    class="contact__input"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="contact__form-group">
+                <label for="email" class="contact__label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="contact__input"
+                  required
+                />
+              </div>
+              <div class="contact__form-group">
+                <label for="message" class="contact__label"
+                  >Deine Nachricht</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="contact__input contact__textarea"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="button contact__button">
+                Senden
+              </button>
+            </form>
+          </section>
+          <aside class="contact__info-section">
+            <h2 class="contact__info-title">
+              Lass uns über <span>Projekte</span> sprechen.
+            </h2>
+            <p class="contact__info-text">
+              Ich bin gespannt auf deine Ideen und freue mich darauf, mit dir
+              zusammenzuarbeiten. Schreib mir einfach eine Nachricht und ich
+              melde mich bei dir.
+            </p>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <section class="footer__content">
+        <nav class="footer__social-media">
+          <ul class="social-media__list">
+            <li>
+              <a href="https://t.me/ledo9913" class="footer__link">
+                <img src="./img/icons/telegram.svg" alt="Telegram Icon" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://discord.com/login?redirect_to=%2Fchannels%2F%40me"
+                class="footer__link"
+              >
+                <img src="./img/icons/discord.svg" alt="Discord Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/ledo93" class="footer__link">
+                <img src="./img/icons/dribbble.svg" alt="Dribbble Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ledo9315" class="footer__link">
+                <img src="./img/icons/github.svg" alt="GitHub Icon" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206/?originalSubdomain=de"
+                class="footer__link"
+              >
+                <img src="./img/icons/linkedIn.svg" alt="LinkedIn Icon" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer__legal">
+          <ul>
+            <li>
+              <a href="./impressum.html" class="footer__link">Impressum</a>
+            </li>
+            <li>
+              <a href="./datenschutz.html" class="footer__link">Datenschutz</a>
+            </li>
+            <li>
+              <a href="./dokumentation.html" class="footer__link"
+                >Dokumentation</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

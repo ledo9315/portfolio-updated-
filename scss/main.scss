@@ -1,0 +1,22 @@
+// ********* BASE *********
+@import "./base/_reset.scss";
+@import "./base/_base.scss";
+@import "./base/variables.scss";
+
+// ********* COMPONENTS *********
+@import "./components/_fonts.scss";
+@import "./components/_hamburger.scss";
+@import "./components/animations.scss";
+@import "./components/_buttons.scss";
+
+// ********* BLOCKS *********
+@import "./blocks/_header.scss";
+@import "./blocks/main.scss";
+@import "./blocks/_footer.scss";
+
+// ********* PAGES *********
+@import "./pages/_about_me.scss";
+@import "./pages/contact.scss";
+
+// ********* PROJECTS *********
+@import "./pages/projects/_project.scss";

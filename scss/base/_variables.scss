@@ -1,0 +1,49 @@
+:root {
+  /* Color */
+  --black: #111111;
+  --light-grey: #adadad;
+  --dark-grey: #1f1f1f;
+  --grey: #555555;
+  --white: #eee9e1;
+  --purple: #a196df;
+  --darkpurple: #4f308a;
+  --yellowgreen: #90d491;
+
+  /* Website - Colors */
+  --bg-color: var(--black);
+  --accent-color: var(--purple);
+  --accent-color-2: var(--yellowgreen);
+  --text-color: var(--white);
+
+  /* Font-weight */
+  --font-weigt-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Font-family */
+  --font-hanson: "Hanson", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* Font-size */
+  --font-size-h1: 2.3rem;
+  --font-size-h2: 1.9rem;
+  --font-size-h3: 1.5rem;
+  --font-size-text-small: 0.9rem;
+
+  --header-height: 70px;
+  --footer-heigt: 182px;
+
+  /* Header-animation */
+  --top-size-small-1: -90px;
+  --top-size-small-2: -180px;
+  --top-size-big-1: -150px;
+  --top-size-big-2: -300px;
+
+  --header-top-size-1: var(--top-size-small-1);
+  --header-top-size-2: var(--top-size-small-2);
+
+  @media screen and (min-width: 620px) {
+    --header-top-size-1: var(--top-size-big-1);
+    --header-top-size-2: var(--top-size-big-2);
+  }
+}

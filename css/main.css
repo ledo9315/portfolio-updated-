@@ -272,6 +272,7 @@ button {
   --top-size-small-2: -180px;
   --top-size-big-1: -150px;
   --top-size-big-2: -300px;
+  --line-height-heading: 1.2;
   --header-top-size-1: var(--top-size-small-1);
   --header-top-size-2: var(--top-size-small-2);
 }
@@ -732,7 +733,7 @@ button {
   font-size: var(--font-size-h1);
   margin-top: -10px;
   margin-bottom: 30px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }
 .about p {
   margin-bottom: 20px;
@@ -898,12 +899,13 @@ dd {
 .contact__title {
   font-size: var(--font-size-h1);
   margin-bottom: 50px;
+  line-height: var(--line-height-heading);
 }
 
 .contact__info-title {
   font-size: var(--font-size-h2);
   margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }
 .contact__info-title span {
   color: var(--accent-color);
@@ -987,7 +989,7 @@ dd {
 
 .project-description__name {
   font-size: var(--font-size-h1);
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
   margin-bottom: 20px;
 }
 
@@ -1055,7 +1057,7 @@ dd {
   font-size: var(--font-size-h1);
   font-weight: bold;
   margin-bottom: 30px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }
 
 .privacy-policy__section-title {
@@ -1063,13 +1065,14 @@ dd {
   margin-top: 40px;
   margin-bottom: 10px;
   padding-bottom: 5px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }
 
 .privacy-policy__subsection-title {
   font-size: var(--font-size-h3);
   margin-top: 20px;
   margin-bottom: 10px;
+  line-height: var(--line-height-heading);
 }
 
 .privacy-policy__text {
@@ -1102,11 +1105,11 @@ address {
   font-size: var(--font-size-h1);
   font-weight: bold;
   margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }
 
 .subsection-title {
   font-size: var(--font-size-h2);
   margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }/*# sourceMappingURL=main.css.map */

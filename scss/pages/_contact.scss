@@ -24,12 +24,13 @@
 .contact__title {
   font-size: var(--font-size-h1);
   margin-bottom: 50px;
+  line-height: var(--line-height-heading);
 }
 
 .contact__info-title {
   font-size: var(--font-size-h2);
   margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 
   span {
     color: var(--accent-color);

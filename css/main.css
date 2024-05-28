@@ -906,6 +906,7 @@ dd {
 
 .contact__form-section {
   align-self: center;
+  max-width: 600px;
 }
 
 .contact__info-section {
@@ -916,6 +917,7 @@ dd {
 }
 @media screen and (min-width: 960px) {
   .contact__info-section {
+    justify-self: center;
     margin-top: 0;
   }
 }

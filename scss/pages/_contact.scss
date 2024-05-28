@@ -23,6 +23,7 @@
 
 .contact__form-section {
   align-self: center;
+  max-width: 600px;
 }
 
 .contact__info-section {
@@ -32,6 +33,7 @@
   margin-top: 50px;
 
   @media screen and (min-width: 960px) {
+    justify-self: center;
     margin-top: 0;
   }
 }

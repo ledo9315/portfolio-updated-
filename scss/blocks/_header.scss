@@ -71,6 +71,7 @@
 }
 
 .navigation__link {
+  white-space: nowrap;
   &--active {
     color: var(--accent-color);
 

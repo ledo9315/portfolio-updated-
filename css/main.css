@@ -512,6 +512,9 @@ button {
   }
 }
 
+.navigation__link {
+  white-space: nowrap;
+}
 .navigation__link--active {
   color: var(--accent-color);
 }

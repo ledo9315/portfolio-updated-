@@ -870,11 +870,12 @@ dd {
   margin-right: 10px;
 }
 
-.contact__container {
-  padding-top: 50px;
+.contact__wrapper {
+  display: grid;
 }
 @media screen and (min-width: 960px) {
-  .contact__container {
+  .contact__wrapper {
+    margin: 0;
     height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
   }
 }
@@ -882,24 +883,30 @@ dd {
 .contact__form-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 150px;
+  row-gap: 50px;
 }
 @media (min-width: 960px) {
   .contact__form-wrapper {
-    grid-template-columns: 0.9fr 1fr;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__form-wrapper {
+    -moz-column-gap: 150px;
+         column-gap: 150px;
   }
 }
 
-.contact__info-section {
-  max-width: 560px;
-  align-self: flex-start;
-  margin-top: 40px;
+.contact__form-section {
+  align-self: center;
 }
 
-.contact__title {
-  font-size: var(--font-size-h1);
-  margin-bottom: 50px;
-  line-height: var(--line-height-heading);
+.contact__info-section {
+  grid-row: 1;
+  align-self: center;
+  max-width: 500px;
 }
 
 .contact__info-title {
@@ -959,7 +966,6 @@ dd {
 }
 
 .contact__button {
-  width: 180px;
   padding: 10px 20px;
   border-radius: 2px;
   background-color: var(--accent-color);
@@ -970,6 +976,8 @@ dd {
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  width: 180px;
+  margin-bottom: 60px;
 }
 .contact__button:hover {
   transform: translateY(-2px);
@@ -977,6 +985,11 @@ dd {
 }
 .contact__button:active {
   transform: translateY(0);
+}
+@media screen and (min-width: 960px) {
+  .contact__button {
+    margin-bottom: 0;
+  }
 }
 
 .project-description {

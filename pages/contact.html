@@ -8,26 +8,34 @@
   </head>
   <body>
     <header>
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Hauptnavigation">
         <section>
           <h2 class="visually-hidden">Navigation</h2>
           <div class="navigation__container container">
             <a class="navigation__logo" href="../index.html">
               <img src="../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
             </a>
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a href="../index.html" class="navigation__link">Projekte</a>
+            <ul class="navigation__list" role="menubar">
+              <li class="navigation__item" role="none">
+                <a href="../index.html" class="navigation__link" role="menuitem"
+                  >Projekte</a
+                >
               </li>
-              <li class="navigation__item">
+              <li class="navigation__item" role="none">
                 <a
                   href="./about_me.html"
-                  class="navigation__link navigation__link--active"
+                  class="navigation__link"
+                  role="menuitem"
                   >Über mich</a
                 >
               </li>
-              <li class="navigation__item">
-                <a href="./contact.html" class="navigation__link">Kontakt</a>
+              <li class="navigation__item" role="none">
+                <a
+                  href="./contact.html"
+                  class="navigation__link navigation__link--active"
+                  role="menuitem"
+                  >Kontakt</a
+                >
               </li>
             </ul>
             <button class="navigation__hamburger" aria-label="Hauptmenü">
@@ -41,84 +49,86 @@
     </header>
     <main>
       <section class="contact">
-        <div class="contact__container container">
-          <h1 class="contact__title">Kontaktiere mich</h1>
-          <article class="contact__form-wrapper">
-            <h2 class="visually-hidden">Kontaktformular</h2>
-            <section class="contact__form-section">
-              <h3 class="visually-hidden">Formular</h3>
-              <form
-                class="contact__form"
-                action="https://mi.hs-flensburg.de/echo.php"
-                method="post"
-              >
-                <div class="contact__name-wrapper">
+        <div class="container">
+          <div class="contact__wrapper">
+            <h1 class="visually-hidden">Kontaktformular</h1>
+            <article class="contact__form-wrapper">
+              <h2 class="visually-hidden">Schreib mir eine Nachricht</h2>
+              <section class="contact__form-section">
+                <h3 class="visually-hidden">Formular</h3>
+                <form
+                  class="contact__form"
+                  action="https://mi.hs-flensburg.de/echo.php"
+                  method="post"
+                >
+                  <div class="contact__name-wrapper">
+                    <div class="contact__form-group">
+                      <label
+                        for="first-name"
+                        class="contact__label contact__vorname"
+                        >Vorname</label
+                      >
+                      <input
+                        type="text"
+                        id="first-name"
+                        name="first-name"
+                        class="contact__input"
+                        required
+                      />
+                    </div>
+                    <div class="contact__form-group">
+                      <label
+                        for="last-name"
+                        class="contact__label contact__nachname"
+                        >Nachname</label
+                      >
+                      <input
+                        type="text"
+                        id="last-name"
+                        name="last-name"
+                        class="contact__input"
+                        required
+                      />
+                    </div>
+                  </div>
                   <div class="contact__form-group">
-                    <label
-                      for="first-name"
-                      class="contact__label contact__vorname"
-                      >Vorname</label
-                    >
+                    <label for="email" class="contact__label">Email</label>
                     <input
-                      type="text"
-                      id="first-name"
-                      name="first-name"
+                      type="email"
+                      id="email"
+                      name="email"
                       class="contact__input"
                       required
                     />
                   </div>
                   <div class="contact__form-group">
-                    <label
-                      for="last-name"
-                      class="contact__label contact__nachname"
-                      >Nachname</label
+                    <label for="message" class="contact__label"
+                      >Deine Nachricht</label
                     >
-                    <input
-                      type="text"
-                      id="last-name"
-                      name="last-name"
-                      class="contact__input"
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="contact__input contact__textarea"
                       required
-                    />
+                    ></textarea>
                   </div>
-                </div>
-                <div class="contact__form-group">
-                  <label for="email" class="contact__label">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="contact__input"
-                    required
-                  />
-                </div>
-                <div class="contact__form-group">
-                  <label for="message" class="contact__label"
-                    >Deine Nachricht</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="contact__input contact__textarea"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" class="button contact__button">
-                  Senden
-                </button>
-              </form>
-            </section>
-            <aside class="contact__info-section">
-              <h2 class="contact__info-title">
-                Lass uns über <span>Projekte</span> sprechen.
-              </h2>
-              <p class="contact__info-text">
-                Ich bin gespannt auf deine Ideen und freue mich darauf, mit dir
-                zusammenzuarbeiten. Schreib mir einfach eine Nachricht und ich
-                melde mich bei dir.
-              </p>
-            </aside>
-          </article>
+                  <button type="submit" class="button contact__button">
+                    Senden
+                  </button>
+                </form>
+              </section>
+              <aside class="contact__info-section">
+                <h2 class="contact__info-title">
+                  Lass uns über <span>Projekte</span> sprechen.
+                </h2>
+                <p class="contact__info-text">
+                  Ich bin gespannt auf deine Ideen und freue mich darauf, mit
+                  dir zusammenzuarbeiten. Schreib mir einfach eine Nachricht und
+                  ich melde mich bei dir.
+                </p>
+              </aside>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -126,7 +136,7 @@
     <footer class="footer">
       <section>
         <h2 class="visually-hidden">Footer</h2>
-        <nav class="footer__social-media">
+        <nav class="footer__social-media" aria-label="Soziale Medien">
           <ul class="social-media__list">
             <li>
               <a href="https://t.me/ledo9913" class="footer__link">
@@ -161,7 +171,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="footer__legal">
+        <nav class="footer__legal" aria-label="Rechtliches">
           <ul>
             <li>
               <a href="../pages/impressum.html" class="footer__link"

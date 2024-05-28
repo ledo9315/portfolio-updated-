@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/main.min.css" />
-    <title>Audiventure UI/UX Design</title>
+    <title>Audiventure</title>
   </head>
   <body>
-    <nav class="navigation">
+    <nav class="navigation" aria-label="Hauptnavigation">
       <section>
         <h2 class="visually-hidden">Navigation</h2>
         <div class="navigation__container container">
@@ -17,21 +17,30 @@
               alt="Leonid Domahalskyy Logo"
             />
           </a>
-          <ul class="navigation__list">
-            <li class="navigation__item">
+          <ul class="navigation__list" role="menubar">
+            <li class="navigation__item" role="none">
               <a
                 href="./../../index.html"
                 class="navigation__link navigation__link--active"
+                role="menuitem"
                 >Projekte</a
               >
             </li>
-            <li class="navigation__item">
-              <a href="./../about_me.html" class="navigation__link"
+            <li class="navigation__item" role="none">
+              <a
+                href="./../about_me.html"
+                class="navigation__link"
+                role="menuitem"
                 >Über mich</a
               >
             </li>
-            <li class="navigation__item">
-              <a href="./../contact.html" class="navigation__link">Kontakt</a>
+            <li class="navigation__item" role="none">
+              <a
+                href="./../contact.html"
+                class="navigation__link"
+                role="menuitem"
+                >Kontakt</a
+              >
             </li>
           </ul>
           <button class="navigation__hamburger" aria-label="Hauptmenü">
@@ -109,7 +118,7 @@
     <footer class="footer">
       <section>
         <h2 class="visually-hidden">Footer</h2>
-        <nav class="footer__social-media">
+        <nav class="footer__social-media" aria-label="Soziale Medien">
           <ul class="social-media__list">
             <li>
               <a href="https://t.me/ledo9913" class="footer__link">
@@ -131,7 +140,7 @@
             </li>
             <li>
               <a href="https://github.com/ledo9315" class="footer__link">
-                <img src="./../../img/icons/github.svg" alt="Gihub Icon" />
+                <img src="./../../img/icons/github.svg" alt="Github Icon" />
               </a>
             </li>
             <li>
@@ -144,7 +153,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="footer__legal">
+        <nav class="footer__legal" aria-label="Rechtliches">
           <ul>
             <li>
               <a href="./../impressum.html" class="footer__link">Impressum</a>

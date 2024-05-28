@@ -178,7 +178,12 @@ body {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+}
+@media screen and (min-width: 360px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 @media screen and (min-width: 620px) {
   .container {
@@ -1113,11 +1118,25 @@ address {
 
 .impressum__wrapper {
   display: block;
-  height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
-  padding: 100px 0;
+  padding: 30px 0;
+}
+@media screen and (min-width: 340px) {
+  .impressum__wrapper {
+    height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
+  }
+}
+@media screen and (min-width: 960px) {
+  .impressum__wrapper {
+    padding: 50px 0;
+  }
 }
 .impressum__wrapper address {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 620px) {
+  .impressum__wrapper address {
+    margin-bottom: 80px;
+  }
 }
 
 .title {

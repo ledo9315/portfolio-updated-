@@ -907,6 +907,12 @@ dd {
   grid-row: 1;
   align-self: center;
   max-width: 500px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 960px) {
+  .contact__info-section {
+    margin-top: 0;
+  }
 }
 
 .contact__info-title {

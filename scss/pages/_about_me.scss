@@ -125,11 +125,13 @@ dd {
   text-transform: none;
 }
 
-@media screen and (max-width: 620px) {
-  .level .active,
-  .level .inactive {
-    width: 38px;
-    height: 6px;
+.level .active,
+.level .inactive {
+  width: 30px;
+  height: 6px;
+
+  @media screen and (min-width: 620px) {
+    width: 50px;
   }
 
   dt {

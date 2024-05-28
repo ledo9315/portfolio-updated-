@@ -853,16 +853,22 @@ dd {
   text-transform: none;
 }
 
-@media screen and (max-width: 620px) {
+.level .active,
+.level .inactive {
+  width: 30px;
+  height: 6px;
+}
+@media screen and (min-width: 620px) {
   .level .active,
   .level .inactive {
-    width: 38px;
-    height: 6px;
-  }
-  dt {
-    margin-right: 10px;
+    width: 50px;
   }
 }
+.level .active dt,
+.level .inactive dt {
+  margin-right: 10px;
+}
+
 .contact__container {
   padding-top: 50px;
 }

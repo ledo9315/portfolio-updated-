@@ -1,5 +1,5 @@
 .about {
-  margin-top: 100px;
+  margin-top: 50px;
   max-width: 600px;
   h2 {
     font-size: var(--font-size-h1);
@@ -17,6 +17,10 @@
   span {
     color: var(--accent-color);
     font-weight: bold;
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-top: 100px;
   }
 }
 

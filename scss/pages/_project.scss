@@ -1,5 +1,9 @@
 .project-description {
-  padding-top: 150px;
+  padding-top: 50px;
+
+  @media screen and (min-width: 960px) {
+    padding-top: 150px;
+  }
 }
 
 .project-description__wrapper {
@@ -25,7 +29,11 @@
 }
 
 .project-images {
-  padding: 200px 0;
+  padding: 100px 0;
+
+  @media screen and (min-width: 960px) {
+    padding: 200px 0;
+  }
 }
 
 .project-images__wrapper {

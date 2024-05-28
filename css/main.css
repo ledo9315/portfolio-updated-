@@ -734,7 +734,7 @@ button {
 }
 
 .about {
-  margin-top: 100px;
+  margin-top: 50px;
   max-width: 600px;
 }
 .about h2 {
@@ -752,6 +752,11 @@ button {
 .about span {
   color: var(--accent-color);
   font-weight: bold;
+}
+@media screen and (min-width: 960px) {
+  .about {
+    margin-top: 100px;
+  }
 }
 
 .capabilities {
@@ -993,7 +998,7 @@ dd {
   cursor: pointer;
   transition: all 0.3s;
   width: 180px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 .contact__button:hover {
   transform: translateY(-2px);
@@ -1009,7 +1014,12 @@ dd {
 }
 
 .project-description {
-  padding-top: 150px;
+  padding-top: 50px;
+}
+@media screen and (min-width: 960px) {
+  .project-description {
+    padding-top: 150px;
+  }
 }
 
 .project-description__wrapper {
@@ -1036,7 +1046,12 @@ dd {
 }
 
 .project-images {
-  padding: 200px 0;
+  padding: 100px 0;
+}
+@media screen and (min-width: 960px) {
+  .project-images {
+    padding: 200px 0;
+  }
 }
 
 .project-images__wrapper {

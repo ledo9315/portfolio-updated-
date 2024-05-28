@@ -1,5 +1,5 @@
 .contact__container {
-  padding: 70px 20px;
+  padding-top: 50px;
   @media screen and (min-width: 960px) {
     height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
   }
@@ -11,13 +11,14 @@
   gap: 150px;
 
   @media (min-width: 960px) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 0.9fr 1fr;
   }
 }
 
 .contact__info-section {
-  max-width: 550px;
+  max-width: 560px;
   align-self: flex-start;
+  margin-top: 40px;
 }
 
 .contact__title {
@@ -27,7 +28,7 @@
 
 .contact__info-title {
   font-size: var(--font-size-h2);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 1.4;
 
   span {
@@ -81,7 +82,7 @@
 }
 
 .contact__button {
-  width: 200px;
+  width: 180px;
   padding: 10px 20px;
   border-radius: 2px;
   background-color: var(--accent-color);

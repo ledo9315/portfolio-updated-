@@ -17,6 +17,10 @@
   @media screen and (min-width: 960px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .project {
   justify-self: center;

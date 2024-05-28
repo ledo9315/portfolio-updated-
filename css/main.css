@@ -916,7 +916,7 @@ dd {
 }
 
 .contact__info-title {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h1);
   margin-bottom: 20px;
   line-height: var(--line-height-heading);
 }

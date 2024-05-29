@@ -610,11 +610,6 @@ button {
 .main-content {
   padding: 120px 0;
 }
-@media screen and (min-width: 620px) {
-  .main-content {
-    padding: 200px 0;
-  }
-}
 
 .projects__title {
   font-size: var(--font-size-h1);
@@ -637,19 +632,19 @@ button {
   }
 }
 
-.project {
+.projects__project {
   justify-self: center;
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-.project__image {
+.projects__image {
   display: block;
   transition: opacity 0.3s ease;
 }
 
-.project__hover-caption {
+.projects__hover-caption {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -660,22 +655,22 @@ button {
   transform: translateY(50%);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.project__hover-caption span {
+.projects__hover-caption span {
   font-size: 0.8rem;
   color: var(--light-grey);
   text-transform: uppercase;
 }
 
-.project__caption {
+.projects__caption {
   margin-top: 15px;
 }
 
-.project:hover .project__hover-caption {
+.projects__project:hover .projects__hover-caption {
   opacity: 1;
   transform: translateY(0);
 }
 
-.project:hover .project__image {
+.projects__project:hover .projects__image {
   opacity: 0.3;
 }
 
@@ -891,7 +886,7 @@ dd {
 @media screen and (min-width: 960px) {
   .contact__wrapper {
     margin: 0;
-    height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
+    height: calc(100vh - (var(--header-height)));
   }
 }
 

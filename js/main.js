@@ -1,3 +1,4 @@
+// Hamburger Menu toggle
 const hamburger = document.querySelector(".navigation__hamburger");
 const nav = document.querySelector(".navigation");
 const navMenu = document.querySelector(".navigation__list");
@@ -16,7 +17,15 @@ document.querySelectorAll(".navigation__item").forEach((n) =>
   })
 );
 
-// switcht die aktive Klasse in der Navigation
+// Mit der Escape-Taste das Hamburger Menu schließen
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hamburger.classList.remove("navigation__hamburger--active");
+    navMenu.classList.remove("navigation__list--active");
+  }
+});
+
+// Switcht die aktive Klasse in der Navigation
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".navigation__item");
 
@@ -33,11 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Navigation wird beim Scrollen ausgeblendet und wieder eingeblendet
 document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0; // Position des letzten Scrolls speichern
 
   window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
       nav.classList.add("navigation--none");

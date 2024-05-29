@@ -514,8 +514,10 @@ button {
 
 .navigation__link {
   white-space: nowrap;
+  font-weight: 700;
 }
 .navigation__link--active {
+  font-weight: 700;
   color: var(--accent-color);
 }
 @media screen and (min-width: 960px) {
@@ -1094,7 +1096,12 @@ dd {
 
 .privacy-policy {
   max-width: 800px;
-  padding: 150px 0;
+  padding: 50px 0;
+}
+@media screen and (min-width: 960px) {
+  .privacy-policy {
+    padding: 150px 0;
+  }
 }
 
 .privacy-policy__title {

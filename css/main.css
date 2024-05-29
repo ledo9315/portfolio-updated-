@@ -261,6 +261,7 @@ button {
   /* Font-weight */
   --font-weigt-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   /* Font-family */
   --font-hanson: "Hanson", sans-serif;
@@ -297,6 +298,20 @@ button {
 }
 @font-face {
   font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Light.woff2") format("woff2"), url("../../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"), url("../../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
   src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -309,17 +324,10 @@ button {
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Light.woff2") format("woff2"), url("../../fonts/Montserrat-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 .navigation__list {
   display: none;
-  -moz-column-gap: 60px;
-       column-gap: 60px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 @media screen and (min-width: 960px) {
   .navigation__list {
@@ -514,11 +522,14 @@ button {
 
 .navigation__link {
   white-space: nowrap;
-  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+  font-weight: var(--font-weight-bold);
 }
 .navigation__link--active {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--accent-color);
+  padding: 10px 20px;
 }
 @media screen and (min-width: 960px) {
   .navigation__link--active {
@@ -527,6 +538,10 @@ button {
 }
 .navigation__link--active:hover {
   color: var(--accent-color);
+}
+
+.navigation__list .navigation__item:last-child .navigation__link {
+  padding-right: 0;
 }
 
 .header__container {

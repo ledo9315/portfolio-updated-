@@ -72,19 +72,26 @@
 
 .navigation__link {
   white-space: nowrap;
-  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+  font-weight: var(--font-weight-bold);
+
   &--active {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--accent-color);
+    padding: 10px 20px;
 
     @media screen and (min-width: 960px) {
       color: var(--text-color);
     }
-
     &:hover {
       color: var(--accent-color);
     }
   }
+}
+
+.navigation__list .navigation__item:last-child .navigation__link {
+  padding-right: 0;
 }
 
 .header__container {

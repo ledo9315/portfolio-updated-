@@ -1,0 +1,35 @@
+.kolophon__header {
+  margin-top: 100px;
+}
+.kolophon__title {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+}
+.kolophon__main {
+  margin-top: var(--spacing-medium);
+}
+.kolophon__section {
+  margin-bottom: var(--spacing-large);
+}
+.kolophon__section-title {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--spacing-medium);
+}
+.kolophon__text {
+  margin-bottom: var(--spacing-small);
+}
+.kolophon__list {
+  max-width: 600px;
+  list-style-type: none;
+  padding: 0;
+}
+.kolophon__list-item {
+  margin-bottom: var(--spacing-small);
+}
+.kolophon__term {
+  font-weight: bold;
+}
+.kolophon__definition {
+  margin-left: var(--spacing-small);
+}

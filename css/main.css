@@ -278,7 +278,11 @@ button {
   --top-size-small-2: -180px;
   --top-size-big-1: -150px;
   --top-size-big-2: -300px;
+  /* Abstände */
   --line-height-heading: 1.2;
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
   --header-top-size-1: var(--top-size-small-1);
   --header-top-size-2: var(--top-size-small-2);
 }
@@ -524,10 +528,10 @@ button {
   white-space: nowrap;
   display: block;
   padding: 10px 20px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
 }
 .navigation__link--active {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   color: var(--accent-color);
   padding: 10px 20px;
 }
@@ -1202,4 +1206,49 @@ address {
   font-size: var(--font-size-h2);
   margin-bottom: 20px;
   line-height: var(--line-height-heading);
+}
+
+.kolophon__header {
+  margin-top: 100px;
+}
+
+.kolophon__title {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+}
+
+.kolophon__main {
+  margin-top: var(--spacing-medium);
+}
+
+.kolophon__section {
+  margin-bottom: var(--spacing-large);
+}
+
+.kolophon__section-title {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--spacing-medium);
+}
+
+.kolophon__text {
+  margin-bottom: var(--spacing-small);
+}
+
+.kolophon__list {
+  max-width: 600px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.kolophon__list-item {
+  margin-bottom: var(--spacing-small);
+}
+
+.kolophon__term {
+  font-weight: bold;
+}
+
+.kolophon__definition {
+  margin-left: var(--spacing-small);
 }/*# sourceMappingURL=main.css.map */

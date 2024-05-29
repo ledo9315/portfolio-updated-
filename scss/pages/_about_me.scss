@@ -25,12 +25,20 @@
 }
 
 .capabilities {
-  padding: 200px 0;
+  padding: 120px 0;
+
+  @media screen and (min-width: 960px) {
+    padding: 200px 0;
+  }
 }
 
 .capabilities__h2 {
   font-size: var(--font-size-h2);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 960px) {
+    margin-bottom: 50px;
+  }
 }
 
 .capabilities__h3 {

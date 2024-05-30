@@ -1,5 +1,9 @@
 .timeline__header {
-  margin-top: 150px;
+  margin-top: 50px;
+
+  @media screen and (min-width: 960px) {
+    margin-top: 150px;
+  }
 }
 
 .timeline__title {
@@ -8,12 +12,17 @@
   margin-bottom: 50px;
 }
 
+.timeline__text {
+  margin-bottom: 30px;
+}
+
 .timeline__main {
   margin-bottom: 150px;
 }
 
 .timeline__wrapper {
-  max-width: 800px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .timeline__main {
@@ -48,4 +57,9 @@
   font-size: var(--font-size-h2);
   line-height: var(--line-height-heading);
   margin-bottom: 30px;
+}
+
+.timeline__hamburger-video {
+  max-width: 1000px;
+  border: 1px solid var(--grey);
 }

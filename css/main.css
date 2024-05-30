@@ -713,7 +713,7 @@ pre {
 
 .footer {
   background-color: black;
-  padding: 60px 0 20px;
+  padding: 60px 0 50px;
 }
 
 .footer__content {
@@ -745,6 +745,7 @@ pre {
 
 .footer__legal ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
@@ -759,6 +760,9 @@ pre {
 }
 .footer__legal ul li:active {
   transform: translateY(1px);
+}
+.footer__legal ul li a {
+  padding: 10px 0;
 }
 @media screen and (min-width: 620px) {
   .footer__legal ul {
@@ -902,7 +906,7 @@ pre {
 }
 
 .level-description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: none;
 }
 
@@ -1188,16 +1192,16 @@ address {
 
 .impressum__wrapper {
   display: block;
-  padding: 30px 0;
+  margin-top: 50px;
 }
 @media screen and (min-width: 340px) {
   .impressum__wrapper {
-    height: calc(100vh - (var(--header-height) + var(--footer-heigt)));
+    height: calc(100vh - (var(--header-height)));
   }
 }
 @media screen and (min-width: 960px) {
   .impressum__wrapper {
-    padding: 50px 0;
+    margin-top: 150px;
   }
 }
 .impressum__wrapper address {
@@ -1223,7 +1227,12 @@ address {
 }
 
 .kolophon__header {
-  margin-top: 150px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 960px) {
+  .kolophon__header {
+    margin-top: 150px;
+  }
 }
 
 .kolophon__main {
@@ -1272,7 +1281,12 @@ address {
 }
 
 .dokumentation__header {
-  margin-top: 150px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 960px) {
+  .dokumentation__header {
+    margin-top: 150px;
+  }
 }
 
 .dokumentation__title {
@@ -1320,7 +1334,12 @@ address {
 }
 
 .timeline__header {
-  margin-top: 150px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 960px) {
+  .timeline__header {
+    margin-top: 150px;
+  }
 }
 
 .timeline__title {
@@ -1329,12 +1348,17 @@ address {
   margin-bottom: 50px;
 }
 
+.timeline__text {
+  margin-bottom: 30px;
+}
+
 .timeline__main {
   margin-bottom: 150px;
 }
 
 .timeline__wrapper {
-  max-width: 800px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .timeline__item {
@@ -1362,4 +1386,9 @@ address {
   font-size: var(--font-size-h2);
   line-height: var(--line-height-heading);
   margin-bottom: 30px;
+}
+
+.timeline__hamburger-video {
+  max-width: 1000px;
+  border: 1px solid var(--grey);
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,9 @@
 .dokumentation__header {
-  margin-top: 150px;
+  margin-top: 50px;
+
+  @media screen and (min-width: 960px) {
+    margin-top: 150px;
+  }
 }
 
 .dokumentation__title {

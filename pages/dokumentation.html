@@ -5,28 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dokumentation</title>
     <link rel="stylesheet" href="../css/main.min.css" />
+    <noscript>
+      <link rel="stylesheet" href="../css/noscript.css" />
+    </noscript>
   </head>
-  <noscript>
-    <style>
-      .navigation {
-        background-color: black !important;
-      }
-      .navigation__link {
-        font-size: 0.9rem !important;
-      }
-      .navigation__link--active {
-        font-size: 0.9rem !important;
-        color: #eee9e1 !important;
-      }
-      .navigation__list {
-        display: flex !important;
-        column-gap: 30px !important;
-      }
-      .navigation__hamburger {
-        display: none !important;
-      }
-    </style>
-  </noscript>
   <body>
     <nav class="navigation" aria-label="Hauptnavigation">
       <h2 class="visually-hidden">Hauptnavigation</h2>
@@ -183,7 +165,7 @@
     </main>
 
     <footer class="footer">
-      <h2 class="visually-hidden">Footer Navigation und Rechtliches</h2>
+      <h2 class="visually-hidden">Footer Inhalt</h2>
       <nav class="footer__social-media" aria-label="Soziale Medien">
         <ul class="social-media__list">
           <li>
@@ -230,7 +212,17 @@
             >
           </li>
           <li>
-            <a href="#" class="footer__link">Dokumentation</a>
+            <a href="../pages/dokumentation.html" class="footer__link"
+              >Dokumentation</a
+            >
+          </li>
+          <li>
+            <a href="../pages/kolophon.html" class="footer__link">Kolophon</a>
+          </li>
+          <li>
+            <a href="../pages/zeitleiste.html" class="footer__link"
+              >Zeitleiste</a
+            >
           </li>
         </ul>
       </nav>

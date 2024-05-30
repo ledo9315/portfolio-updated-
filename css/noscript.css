@@ -1,0 +1,19 @@
+/* Inhalt von noscript.css */
+.navigation {
+    background-color: black !important;
+  }
+  .navigation__link {
+    font-size: 0.9rem !important;
+  }
+  .navigation__link--active {
+    font-size: 0.9rem !important;
+    color: #eee9e1 !important;
+  }
+  .navigation__list {
+    display: flex !important;
+    column-gap: 30px !important;
+  }
+  .navigation__hamburger {
+    display: none !important;
+  }
+  

@@ -16,7 +16,7 @@
   margin-bottom: 20px;
 }
 .project-description__description {
-  color: #777777;
+  color: var(--light-grey);
   margin-bottom: 20px;
 }
 
@@ -85,4 +85,9 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+#project-image-pw-generator {
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
 }

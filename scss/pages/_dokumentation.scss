@@ -1,0 +1,50 @@
+.dokumentation__header {
+  margin-top: 150px;
+}
+
+.dokumentation__title {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+  margin-bottom: 50px;
+}
+
+.documentation__main {
+  margin-bottom: 150px;
+}
+
+.documentation__section {
+  max-width: 700px;
+  padding: 30px 0;
+
+  p:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.documentation__section-title {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  margin-bottom: 20px;
+}
+
+.documentation__section-subtitle {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-heading);
+  margin-bottom: 10px;
+}
+
+.documentation__text {
+  span:first-of-type {
+    color: var(--accent-color-2);
+    font-weight: var(--font-weight-bold);
+  }
+  span:last-of-type {
+    color: var(--accent-color);
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+#documentation__link-color {
+  font-style: italic;
+  text-decoration: underline;
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeitleiste</title>
+    <link rel="stylesheet" href="../css/main.min.css" />
+  </head>
+  <noscript>
+    <style>
+      .navigation {
+        background-color: black !important;
+      }
+      .navigation__link {
+        font-size: 0.9rem !important;
+      }
+      .navigation__link--active {
+        font-size: 0.9rem !important;
+        color: #eee9e1 !important;
+      }
+      .navigation__list {
+        display: flex !important;
+        column-gap: 30px !important;
+      }
+      .navigation__hamburger {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+  <body>
+    <nav class="navigation" aria-label="Hauptnavigation">
+      <h2 class="visually-hidden">Hauptnavigation</h2>
+      <div class="navigation__container container">
+        <a class="navigation__logo" href="../index.html">
+          <img src="../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
+        </a>
+        <ul class="navigation__list" role="menubar">
+          <li class="navigation__item" role="none">
+            <a
+              href="../index.html#main"
+              class="navigation__link"
+              role="menuitem"
+              >Projekte</a
+            >
+          </li>
+          <li class="navigation__item" role="none">
+            <a href="./about_me.html" class="navigation__link" role="menuitem"
+              >Über mich</a
+            >
+          </li>
+          <li class="navigation__item" role="none">
+            <a href="./contact.html" class="navigation__link" role="menuitem"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+        <button class="navigation__hamburger" aria-label="Hauptmenü">
+          <span class="navigation__bar"></span>
+          <span class="navigation__bar"></span>
+          <span class="navigation__bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <header class="timeline__header">
+      <div class="container">
+        <h1 class="timeline__title">Zeitleiste</h1>
+      </div>
+    </header>
+
+    <main class="timeline__main">
+      <div class="container">
+        <div class="timeline__wrapper">
+          <ul class="timeline">
+            <li class="timeline__item">
+              <h2 class="timeline__date">
+                <time datetime="2024-05-29"></time> 01.01.2024 – Projektstart
+              </h2>
+              <figure>
+                <img
+                  src="./../img/zeitleiste/entwurf.jpg"
+                  alt="Erstes Layout der Startseite mit Grundstruktur und Farbwahl im Light- und Darkmode für Smartphone, Tablet und Desktop Auflösungen"
+                />
+                <figcaption>
+                  Erstes Layout der Startseite mit Grundstruktur und Farbwahl im
+                  Light- und Darkmode für Smartphone, Tablet, und Desktop
+                  Aulösungen.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./../img/zeitleiste/entwurf2.jpg"
+                  alt="Erstes Layout der 'Über mich' Seite mit Grundstruktur und Farbwahl im Light- und Darkmode für Smartphone, Tablet und Desktop Auflösungen"
+                />
+                <figcaption>Erstes Layout von der Über mich Seite.</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./../img/zeitleiste/entwurf3.jpg"
+                  alt="Erstes Layout der 'Kontakt' Seite mit Grundstruktur und Farbwahl im Light- und Darkmode für Smartphone, Tablet und Desktop Auflösungen"
+                />
+                <figcaption>Erstes Layout von der Kontakt Seite.</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./../img/zeitleiste/entwurf4.jpg"
+                  alt="Erstes Layout der 'Projekte' Seite mit Grundstruktur und Farbwahl im Light- und Darkmode für Smartphone, Tablet und Desktop Auflösungen"
+                />
+                <figcaption>Erstes Layout von der Projekte Seite.</figcaption>
+              </figure>
+            </li>
+            <li class="timeline__item">
+              <h2 class="timeline__date">
+                <time datetime="2024-01-15">15.01.2024</time> – Typografie
+              </h2>
+              <figure>
+                <img
+                  src="../img/zeitleiste/Typo_und_Icons1.jpg"
+                  alt="Screenshot von der VScode mit dem Ordner 'fonts' in dem die Schriftarten 'Hanson' und 'Montserrat' liegen"
+                />
+                <figcaption>
+                  Auswahl und Integration von Schriftarten. Wir haben die
+                  Schriftarten "Hanson" und "Montserrat" als @font-face in die
+                  CSS-Datei eingebunden.
+                </figcaption>
+              </figure>
+              <pre><code>
+
+                @font-face {
+                  font-family: "Hanson";
+                  src: url("../../fonts/Hanson-Bold.woff2") format("woff2"),
+                       url("../../fonts/Hanson-Bold.woff") format("woff");
+                  font-weight: bold;
+                  font-style: normal;
+                  font-display: swap;
+                }
+                
+                @font-face {
+                  font-family: "Montserrat";
+                  src: url("../../fonts/Montserrat-Light.woff2") format("woff2"),
+                       url("../../fonts/Montserrat-Light.woff") format("woff");
+                  font-weight: 300;
+                  font-style: normal;
+                  font-display: swap;
+                }
+                
+                @font-face {
+                  font-family: "Montserrat";
+                  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"),
+                       url("../../fonts/Montserrat-Medium.woff") format("woff");
+                  font-weight: 500;
+                  font-style: normal;
+                  font-display: swap;
+                }
+                
+                @font-face {
+                  font-family: "Montserrat";
+                  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"),
+                       url("../../fonts/Montserrat-Regular.woff") format("woff");
+                  font-weight: normal;
+                  font-style: normal;
+                  font-display: swap;
+                }
+                
+                @font-face {
+                  font-family: "Montserrat";
+                  src: url("../../fonts/Montserrat-Bold.woff2") format("woff2"),
+                       url("../../fonts/Montserrat-Bold.woff") format("woff");
+                  font-weight: bold;
+                  font-style: normal;
+                  font-display: swap;
+                }
+                
+            </code></pre>
+            </li>
+            <li class="timeline__item">
+              <h2 class="timeline__date">
+                20.01.2024 – Reset CSS und CSS-Variablen
+              </h2>
+              <figure>
+                <img
+                  src="../img/zeitleiste/reset_css.jpg"
+                  alt="Reset CSS und CSS-Variablen"
+                />
+                <figcaption>
+                  Implementierung von Reset CSS und CSS-Variablen. Wir haben
+                  zunächst ein Reset-CSS eingeführt, um eine konsistente Basis
+                  für alle Browser zu schaffen. Anschließend wurden
+                  CSS-Variablen definiert, um Farben, Schriftgrößen und Abstände
+                  zentral zu verwalten und eine einfache Wartung und Anpassung
+                  des Designs zu ermöglichen.
+                </figcaption>
+              </figure>
+              <h3>Übersicht der CSS Variblen:</h3>
+              <pre><code>
+        :root {
+        /* Color */
+        --black: #111111;
+        --light-grey: #9e9b9b;
+        --dark-grey: #1f1f1f;
+        --grey: #555555;
+        --white: #eee9e1;
+        --purple: #a196df;
+        --darkpurple: #392263;
+        --yellowgreen: #90d491;
+
+        /* Website - Colors */
+        --bg-color: var(--black);
+        --accent-color: var(--purple);
+        --accent-color-2: var(--yellowgreen);
+        --text-color: var(--white);
+
+        /* Font-weight */
+        --font-weigt-light: 300;
+        --font-weight-regular: 400;
+        --font-weight-medium: 500;
+        --font-weight-bold: 700;
+
+        /* Font-family */
+        --font-hanson: "Hanson", sans-serif;
+        --font-montserrat: "Montserrat", sans-serif;
+
+        /* Font-size */
+        --font-size-h1: 2.5rem;
+        --font-size-h2: 2rem;
+        --font-size-h3: 1.5rem;
+        --font-size-text-small: 0.9rem;
+
+        --header-height: 70px;
+        --footer-heigt: 182px;
+
+        /* Header-animation */
+        --top-size-small-1: -90px;
+        --top-size-small-2: -180px;
+        --top-size-big-1: -150px;
+        --top-size-big-2: -300px;
+
+        --line-height-heading: 1.2;
+
+        --header-top-size-1: var(--top-size-small-1);
+        --header-top-size-2: var(--top-size-small-2);
+
+        @media screen and (min-width: 620px) {
+            --header-top-size-1: var(--top-size-big-1);
+            --header-top-size-2: var(--top-size-big-2);
+        }
+        }
+              </code></pre>
+            </li>
+
+            <li class="timeline__item">
+              <h2 class="timeline__date">30.01.2024 – Erste Implementierung</h2>
+              <figure>
+                <img
+                  src="../img/zeitleiste/erste_implementierung.jpg"
+                  alt="Erste Implementierung"
+                />
+                <figcaption>
+                  Erste Implementierung des Layouts und der Navigation. Wir
+                  haben die Grundstruktur der Webseite erstellt, inklusive
+                  Hauptnavigation, Header und Hauptinhaltsbereich. Die
+                  Entwicklung begann mit der mobilen Auflösung und wurde für
+                  größere Bildschirme erweitert. Dabei kam CSS Grid zum Einsatz,
+                  um eine flexible und anpassungsfähige Struktur zu
+                  gewährleisten.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="timeline__item">
+              <h2 class="timeline__date">
+                10.02.2024 – Umsetzung des Hauptinhalts
+              </h2>
+              <figure>
+                <a href="img/screenshot04.png">
+                  <img
+                    src="../img/zeitleiste/main.jpg"
+                    alt="Umsetzung des Hauptinhalts"
+                  />
+                </a>
+                <figcaption>
+                  Umsetzung des Mainbereichs. Wie bereits im Header, haben wir
+                  den Mainbereich mit mobile first entwickelt und anschließend
+                  für größere Bildschirme erweitert. Dabei kam erneut CSS Grid
+                  zum Einsatz.
+                </figcaption>
+              </figure>
+              <pre><code>
+                .projects__list {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 60px;
+                  
+                    @media screen and (min-width: 960px) {
+                      grid-template-columns: repeat(2, 1fr);
+                    }
+                  
+                    @media screen and (min-width: 1200px) {
+                      grid-template-columns: repeat(3, 1fr);
+                    }
+              </code></pre>
+            </li>
+            <li class="timeline__item">
+              <h2 class="timeline__date">
+                20.02.2024 – Implementierung des Footers
+              </h2>
+              <figure>
+                <a href="img/screenshot05.png">
+                  <img
+                    src="../img/zeitleiste/footer.jpg"
+                    alt="Implementierung des Footers"
+                  />
+                </a>
+                <figcaption>
+                  Implementierung des Footers. Die Grundstruktur des Footers
+                  wurde mit CSS Grid erstellt. Anschließend wurden die Listen
+                  innerhalb des Footers mit Flexbox gestaltet.
+                </figcaption>
+              </figure>
+              <pre><code>
+                .footer__content {
+                    display: grid;
+                  }
+                  
+                  .social-media__list {
+                    display: flex;
+                    column-gap: 20px;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                  
+                    li {
+                      transition: transform 0.3s;
+                  
+                      &:hover {
+                        transform: translateY(-3px);
+                      }
+                  
+                      &:active {
+                        transform: translateY(1px);
+                      }
+                    }
+                  
+                    @media screen and (min-width: 620px) {
+                      column-gap: 30px;
+                    }
+                  }
+                  
+                  .footer__legal ul {
+                    display: flex;
+                    justify-content: center;
+                    column-gap: 15px;
+                  
+                    li {
+                      color: var(--light-grey);
+                      font-size: 0.9rem;
+                      transition: color 0.3s;
+                  
+                      &:hover {
+                        color: var(--accent-color);
+                      }
+                  
+                      &:active {
+                        transform: translateY(1px);
+                      }
+                    }
+              </code></pre>
+            </li>
+
+            <li class="timeline__item">
+              <h2 class="timeline__date">
+                15.02.2024 – Testphase und Anpassungen
+              </h2>
+              <figure>
+                <a href="img/screenshot04.png">
+                  <img
+                    src="img/screenshot04.png"
+                    alt="Testphase und Anpassungen"
+                  />
+                </a>
+                <figcaption>
+                  Durchführung von Tests und Anpassungen basierend auf Feedback.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="timeline__item">
+              <h2 class="timeline__date">28.02.2024 – Finalisierung</h2>
+              <figure>
+                <a href="img/screenshot05.png">
+                  <img src="img/screenshot05.png" alt="Finalisierung" />
+                </a>
+                <figcaption>
+                  Finalisierung des Designs und der Inhalte.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <h2 class="visually-hidden">Footer Navigation und Rechtliches</h2>
+      <nav class="footer__social-media" aria-label="Soziale Medien">
+        <ul class="social-media__list">
+          <li>
+            <a href="https://t.me/ledo9913" class="footer__link">
+              <img src="../img/icons/telegram.svg" alt="Telegram Icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://discord.com/login?redirect_to=%2Fchannels%2F%40me"
+              class="footer__link"
+            >
+              <img src="../img/icons/discord.svg" alt="Discord Icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://dribbble.com/ledo93" class="footer__link">
+              <img src="../img/icons/dribbble.svg" alt="Dribbble Icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ledo9315" class="footer__link">
+              <img src="../img/icons/github.svg" alt="Gihub Icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206/?originalSubdomain=de"
+              class="footer__link"
+            >
+              <img src="../img/icons/linkedIn.svg" alt="LinkedIn Icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="footer__legal" aria-label="Rechtliches">
+        <ul>
+          <li>
+            <a href="../pages/impressum.html" class="footer__link">Impressum</a>
+          </li>
+          <li>
+            <a href="../pages/datenschutz.html" class="footer__link"
+              >Datenschutz</a
+            >
+          </li>
+          <li>
+            <a href="#" class="footer__link">Dokumentation</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

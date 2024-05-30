@@ -71,3 +71,13 @@ button {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: rgb(26, 25, 25);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 20px;
+  overflow-x: auto;
+}

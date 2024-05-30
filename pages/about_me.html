@@ -29,46 +29,46 @@
   </noscript>
   <body>
     <nav class="navigation" aria-label="Hauptnavigation">
-      <section>
-        <h2 class="visually-hidden">Navigation</h2>
-        <div class="navigation__container container">
-          <a class="navigation__logo" href="../index.html">
-            <img src="../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
-          </a>
-          <ul class="navigation__list" role="menubar">
-            <li class="navigation__item" role="none">
-              <a
-                href="../index.html#main"
-                class="navigation__link"
-                role="menuitem"
-                >Projekte</a
-              >
-            </li>
-            <li class="navigation__item" role="none">
-              <a
-                href="#"
-                class="navigation__link navigation__link--active"
-                role="menuitem"
-                >Über mich</a
-              >
-            </li>
-            <li class="navigation__item" role="none">
-              <a href="./contact.html" class="navigation__link" role="menuitem"
-                >Kontakt</a
-              >
-            </li>
-          </ul>
-          <button class="navigation__hamburger" aria-label="Hauptmenü">
-            <span class="navigation__bar"></span>
-            <span class="navigation__bar"></span>
-            <span class="navigation__bar"></span>
-          </button>
-        </div>
-      </section>
+      <h2 class="visually-hidden">Navigation</h2>
+      <div class="navigation__container container">
+        <a class="navigation__logo" href="../index.html">
+          <img src="../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
+        </a>
+        <ul class="navigation__list" role="menubar">
+          <li class="navigation__item" role="none">
+            <a
+              href="../index.html#main"
+              class="navigation__link"
+              role="menuitem"
+              >Projekte</a
+            >
+          </li>
+          <li class="navigation__item" role="none">
+            <a
+              href="#"
+              class="navigation__link navigation__link--active"
+              role="menuitem"
+              >Über mich</a
+            >
+          </li>
+          <li class="navigation__item" role="none">
+            <a href="./contact.html" class="navigation__link" role="menuitem"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+        <button class="navigation__hamburger" aria-label="Hauptmenü">
+          <span class="navigation__bar"></span>
+          <span class="navigation__bar"></span>
+          <span class="navigation__bar"></span>
+        </button>
+      </div>
     </nav>
+
     <header>
       <h1 class="visually-hidden">Über mich</h1>
     </header>
+
     <main>
       <div class="container">
         <article class="about">
@@ -112,9 +112,9 @@
               <dl>
                 <div class="item">
                   <dt>Deutsch</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true">C2</span>
-                    <div class="level" role="img" aria-label="Sprachniveau C2">
+                    <div class="level" aria-label="Sprachniveau C2">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="active"></div>
@@ -126,9 +126,9 @@
                 </div>
                 <div class="item">
                   <dt>Russisch</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true">C2</span>
-                    <div class="level" role="img" aria-label="Sprachniveau C2">
+                    <div class="level" aria-label="Sprachniveau C2">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="active"></div>
@@ -140,15 +140,11 @@
                 </div>
                 <div class="item">
                   <dt>Ukrainisch</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Muttersprache</span
                     >
-                    <div
-                      class="level"
-                      role="img"
-                      aria-label="Sprachniveau Muttersprache"
-                    >
+                    <div class="level" aria-label="Sprachniveau Muttersprache">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="active"></div>
@@ -160,9 +156,9 @@
                 </div>
                 <div class="item">
                   <dt>English</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true">B1</span>
-                    <div class="level" role="img" aria-label="Sprachniveau B1">
+                    <div class="level" aria-label="Sprachniveau B1">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="active"></div>
@@ -184,15 +180,11 @@
               <dl>
                 <div class="item">
                   <dt>JavaScript</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Kompetent</span
                     >
-                    <div
-                      class="level"
-                      role="img"
-                      aria-label="Kompetenzniveau: Kompetent"
-                    >
+                    <div class="level" aria-label="Kompetenzniveau: Kompetent">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="active"></div>
@@ -204,13 +196,12 @@
                 </div>
                 <div class="item">
                   <dt>Java</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Fortgeschritten</span
                     >
                     <div
                       class="level"
-                      role="img"
                       aria-label="Kompetenzniveau: Fortgeschritten"
                     >
                       <div class="active"></div>
@@ -224,15 +215,11 @@
                 </div>
                 <div class="item">
                   <dt>Kotlin</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Anfänger</span
                     >
-                    <div
-                      class="level"
-                      role="img"
-                      aria-label="Kompetenzniveau: Anfänger"
-                    >
+                    <div class="level" aria-label="Kompetenzniveau: Anfänger">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="inactive"></div>
@@ -244,15 +231,11 @@
                 </div>
                 <div class="item">
                   <dt>Python</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Anfänger</span
                     >
-                    <div
-                      class="level"
-                      role="img"
-                      aria-label="Kompetenzniveau: Anfänger"
-                    >
+                    <div class="level" aria-label="Kompetenzniveau: Anfänger">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="inactive"></div>
@@ -269,13 +252,12 @@
               <dl>
                 <div class="item">
                   <dt>React</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Fortgeschritten</span
                     >
                     <div
                       class="level"
-                      role="img"
                       aria-label="Fähigkeitsniveau Fortgeschritten"
                     >
                       <div class="active"></div>
@@ -289,15 +271,11 @@
                 </div>
                 <div class="item">
                   <dt>Node.js</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Anfänger</span
                     >
-                    <div
-                      class="level"
-                      role="img"
-                      aria-label="Fähigkeitsniveau Anfänger"
-                    >
+                    <div class="level" aria-label="Fähigkeitsniveau Anfänger">
                       <div class="active"></div>
                       <div class="active"></div>
                       <div class="inactive"></div>
@@ -309,15 +287,11 @@
                 </div>
                 <div class="item">
                   <dt>Deno</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Anfänger</span
                     >
-                    <div
-                      class="level"
-                      role="img"
-                      aria-label="Fähigkeitsniveau Anfänger"
-                    >
+                    <div class="level" aria-label="Fähigkeitsniveau Anfänger">
                       <div class="active"></div>
                       <div class="inactive"></div>
                       <div class="inactive"></div>
@@ -334,13 +308,12 @@
               <dl>
                 <div class="item">
                   <dt>Web Design</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Fortgeschritten</span
                     >
                     <div
                       class="level"
-                      role="img"
                       aria-label="Designniveau: Fortgeschritten"
                     >
                       <div class="active"></div>
@@ -354,13 +327,12 @@
                 </div>
                 <div class="item">
                   <dt>UI Design</dt>
-                  <dd>
+                  <dd class="item__table">
                     <span class="level-description" aria-hidden="true"
                       >Fortgeschritten</span
                     >
                     <div
                       class="level"
-                      role="img"
                       aria-label="Designniveau: Fortgeschritten"
                     >
                       <div class="active"></div>
@@ -379,61 +351,57 @@
       </section>
     </main>
     <footer class="footer">
-      <section>
-        <h2 class="visually-hidden">Footer</h2>
-        <nav class="footer__social-media" aria-label="Soziale Medien">
-          <ul class="social-media__list">
-            <li>
-              <a href="https://t.me/ledo9913" class="footer__link">
-                <img src="../img/icons/telegram.svg" alt="Telegram Icon" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://discord.com/login?redirect_to=%2Fchannels%2F%40me"
-                class="footer__link"
-              >
-                <img src="../img/icons/discord.svg" alt="Discord Icon" />
-              </a>
-            </li>
-            <li>
-              <a href="https://dribbble.com/ledo93" class="footer__link">
-                <img src="../img/icons/dribbble.svg" alt="Dribbble Icon" />
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/ledo9315" class="footer__link">
-                <img src="../img/icons/github.svg" alt="Gihub Icon" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206/?originalSubdomain=de"
-                class="footer__link"
-              >
-                <img src="../img/icons/linkedIn.svg" alt="LinkedIn Icon" />
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="footer__legal" aria-label="Rechtliches">
-          <ul>
-            <li>
-              <a href="../pages/impressum.html" class="footer__link"
-                >Impressum</a
-              >
-            </li>
-            <li>
-              <a href="../pages/datenschutz.html" class="footer__link"
-                >Datenschutz</a
-              >
-            </li>
-            <li>
-              <a href="#!" class="footer__link">Dokumentation</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+      <h2 class="visually-hidden">Footer Navigation und Rechtliches</h2>
+      <nav class="footer__social-media" aria-label="Soziale Medien">
+        <ul class="social-media__list">
+          <li>
+            <a href="https://t.me/ledo9913" class="footer__link">
+              <img src="../img/icons/telegram.svg" alt="Telegram Icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://discord.com/login?redirect_to=%2Fchannels%2F%40me"
+              class="footer__link"
+            >
+              <img src="../img/icons/discord.svg" alt="Discord Icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://dribbble.com/ledo93" class="footer__link">
+              <img src="../img/icons/dribbble.svg" alt="Dribbble Icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ledo9315" class="footer__link">
+              <img src="../img/icons/github.svg" alt="Gihub Icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206/?originalSubdomain=de"
+              class="footer__link"
+            >
+              <img src="../img/icons/linkedIn.svg" alt="LinkedIn Icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="footer__legal" aria-label="Rechtliches">
+        <ul>
+          <li>
+            <a href="../pages/impressum.html" class="footer__link">Impressum</a>
+          </li>
+          <li>
+            <a href="../pages/datenschutz.html" class="footer__link"
+              >Datenschutz</a
+            >
+          </li>
+          <li>
+            <a href="#!" class="footer__link">Dokumentation</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
     <script src="../js/main.js"></script>
   </body>

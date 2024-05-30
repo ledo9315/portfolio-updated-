@@ -95,12 +95,7 @@
   }
 }
 
-dt {
-  font-family: var(--font-montserrat);
-  text-transform: none;
-}
-
-dd {
+.item__table {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;

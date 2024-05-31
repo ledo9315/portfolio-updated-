@@ -9,30 +9,39 @@
 
   <body>
     <header class="header">
-      <nav class="navigation">
-        <a href="#" class="navigation__logo">
-          <img src="images/logo.png" alt="Leonid Dombrovskiy Logo" />
-        </a>
-        <button class="navigation__toggle" aria-label="Menü öffnen">
-          <span class="navigation__icon"></span>
-        </button>
+      <h1 class="visually-hidden">
+        Leonid Domahalskyy - UI/UX Designer Portfolio
+      </h1>
+      <nav class="navigation" aria-label="Hauptnavigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#main" class="navigation__link--active">Projekte</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./pages/about_me.html" class="navigation__link"
+              >Über mich</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./pages/contact.html" class="navigation__link">Kontakt</a>
+          </li>
+        </ul>
       </nav>
       <section class="header__content">
-        <h1 class="header__title">Hey, ich bin Leonid</h1>
+        <h2 class="header__title">Hey, ich bin Leonid</h2>
         <h2 class="header__subtitle">UI/UX Designer</h2>
-        <a href="#contact" class="button header__button">Schreibe mir</a>
       </section>
     </header>
 
-    <main class="main-content">
-      <section class="projects" id="projects">
+    <main class="main-content" id="main">
+      <section class="projects">
         <h2 class="projects__title">Meine Projekte</h2>
         <ul class="projects__list">
           <li class="project">
             <figure>
               <img
                 src="images/audiventure.png"
-                alt="Screenshot des Audiventure-Projekts mit Mobile-App und Website"
+                alt="Screenshot des Audiventure-Projekts, das die mobile App und die Website zeigt. Der Hintergrund ist lila-pink und es sind verschiedene App-Screenshots und ein Smartphone-Bildschirm zu sehen."
                 class="project__image"
               />
               <figcaption class="project__caption">Audiventure</figcaption>
@@ -42,7 +51,7 @@
             <figure>
               <img
                 src="images/angeles-dance-academy.png"
-                alt="Screenshot der Website der Angeles Dance Academy"
+                alt="Screenshot der Website der Angela's Dance Academy, dargestellt auf einem Laptop. Die Startseite zeigt das Logo der Academy und ein Bild von tanzenden Kindern."
                 class="project__image"
               />
               <figcaption class="project__caption">
@@ -54,7 +63,7 @@
             <figure>
               <img
                 src="images/photography-masterclass.png"
-                alt="Screenshot der Website für die Photography Masterclass"
+                alt="Screenshot der Website für die Photography Masterclass, dargestellt auf einem Laptop. Die Startseite zeigt ein großes Hintergrundbild einer Landschaft mit dem Titel 'Photography Masterclass' und dem Untertitel 'Master Landscape Photography in 10 Days'."
                 class="project__image"
               />
               <figcaption class="project__caption">
@@ -66,7 +75,7 @@
             <figure>
               <img
                 src="images/password-generator.png"
-                alt="Screenshot des Password Generator-Tools"
+                alt="Screenshot des Password Generator-Tools, dargestellt auf einem Laptop. Die Seite zeigt die Benutzeroberfläche des Tools, einschließlich Eingabefeldern und Auswahloptionen zur Generierung sicherer Passwörter."
                 class="project__image"
               />
               <figcaption class="project__caption">
@@ -79,33 +88,66 @@
     </main>
 
     <footer class="footer">
-      <section class="footer__content">
-        <p class="footer__text">© Leonid Dombrovskiy</p>
-        <nav class="footer__social-media">
-          <ul>
-            <li>
-              <a href="https://github.com/leonid" class="footer__link"
-                >GitHub</a
-              >
-            </li>
-            <li>
-              <a href="https://www.behance.net/leonid" class="footer__link"
-                >Behance</a
-              >
-            </li>
-            <li>
-              <a href="https://dribbble.com/leonid" class="footer__link"
-                >Dribbble</a
-              >
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/leonid" class="footer__link"
-                >LinkedIn</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </section>
+      <nav class="footer__social-media" aria-label="Soziale Medien">
+        <ul class="social-media__list">
+          <li>
+            <a href="https://t.me/ledo9913" class="footer__link">
+              <img src="./img/icons/telegram.svg" alt="Telegram Icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://discord.com/login?redirect_to=%2Fchannels%2F%40me"
+              class="footer__link"
+            >
+              <img src="./img/icons/discord.svg" alt="Discord Icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://dribbble.com/ledo93" class="footer__link">
+              <img src="./img/icons/dribbble.svg" alt="Dribbble Icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ledo9315" class="footer__link">
+              <img src="./img/icons/github.svg" alt="GitHub Icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206/?originalSubdomain=de"
+              class="footer__link"
+            >
+              <img src="./img/icons/linkedIn.svg" alt="LinkedIn Icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="footer__legal" aria-label="Rechtliches">
+        <ul>
+          <li>
+            <a href="./pages/impressum.html" class="footer__link">Impressum</a>
+          </li>
+          <li>
+            <a href="./pages/datenschutz.html" class="footer__link"
+              >Datenschutz</a
+            >
+          </li>
+          <li>
+            <a href="./pages/dokumentation.html" class="footer__link"
+              >Dokumentation</a
+            >
+          </li>
+          <li>
+            <a href="./pages/kolophon.html" class="footer__link">Kolophon</a>
+          </li>
+          <li>
+            <a href="./pages/zeitleiste.html" class="footer__link"
+              >Zeitleiste</a
+            >
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>

@@ -30,6 +30,7 @@
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
   background-color: var(--white);
 }
 
@@ -39,10 +40,12 @@
 
 .navigation__hamburger--active .navigation__bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
 }
 
 .navigation__hamburger--active .navigation__bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
 }
 
 .navigation__list--active {
@@ -54,10 +57,10 @@
   font-size: 2rem;
   font-weight: bold;
   position: absolute;
-  top: 70px; /* Höhe der Header-Leiste */
+  top: 70px;
   left: 0;
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: rgba($color: #000000, $alpha: 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 1001;
 }

@@ -39,12 +39,16 @@
 }
 
 .contact__info-title {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h2);
   margin-bottom: 20px;
   line-height: var(--line-height-heading);
 
   span {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 420px) {
+    font-size: var(--font-size-h1);
   }
 }
 

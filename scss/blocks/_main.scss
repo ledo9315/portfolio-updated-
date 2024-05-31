@@ -6,9 +6,13 @@
   }
 }
 .projects__title {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h2);
   letter-spacing: -0.02em;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 420px) {
+    font-size: var(--font-size-h1);
+  }
 }
 .projects__list {
   display: grid;

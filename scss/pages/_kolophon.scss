@@ -15,9 +15,13 @@
   }
 }
 .kolophon__title {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h2);
   line-height: var(--line-height-heading);
   margin-bottom: 50px;
+
+  @media screen and (min-width: 420px) {
+    font-size: var(--font-size-h1);
+  }
 }
 
 .kolophon__section {
@@ -25,9 +29,13 @@
 }
 
 .kolophon__section-title {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h3);
   line-height: var(--line-height-heading);
   margin-bottom: 20px;
+
+  @media screen and (min-width: 420px) {
+    font-size: var(--font-size-h2);
+  }
 }
 
 .kolophon__list {

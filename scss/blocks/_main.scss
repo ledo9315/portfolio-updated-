@@ -39,8 +39,10 @@
 
 .projects__image {
   display: block;
-  transition: opacity 0.3s ease;
   -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .projects__hover-caption {
@@ -49,13 +51,17 @@
   left: 20px;
   opacity: 0;
   font-size: 1.2rem;
-  transition: opacity 0.3s ease;
   -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   line-height: 1.1;
-  transform: translateY(50%);
   -webkit-transform: translateY(50%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  -moz-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  transform: translateY(50%);
   -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease, opacity 0.3s ease;
+  -o-transition: -o-transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 
   span {
     font-size: 0.8rem;
@@ -70,8 +76,10 @@
 
 .projects__project:hover .projects__hover-caption {
   opacity: 1;
-  transform: translateY(0);
   -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .projects__project:hover .projects__image {

@@ -456,8 +456,8 @@ pre {
 }
 .navigation--black-bg {
   background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .navigation__container {
@@ -468,8 +468,8 @@ pre {
 }
 .navigation__container--mobile {
   background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .navigation__logo {
@@ -503,6 +503,9 @@ pre {
 }
 .navigation__item:active {
   transform: translateY(1px);
+}
+.navigation__item:visited {
+  color: var(--grey);
 }
 @media screen and (min-width: 960px) {
   .navigation__item {
@@ -574,7 +577,6 @@ pre {
 .header__subtitle span {
   position: relative;
   animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-  -webkit-animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; /* Added WebKit prefix */
 }
 @media screen and (min-width: 620px) {
   .header__subtitle {
@@ -611,7 +613,6 @@ pre {
   fill: var(--white);
   display: block;
   animation: bounce 6s infinite;
-  -webkit-animation: bounce 6s infinite;
 }
 
 .main-content {
@@ -660,7 +661,6 @@ pre {
 .projects__image {
   display: block;
   transition: opacity 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
 }
 
 .projects__hover-caption {
@@ -670,12 +670,9 @@ pre {
   opacity: 0;
   font-size: 1.2rem;
   transition: opacity 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
   line-height: 1.1;
   transform: translateY(50%);
-  -webkit-transform: translateY(50%);
   transition: transform 0.3s ease, opacity 0.3s ease;
-  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
 }
 .projects__hover-caption span {
   font-size: 0.8rem;
@@ -690,7 +687,6 @@ pre {
 .projects__project:hover .projects__hover-caption {
   opacity: 1;
   transform: translateY(0);
-  -webkit-transform: translateY(0);
 }
 
 .projects__project:hover .projects__image {
@@ -715,15 +711,12 @@ pre {
 }
 .social-media__list li {
   transition: transform 0.3s;
-  -webkit-transition: -webkit-transform 0.3s;
 }
 .social-media__list li:hover {
   transform: translateY(-3px);
-  -webkit-transform: translateY(-3px);
 }
 .social-media__list li:active {
   transform: translateY(1px);
-  -webkit-transform: translateY(1px);
 }
 @media screen and (min-width: 620px) {
   .social-media__list {
@@ -743,14 +736,15 @@ pre {
   color: var(--light-grey);
   font-size: 0.9rem;
   transition: color 0.3s;
-  -webkit-transition: color 0.3s;
 }
 .footer__legal ul li:hover {
   color: var(--accent-color);
 }
 .footer__legal ul li:active {
   transform: translateY(1px);
-  -webkit-transform: translateY(1px);
+}
+.footer__legal ul li:visited {
+  color: var(--grey);
 }
 .footer__legal ul li a {
   padding: 10px 0;

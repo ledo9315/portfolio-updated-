@@ -7,10 +7,11 @@
 }
 
 .project-description__wrapper {
-  max-width: 585px;
+  max-width: 700px;
 }
 
 .project-description__name {
+  font-family: var(--font-hanson);
   font-size: var(--font-size-h1);
   line-height: var(--line-height-heading);
   margin-bottom: 20px;

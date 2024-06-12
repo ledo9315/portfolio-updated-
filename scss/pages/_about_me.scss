@@ -1,8 +1,9 @@
 .about {
   margin-top: 50px;
-  max-width: 600px;
+  max-width: 700px;
   h2 {
     font-size: var(--font-size-h2);
+    font-family: var(--font-hanson);
     margin-top: -10px;
     margin-bottom: 30px;
     line-height: var(--line-height-heading);
@@ -37,6 +38,7 @@
 }
 
 .capabilities__h2 {
+  font-family: var(--font-hanson);
   font-size: var(--font-size-h3);
   margin-bottom: 30px;
 
@@ -50,6 +52,8 @@
 }
 
 .capabilities__h3 {
+  font-family: var(--font-hanson);
+
   font-size: bold;
   margin-bottom: 20px;
 

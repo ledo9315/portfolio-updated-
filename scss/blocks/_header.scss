@@ -6,7 +6,9 @@
   z-index: 1009;
 
   &--none {
+    -webkit-opacity: 0;
     opacity: 0;
+    -webkit-visibility: hidden;
     visibility: hidden;
   }
 

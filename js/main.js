@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    console.log(scrollTop);
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
       nav.classList.add("navigation--none");

@@ -1378,6 +1378,10 @@ address {
   text-decoration: underline;
 }
 
+.timeline {
+  max-width: 860px;
+}
+
 .timeline__header {
   margin-top: 50px;
 }
@@ -1398,14 +1402,6 @@ address {
   }
 }
 
-.timeline__text {
-  margin-bottom: 30px;
-}
-
-.timeline__main {
-  margin-bottom: 150px;
-}
-
 .timeline__wrapper {
   -moz-column-gap: 100px;
        column-gap: 100px;
@@ -1417,8 +1413,16 @@ address {
   }
 }
 
-.timeline {
-  max-width: 860px;
+.timeline__item figure figcaption {
+  font-style: italic;
+}
+
+.timeline__text {
+  margin-bottom: 30px;
+}
+
+.timeline__main {
+  margin-bottom: 150px;
 }
 
 .timeline__sidenav {
@@ -1432,23 +1436,9 @@ address {
   background-color: var(--black);
   width: 340px;
 }
-@media screen and (min-width: 1400px) {
-  .timeline__sidenav {
-    display: block;
-  }
-}
-
-.timeline__sidenav ol {
-  list-style: none;
-  padding: 0;
-  padding-left: 20px;
-  border-left: 1px solid rgb(66, 66, 66);
-}
-
 .timeline__sidenav li {
   margin-bottom: 12px;
 }
-
 .timeline__sidenav a {
   font-size: var(--font-size-text-small);
   line-height: var(--line-height-heading);
@@ -1457,6 +1447,11 @@ address {
   display: block;
   transition: all 0.3s;
   color: rgb(204, 198, 198);
+}
+@media screen and (min-width: 1400px) {
+  .timeline__sidenav {
+    display: block;
+  }
 }
 
 .timeline__sidenav a.active {

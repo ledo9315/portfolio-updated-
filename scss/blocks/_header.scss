@@ -69,8 +69,6 @@
 
   &:active {
     -webkit-transform: translateY(1px);
-    -moz-transform: translateY(1px);
-    -o-transform: translateY(1px);
     transform: translateY(1px);
   }
 
@@ -144,10 +142,7 @@
   margin-bottom: 30px;
   span {
     position: relative;
-    -webkit-animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-      infinite;
-    -moz-animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    -o-animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -webkit-animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     animation: animation 15s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
   }
   @media screen and (min-width: 620px) {
@@ -176,6 +171,7 @@
   margin-bottom: 60px;
 
   width: 100%;
+  height: 5dvh;
   height: 30px;
 
   svg {
@@ -183,8 +179,6 @@
     fill: var(--white);
     display: block;
     -webkit-animation: bounce 6s infinite;
-    -moz-animation: bounce 6s infinite;
-    -o-animation: bounce 6s infinite;
     animation: bounce 6s infinite;
   }
 }

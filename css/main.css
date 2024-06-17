@@ -1362,6 +1362,22 @@ address {
 .documentation__section p:not(:last-of-type) {
   margin-bottom: 20px;
 }
+.documentation__section aside {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: var(--background-color-1);
+  border-left: 5px solid var(--accent-color);
+}
+.documentation__section aside a {
+  display: flex;
+  font-style: italic;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.documentation__section aside a:hover {
+  color: var(--accent-color);
+}
 
 .documentation__section-title {
   font-size: var(--font-size-h3);
@@ -1379,15 +1395,6 @@ address {
   font-size: var(--font-size-h3);
   line-height: var(--line-height-heading);
   margin-bottom: 10px;
-}
-
-.documentation__text span:first-of-type {
-  color: var(--accent-color-2);
-  font-weight: var(--font-weight-bold);
-}
-.documentation__text span:last-of-type {
-  color: var(--accent-color);
-  font-weight: var(--font-weight-bold);
 }
 
 #documentation__link-color {

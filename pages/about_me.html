@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Über mich</title>
+    <title data-i18n="about_title">Über mich</title>
     <link rel="stylesheet" href="../css/main.min.css" />
     <noscript>
       <link rel="stylesheet" href="../css/noscript.css" />
@@ -17,15 +17,43 @@
         </a>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="../index.html#main" class="navigation__link">Projekte</a>
+            <a
+              href="../index.html#main"
+              class="navigation__link"
+              data-i18n="nav_projects"
+              >Projekte</a
+            >
           </li>
           <li class="navigation__item" role="none">
-            <a href="#" class="navigation__link navigation__link--active"
+            <a
+              href="#"
+              class="navigation__link navigation__link--active"
+              data-i18n="nav_about"
               >&#220;ber mich</a
             >
           </li>
           <li class="navigation__item">
-            <a href="./contact.html" class="navigation__link">Kontakt</a>
+            <a
+              href="./contact.html"
+              class="navigation__link"
+              data-i18n="nav_contact"
+              >Kontakt</a
+            >
+          </li>
+          <li class="navigation__lang">
+            <a
+              href="./about_me.html"
+              class="navigation__link"
+              onclick="changeLanguage('de')"
+              >DE</a
+            >
+            <span class="navigation__separator">|</span>
+            <a
+              href="./about_me.html"
+              class="navigation__link"
+              onclick="changeLanguage('en')"
+              >EN</a
+            >
           </li>
         </ul>
         <button class="navigation__hamburger" aria-label="Hauptmenü">
@@ -43,48 +71,63 @@
     <main>
       <div class="container">
         <article class="about">
-          <h2 class="about__headline">Über mich</h2>
-          <p>
+          <h2 class="about__headline" data-i18n="about_headline">Über mich</h2>
+          <p data-i18n="about_intro">
             Moin! Ich bin ein passionierter Programmierer aus Flensburg im
             Norden Deutschlands. Mein Wissen in der Softwareentwicklung habe ich
             durch kontinuierliches Engagement, praktische Erfahrungen und mein
             Studium der
-            <span>Medieninformatik</span> an der Hochschule Flensburg erworben.
+            <span data-i18n="about_study_field">Medieninformatik</span> an der
+            Hochschule Flensburg erworben.
           </p>
-          <p>
-            Ich habe eine besondere Leidenschaft f&#252;r die Entwicklung von
+          <p data-i18n="about_passion">
+            Ich habe eine besondere Leidenschaft für die Entwicklung von
             Webanwendungen, insbesondere im Bereich
-            <span>UI/UX Design</span> und <span>Webentwicklung</span>. Mir ist
-            es wichtig, dass L&#246;sungen nicht nur funktional, sondern auch
+            <span data-i18n="about_ui_ux">UI/UX Design</span> und
+            <span data-i18n="about_web_dev">Webentwicklung</span>. Mir ist es
+            wichtig, dass Lösungen nicht nur funktional, sondern auch
             benutzerfreundlich sind. Innovation und Benutzerfreundlichkeit sind
-            meine st&#228;ndige Motivation.
+            meine ständige Motivation.
           </p>
-          <p>
-            Ich halte mich stets &#252;ber die neuesten Technologien auf dem
-            Laufenden, um sicherzustellen, dass meine F&#228;higkeiten den
-            aktuellen Anforderungen entsprechen. Wenn du einen versierten
-            Entwickler suchst, der herausragende Ergebnisse erzielt, stehe ich
-            gerne zur Verf&#252;gung.
+          <p data-i18n="about_skills">
+            Ich halte mich stets über die neuesten Technologien auf dem
+            Laufenden, um sicherzustellen, dass meine Fähigkeiten den aktuellen
+            Anforderungen entsprechen. Wenn du einen versierten Entwickler
+            suchst, der herausragende Ergebnisse erzielt, stehe ich gerne zur
+            Verfügung.
           </p>
-          <p>
-            Lass uns gemeinsam an spannenden Projekten arbeiten und
-            gro&#223;artige digitale Erlebnisse schaffen. Kontaktiere mich, um
-            mehr &#252;ber meine Arbeit und wie ich dir helfen kann, zu
-            erfahren.
+          <p data-i18n="about_collaboration">
+            Lass uns gemeinsam an spannenden Projekten arbeiten und großartige
+            digitale Erlebnisse schaffen. Kontaktiere mich, um mehr über meine
+            Arbeit und wie ich dir helfen kann, zu erfahren.
           </p>
         </article>
       </div>
       <section class="capabilities">
         <div class="container">
-          <h2 class="capabilities__h2">Meine F&#228;higkeiten</h2>
+          <h2 class="capabilities__h2" data-i18n="capabilities_headline">
+            Meine Fähigkeiten
+          </h2>
           <div class="capabilities__wrapper">
             <div class="capabilities__sprachen capabilities__section">
-              <h3 class="capabilities__h3">Sprachen</h3>
+              <h3
+                class="capabilities__h3"
+                data-i18n="capabilities_languages_headline"
+              >
+                Sprachen
+              </h3>
               <dl>
                 <div class="item">
-                  <dt id="deutsch-label">Deutsch</dt>
+                  <dt id="deutsch-label" data-i18n="language_german">
+                    Deutsch
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true">C2</span>
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_c2"
+                      >C2</span
+                    >
                     <div class="level" aria-labelledby="deutsch-label">
                       <div class="active"></div>
                       <div class="active"></div>
@@ -96,9 +139,16 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="russisch-label">Russisch</dt>
+                  <dt id="russisch-label" data-i18n="language_russian">
+                    Russisch
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true">C2</span>
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_c2"
+                      >C2</span
+                    >
                     <div class="level" aria-labelledby="russisch-label">
                       <div class="active"></div>
                       <div class="active"></div>
@@ -110,9 +160,14 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="ukrainisch-label">Ukrainisch</dt>
+                  <dt id="ukrainisch-label" data-i18n="language_ukrainian">
+                    Ukrainisch
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_native"
                       >Muttersprache</span
                     >
                     <div class="level" aria-labelledby="ukrainisch-label">
@@ -126,9 +181,16 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="englisch-label">Englisch</dt>
+                  <dt id="englisch-label" data-i18n="language_english">
+                    Englisch
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true">B1</span>
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_b1"
+                      >B1</span
+                    >
                     <div class="level" aria-labelledby="englisch-label">
                       <div class="active"></div>
                       <div class="active"></div>
@@ -145,14 +207,23 @@
             <div
               class="capabilities__programmiersprachen capabilities__section"
             >
-              <h3 id="programming-languages" class="capabilities__h3">
+              <h3
+                id="programming-languages"
+                class="capabilities__h3"
+                data-i18n="capabilities_programming_languages_headline"
+              >
                 Programmiersprachen
               </h3>
               <dl>
                 <div class="item">
-                  <dt id="javascript-label">JavaScript</dt>
+                  <dt id="javascript-label" data-i18n="language_javascript">
+                    JavaScript
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_proficient"
                       >Kompetent</span
                     >
                     <div class="level" aria-labelledby="javascript-label">
@@ -166,9 +237,12 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="java-label">Java</dt>
+                  <dt id="java-label" data-i18n="language_java">Java</dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_advanced"
                       >Fortgeschritten</span
                     >
                     <div class="level" aria-labelledby="java-label">
@@ -182,10 +256,13 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="kotlin-label">Kotlin</dt>
+                  <dt id="kotlin-label" data-i18n="language_kotlin">Kotlin</dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
-                      >Anf&#228;nger</span
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_beginner"
+                      >Anfänger</span
                     >
                     <div class="level" aria-labelledby="kotlin-label">
                       <div class="active"></div>
@@ -198,10 +275,13 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="python-label">Python</dt>
+                  <dt id="python-label" data-i18n="language_python">Python</dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
-                      >Anf&#228;nger</span
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_beginner"
+                      >Anfänger</span
                     >
                     <div class="level" aria-labelledby="python-label">
                       <div class="active"></div>
@@ -217,12 +297,20 @@
             </div>
 
             <div class="capabilities__webentwicklung capabilities__section">
-              <h3 class="capabilities__h3">Webentwicklung</h3>
+              <h3
+                class="capabilities__h3"
+                data-i18n="capabilities_web_dev_headline"
+              >
+                Webentwicklung
+              </h3>
               <dl>
                 <div class="item">
-                  <dt id="react-label">React</dt>
+                  <dt id="react-label" data-i18n="language_react">React</dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_advanced"
                       >Fortgeschritten</span
                     >
                     <div class="level" aria-labelledby="react-label">
@@ -236,10 +324,13 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="nodejs-label">Node.js</dt>
+                  <dt id="nodejs-label" data-i18n="language_nodejs">Node.js</dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
-                      >Anf&#228;nger</span
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_beginner"
+                      >Anfänger</span
                     >
                     <div class="level" aria-labelledby="nodejs-label">
                       <div class="active"></div>
@@ -252,10 +343,13 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="deno-label">Deno</dt>
+                  <dt id="deno-label" data-i18n="language_deno">Deno</dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
-                      >Anf&#228;nger</span
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_beginner"
+                      >Anfänger</span
                     >
                     <div class="level" aria-labelledby="deno-label">
                       <div class="active"></div>
@@ -271,12 +365,22 @@
             </div>
 
             <div class="capabilities__design capabilities__section">
-              <h3 class="capabilities__h3">Design</h3>
+              <h3
+                class="capabilities__h3"
+                data-i18n="capabilities_design_headline"
+              >
+                Design
+              </h3>
               <dl>
                 <div class="item">
-                  <dt id="webdesign-label">Web Design</dt>
+                  <dt id="webdesign-label" data-i18n="language_webdesign">
+                    Web Design
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_advanced"
                       >Fortgeschritten</span
                     >
                     <div class="level" aria-labelledby="webdesign-label">
@@ -290,9 +394,14 @@
                   </dd>
                 </div>
                 <div class="item">
-                  <dt id="uidesign-label">UI Design</dt>
+                  <dt id="uidesign-label" data-i18n="language_uidesign">
+                    UI Design
+                  </dt>
                   <dd class="item__table">
-                    <span class="level-description" aria-hidden="true"
+                    <span
+                      class="level-description"
+                      aria-hidden="true"
+                      data-i18n="level_advanced"
                       >Fortgeschritten</span
                     >
                     <div class="level" aria-labelledby="uidesign-label">
@@ -311,14 +420,16 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
-      <nav class="footer__social-media" aria-label="Soziale Medien">
+      <nav class="footer__social-media" aria-label="Social Media">
         <ul class="social-media__list">
           <li>
             <a href="https://t.me/ledo9913" class="footer__link">
               <img
                 src="../img/icons/telegram.svg"
-                alt="Link zu meinem Telegram-Kanal."
+                alt="Link to my Telegram channel."
+                data-i18n-alt="social_telegram"
               />
             </a>
           </li>
@@ -329,7 +440,8 @@
             >
               <img
                 src="../img/icons/discord.svg"
-                alt="Link zu meinem Discord-Server."
+                alt="Link to my Discord server."
+                data-i18n-alt="social_discord"
               />
             </a>
           </li>
@@ -337,7 +449,8 @@
             <a href="https://dribbble.com/ledo93" class="footer__link">
               <img
                 src="../img/icons/dribbble.svg"
-                alt="Link zu meinem Dribbble-Profil."
+                alt="Link to my Dribbble profile."
+                data-i18n-alt="social_dribbble"
               />
             </a>
           </li>
@@ -345,7 +458,8 @@
             <a href="https://github.com/ledo9315" class="footer__link">
               <img
                 src="../img/icons/github.svg"
-                alt="Link zu meinem GitHub-Repository."
+                alt="Link to my GitHub repository."
+                data-i18n-alt="social_github"
               />
             </a>
           </li>
@@ -356,33 +470,53 @@
             >
               <img
                 src="../img/icons/linkedIn.svg"
-                alt="Link zu meinem LinkedIn-Profil"
+                alt="Link to my LinkedIn profile."
+                data-i18n-alt="social_linkedin"
               />
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="footer__legal" aria-label="Rechtliches">
+      <nav class="footer__legal" aria-label="Legal">
         <ul>
           <li>
-            <a href="../pages/impressum.html" class="footer__link">Impressum</a>
-          </li>
-          <li>
-            <a href="../pages/datenschutz.html" class="footer__link"
-              >Datenschutz</a
+            <a
+              href="../pages/impressum.html"
+              class="footer__link"
+              data-i18n="legal_imprint"
+              >Imprint</a
             >
           </li>
           <li>
-            <a href="../pages/dokumentation.html" class="footer__link"
-              >Dokumentation</a
+            <a
+              href="../pages/datenschutz.html"
+              class="footer__link"
+              data-i18n="legal_privacy"
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <a href="../pages/kolophon.html" class="footer__link">Kolophon</a>
+            <a
+              href="../pages/dokumentation.html"
+              class="footer__link"
+              data-i18n="legal_documentation"
+              >Documentation</a
+            >
           </li>
           <li>
-            <a href="../pages/zeitleiste.html" class="footer__link"
-              >Zeitleiste</a
+            <a
+              href="../pages/kolophon.html"
+              class="footer__link"
+              data-i18n="legal_colophon"
+              >Colophon</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/zeitleiste.html"
+              class="footer__link"
+              data-i18n="legal_timeline"
+              >Timeline</a
             >
           </li>
         </ul>

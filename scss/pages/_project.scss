@@ -8,6 +8,11 @@
 
 .project-description__wrapper {
   max-width: 700px;
+
+  aside {
+    display: inline-block;
+    margin-top: 10px;
+  }
 }
 
 .project-description__name {

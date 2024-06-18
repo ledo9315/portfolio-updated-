@@ -1,6 +1,8 @@
 .navigation {
   position: sticky;
   top: 0;
+  //TODO: Bug mit der Transition im Safari beheben
+  -webkit-transition: top 0.3s;
   transition: opacity 0.5s ease, visibility 0.5s ease,
     background-color 0.5s ease;
   z-index: 1009;
@@ -103,6 +105,31 @@
 
 .navigation__list .navigation__item:last-child .navigation__link {
   padding-right: 0;
+}
+
+.navigation__lang {
+  display: flex;
+  row-gap: 0;
+
+  a {
+    padding: 10px 0;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+}
+
+.navigation__separator {
+  margin: 0 5px;
+  color: var(--accent-color);
+  padding: 10px 0;
 }
 
 .header__container {

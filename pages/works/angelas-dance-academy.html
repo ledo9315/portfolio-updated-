@@ -15,26 +15,44 @@
         <a class="navigation__logo" href="./../../index.html">
           <img src="./../../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
         </a>
-        <ul class="navigation__list" role="menubar">
-          <li class="navigation__item" role="none">
+        <ul class="navigation__list">
+          <li class="navigation__item">
             <a
               href="./../../index.html#main"
               class="navigation__link navigation__link--active"
-              role="menuitem"
+              data-i18n="nav_projects"
               >Projekte</a
             >
           </li>
-          <li class="navigation__item" role="none">
+          <li class="navigation__item">
             <a
               href="./../about_me.html"
               class="navigation__link"
-              role="menuitem"
+              data-i18n="nav_about"
               >Über mich</a
             >
           </li>
-          <li class="navigation__item" role="none">
-            <a href="./../contact.html" class="navigation__link" role="menuitem"
+          <li class="navigation__item">
+            <a
+              href="./../contact.html"
+              class="navigation__link"
+              data-i18n="nav_contact"
               >Kontakt</a
+            >
+          </li>
+          <li class="navigation__lang">
+            <a
+              href="../works/angelas-dance-academy.html"
+              class="navigation__link"
+              onclick="changeLanguage('de')"
+              >DE</a
+            >
+            <span class="navigation__separator">|</span>
+            <a
+              href="../works/angelas-dance-academy.html"
+              class="navigation__link"
+              onclick="changeLanguage('en')"
+              >EN</a
             >
           </li>
         </ul>
@@ -50,31 +68,48 @@
       <section class="project-description">
         <div class="container">
           <div class="project-description__wrapper">
-            <h1 class="project-description__name">Angela's Dance Academy</h1>
-            <p class="project-description__description">
+            <h1
+              class="project-description__name"
+              data-i18n="project_name_dance_academy"
+            >
+              Angela's Dance Academy
+            </h1>
+            <p
+              class="project-description__description"
+              data-i18n="project_description_dance_academy"
+            >
               Visuelle Identität, Branding, Logotype, Webseite
             </p>
-            <p class="project-description__text">
+            <p
+              class="project-description__text"
+              data-i18n="project_text_dance_academy"
+            >
               Im Rahmen dieses Projekts habe ich meine Fähigkeiten in HTML und
               CSS genutzt, um eine dynamische und ansprechende Webseite für
               Angela's Dance Academy zu entwickeln. Die Webseite ist darauf
               ausgelegt, die Begeisterung und das Talent für Tanz in einer
               einzigartigen Weise zu präsentieren.
             </p>
-            <p class="project-description__keywords">
+            <p
+              class="project-description__keywords"
+              data-i18n="project_keywords_dance_academy"
+            >
               HTML, CSS, Responsive Design
             </p>
           </div>
         </div>
       </section>
       <section class="project-images">
-        <h2 class="visually-hidden">Bilder Galerie</h2>
+        <h2 class="visually-hidden" data-i18n="project_images_heading">
+          Bilder Galerie
+        </h2>
         <div class="container">
           <div class="project-images__wrapper">
             <div class="project-images__thumbnail">
               <img
                 src="./../../img/project-angelas-dance-academy/thumbnail.webp"
                 alt="Header der Angela's Dance Academy-Website mit dem Logo der Academy und Kontaktinformationen. Die Adresse lautet 12840 Tamiami Trail North Suite 300, Naples, FL, 34110, und die Telefonnummer ist 239.215.2888."
+                data-i18n-alt="project_thumbnail_alt_dance_academy"
               />
             </div>
             <div
@@ -83,24 +118,28 @@
               <img
                 src="./../../img/project-angelas-dance-academy/Frame-1.webp"
                 alt="GIF der Angela's Dance Academy-Website, das die Seite von oben nach unten scrollt und verschiedene Abschnitte zeigt."
+                data-i18n-alt="project_gif_alt_dance_academy"
               />
             </div>
             <div class="project-images__item project-images__item__2">
               <img
                 src="./../../img/project-angelas-dance-academy/Frame-2.webp"
                 alt="Logo der Angela's Dance Academy mit einem stilisierten Buchstaben 'A' und dem Text 'Angela's Dance Academy' daneben."
+                data-i18n-alt="project_logo_alt_dance_academy"
               />
             </div>
             <div class="project-images__item project-images__item__3">
               <img
                 src="./../../img/project-angelas-dance-academy/Frame-3.webp"
                 alt="Screenshot der Angela's Dance Academy-Website auf einem Smartphone. Die mobile Ansicht zeigt die Startseite mit einem Bild von tanzenden Kindern und einer kurzen Beschreibung darunter."
+                data-i18n-alt="project_mobile_screenshot_alt_dance_academy"
               />
             </div>
             <div class="project-images__item project-images__item__4">
               <img
                 src="./../../img/project-angelas-dance-academy/Frame-4.webp"
                 alt="Screenshot der Angela's Dance Academy-Website auf einem Laptop. Die Desktop-Ansicht zeigt die Seite mit den Kursangeboten, einschließlich Bildern von tanzenden Kindern und Kursbeschreibungen."
+                data-i18n-alt="project_desktop_screenshot_alt_dance_academy"
               />
             </div>
           </div>
@@ -109,13 +148,14 @@
     </main>
 
     <footer class="footer">
-      <nav class="footer__social-media" aria-label="Soziale Medien">
+      <nav class="footer__social-media" aria-label="Social Media">
         <ul class="social-media__list">
           <li>
             <a href="https://t.me/ledo9913" class="footer__link">
               <img
                 src="../../img/icons/telegram.svg"
                 alt="Link zu meinem Telegram-Kanal"
+                data-i18n-alt="social_telegram"
               />
             </a>
           </li>
@@ -127,6 +167,7 @@
               <img
                 src="../../img/icons/discord.svg"
                 alt="Link zu meinem Discord-Server"
+                data-i18n-alt="social_discord"
               />
             </a>
           </li>
@@ -135,6 +176,7 @@
               <img
                 src="../../img/icons/dribbble.svg"
                 alt="Link zu meinem Dribbble-Profil"
+                data-i18n-alt="social_dribbble"
               />
             </a>
           </li>
@@ -143,6 +185,7 @@
               <img
                 src="../../img/icons/github.svg"
                 alt="Link zu meinem Github-Profil"
+                data-i18n-alt="social_github"
               />
             </a>
           </li>
@@ -154,41 +197,58 @@
               <img
                 src="../../img/icons/linkedIn.svg"
                 alt="Link zu meinem LinkedIn-Profil"
+                data-i18n-alt="social_linkedin"
               />
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="footer__legal" aria-label="Rechtliches">
+      <nav class="footer__legal" aria-label="Legal">
         <ul>
           <li>
-            <a href="../../pages/impressum.html" class="footer__link"
+            <a
+              href="../../pages/impressum.html"
+              class="footer__link"
+              data-i18n="legal_imprint"
               >Impressum</a
             >
           </li>
           <li>
-            <a href="../../pages/datenschutz.html" class="footer__link"
+            <a
+              href="../../pages/datenschutz.html"
+              class="footer__link"
+              data-i18n="legal_privacy"
               >Datenschutz</a
             >
           </li>
           <li>
-            <a href="../../pages/dokumentation.html" class="footer__link"
+            <a
+              href="../../pages/dokumentation.html"
+              class="footer__link"
+              data-i18n="legal_documentation"
               >Dokumentation</a
             >
           </li>
           <li>
-            <a href="../../pages/kolophon.html" class="footer__link"
+            <a
+              href="../../pages/kolophon.html"
+              class="footer__link"
+              data-i18n="legal_colophon"
               >Kolophon</a
             >
           </li>
           <li>
-            <a href="../../pages/zeitleiste.html" class="footer__link"
+            <a
+              href="../../pages/zeitleiste.html"
+              class="footer__link"
+              data-i18n="legal_timeline"
               >Zeitleiste</a
             >
           </li>
         </ul>
       </nav>
     </footer>
+
     <script src="./../../js/main.js"></script>
   </body>
 </html>

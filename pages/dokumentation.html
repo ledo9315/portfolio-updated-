@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dokumentation</title>
+    <title data-i18n="documentation_title">Dokumentation</title>
     <link rel="stylesheet" href="../css/main.min.css" />
     <noscript>
       <link rel="stylesheet" href="../css/noscript.css" />
@@ -15,17 +15,45 @@
         <a class="navigation__logo" href="../index.html">
           <img src="../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
         </a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="../index.html#main" class="navigation__link">Projekte</a>
-          </li>
-          <li class="navigation__item">
-            <a href="./about_me.html" class="navigation__link"
-              >&#220;ber mich</a
+        <ul class="navigation__list" role="menubar">
+          <li class="navigation__item" role="none">
+            <a
+              href="../index.html#main"
+              class="navigation__link"
+              data-i18n="nav_projects"
+              >Projekte</a
             >
           </li>
-          <li class="navigation__item">
-            <a href="./contact.html" class="navigation__link">Kontakt</a>
+          <li class="navigation__item" role="none">
+            <a
+              href="./about_me.html"
+              class="navigation__link"
+              data-i18n="nav_about"
+              >Über mich</a
+            >
+          </li>
+          <li class="navigation__item" role="none">
+            <a
+              href="./contact.html"
+              class="navigation__link navigation__link--active"
+              data-i18n="nav_contact"
+              >Kontakt</a
+            >
+          </li>
+          <li class="navigation__lang">
+            <a
+              href="./dokumentation.html"
+              class="navigation__link"
+              onclick="changeLanguage('de')"
+              >DE</a
+            >
+            <span class="navigation__separator">|</span>
+            <a
+              href="./dokumentation.html"
+              class="navigation__link"
+              onclick="changeLanguage('en')"
+              >EN</a
+            >
           </li>
         </ul>
         <button class="navigation__hamburger" aria-label="Hauptmenü">
@@ -45,57 +73,80 @@
     <main class="documentation__main">
       <div class="container">
         <section class="documentation__section" aria-labelledby="idea-concept">
-          <h2 class="documentation__section-title" id="idea-concept">
+          <h2
+            class="documentation__section-title"
+            id="idea-concept"
+            data-i18n="documentation_idea_concept_title"
+          >
             Idee und Grafisches Konzept
           </h2>
-          <p class="documentation__text">
-            Meine Webseite f&#252;r wurde entwickelt, um die F&#228;higkeiten
-            und Projekte als UI/UX-Designer professionell und ansprechend zu
-            pr&#228;sentieren. Das Hauptziel war es, eine klare,
-            benutzerfreundliche und &#228;sthetisch ansprechende Plattform zu
-            schaffen, die die Kreativit&#228;t und Kompetenz im Bereich
-            Webdesign widerspiegelt. Die Gestaltung sollte modern,
-            minimalistisch und funktional sein, um den Fokus auf die Inhalte zu
-            legen und eine intuitive Navigation zu erm&#246;glichen.
+          <p
+            class="documentation__text"
+            data-i18n="documentation_idea_concept_text"
+          >
+            Meine Webseite wurde entwickelt, um die Fähigkeiten und Projekte als
+            UI/UX-Designer professionell und ansprechend zu präsentieren. Das
+            Hauptziel war es, eine klare, benutzerfreundliche und ästhetisch
+            ansprechende Plattform zu schaffen, die die Kreativität und
+            Kompetenz im Bereich Webdesign widerspiegelt. Die Gestaltung sollte
+            modern, minimalistisch und funktional sein, um den Fokus auf die
+            Inhalte zu legen und eine intuitive Navigation zu ermöglichen.
           </p>
         </section>
         <section class="documentation__section" aria-labelledby="styletiles">
-          <h2 class="documentation__section-title" id="styletiles">
+          <h2
+            class="documentation__section-title"
+            id="styletiles"
+            data-i18n="documentation_styletiles_title"
+          >
             Styletiles
           </h2>
-          <p class="documentation__text">
-            <strong>Auswahl des Styletiles mit Begr&#252;ndung:</strong>
-            F&#252;r das Styletile haben wir eine Kombination aus dunklen und
-            hellen Farben gew&#228;hlt, um einen starken visuellen Kontrast zu
-            erzeugen. Dies hilft, wichtige Informationen hervorzuheben und die
-            Lesbarkeit zu verbessern. Die Hauptfarben sind ein tiefes Schwarz
-            (#111111) f&#252;r den Hintergrund, begleitet von Akzenten in
-            Wei&#223; (#eee9e1) und kr&#228;ftigen Farben wie Gr&#252;n
-            (#90d491) und Lila (#a196df) f&#252;r Text und
+          <p
+            class="documentation__text"
+            data-i18n="documentation_styletiles_selection_text"
+          >
+            <strong>Auswahl des Styletiles mit Begründung:</strong>
+            Für das Styletile haben wir eine Kombination aus dunklen und hellen
+            Farben gewählt, um einen starken visuellen Kontrast zu erzeugen.
+            Dies hilft, wichtige Informationen hervorzuheben und die Lesbarkeit
+            zu verbessern. Die Hauptfarben sind ein tiefes Schwarz (#111111) für
+            den Hintergrund, begleitet von Akzenten in Weiß (#eee9e1) und
+            kräftigen Farben wie Grün (#90d491) und Lila (#a196df) für Text und
             Call-to-Action-Elemente. Diese Farbauswahl spiegelt Leonids kreative
-            und dynamische Pers&#246;nlichkeit wider.
+            und dynamische Persönlichkeit wider.
           </p>
-          <p class="documentation__text">
+          <p
+            class="documentation__text"
+            data-i18n="documentation_styletiles_changes_text"
+          >
             <strong>
-              Ver&#228;nderungen gegen&#252;ber dem ersten Entwurfsschritt mit
-              Begr&#252;ndung:
+              Veränderungen gegenüber dem ersten Entwurfsschritt mit Begründung:
             </strong>
             Im ersten Entwurf haben wir mehr Farben und verschiedene
-            Schriftarten ausprobiert, was jedoch zu einem &#252;berladenen und
-            unruhigen Erscheinungsbild f&#252;hrte. Daher haben wir die
-            Farbpalette vereinfacht und die Anzahl der verwendeten Schriftarten
-            auf zwei reduziert, um ein koh&#228;renteres und professionelleres
-            Design zu erreichen.
+            Schriftarten ausprobiert, was jedoch zu einem überladenen und
+            unruhigen Erscheinungsbild führte. Daher haben wir die Farbpalette
+            vereinfacht und die Anzahl der verwendeten Schriftarten auf zwei
+            reduziert, um ein kohärenteres und professionelleres Design zu
+            erreichen.
           </p>
 
           <aside>
-            <a target="_blank" href="./../img/style-tiles/Style-Tile-1.webp"
+            <a
+              target="_blank"
+              href="./../img/style-tiles/Style-Tile-1.webp"
+              data-i18n="documentation_styletile_link_1"
               >Link zum ersten Style-Tile</a
             >
-            <a target="_blank" href="./../img/style-tiles/Style-Tile-2.webp"
+            <a
+              target="_blank"
+              href="./../img/style-tiles/Style-Tile-2.webp"
+              data-i18n="documentation_styletile_link_2"
               >Link zum zweiten Style-Tile</a
             >
-            <a target="_blank" href="./../img/style-tiles/Style-Tile-3.webp"
+            <a
+              target="_blank"
+              href="./../img/style-tiles/Style-Tile-3.webp"
+              data-i18n="documentation_styletile_link_3"
               >Link zum dritten Style-Tile</a
             >
           </aside>
@@ -107,82 +158,95 @@
           <h2
             class="documentation__section-title"
             id="typography-colors-layout"
+            data-i18n="documentation_typography_colors_layout_title"
           >
             Typografie, Farben, Layout und Raster
           </h2>
-          <p class="documentation__text">
-            <strong>&#220;berlegungen zur Typografie:</strong> Die Typografie
-            spielt eine entscheidende Rolle bei der Gestaltung unserer Webseite.
-            Wir haben zwei Hauptschriftarten gew&#228;hlt: &#8222;HANSON&#8220;
-            f&#252;r &#220;berschriften und &#8222;Montserrat&#8220; f&#252;r
-            Flie&#223;texte. Diese Kombination sorgt f&#252;r eine klare
-            Hierarchie und gute Lesbarkeit. &#8222;HANSON&#8220; vermittelt
-            St&#228;rke und Ausdruckskraft, w&#228;hrend
-            &#8222;Montserrat&#8220; durch seine Schlichtheit und Vielseitigkeit
-            besticht.
+          <p
+            class="documentation__text"
+            data-i18n="documentation_typography_text"
+          >
+            <strong>Überlegungen zur Typografie:</strong> Die Typografie spielt
+            eine entscheidende Rolle bei der Gestaltung unserer Webseite. Wir
+            haben zwei Hauptschriftarten gewählt: „HANSON“ für Überschriften und
+            „Montserrat“ für Fließtexte. Diese Kombination sorgt für eine klare
+            Hierarchie und gute Lesbarkeit. „HANSON“ vermittelt Stärke und
+            Ausdruckskraft, während „Montserrat“ durch seine Schlichtheit und
+            Vielseitigkeit besticht.
           </p>
 
-          <p class="documentation__text">
-            <strong>&#220;berlegungen zu Farben:</strong> Die Farben wurden
-            sorgf&#228;ltig ausgew&#228;hlt, um Kontraste zu schaffen und
-            wichtige Elemente hervorzuheben. Schwarz als Hintergrundfarbe
-            verleiht der Seite Tiefe und Professionalit&#228;t. Die Akzentfarben
-            Gr&#252;n und Lila sorgen f&#252;r frische und kreative Akzente.
-            Wei&#223; wird verwendet, um Texte und wichtige Informationen klar
-            und lesbar zu machen. Die Farben wurden au&#223;erdem mit
-            Contrast-Grid gepr&#252;ft, um sicherzustellen, dass sie ausreichend
-            Kontrast f&#252;r eine gute Lesbarkeit bieten. Das Contrast-Grid
-            kann
-            <a id="documentation__link-color" href="https://ibb.co/2cbGg3f"
+          <p class="documentation__text" data-i18n="documentation_colors_text">
+            <strong>Überlegungen zu Farben:</strong> Die Farben wurden
+            sorgfältig ausgewählt, um Kontraste zu schaffen und wichtige
+            Elemente hervorzuheben. Schwarz als Hintergrundfarbe verleiht der
+            Seite Tiefe und Professionalität. Die Akzentfarben Grün und Lila
+            sorgen für frische und kreative Akzente. Weiß wird verwendet, um
+            Texte und wichtige Informationen klar und lesbar zu machen. Die
+            Farben wurden außerdem mit Contrast-Grid geprüft, um
+            sicherzustellen, dass sie ausreichend Kontrast für eine gute
+            Lesbarkeit bieten. Das Contrast-Grid kann
+            <a
+              id="documentation__link-color"
+              href="https://ibb.co/2cbGg3f"
+              data-i18n="documentation_contrast_grid_link"
               >hier</a
             >
             eingesehen werden.
           </p>
 
-          <p class="documentation__text">
-            <strong>&#220;berlegungen zu Layout und Raster:</strong> Das Layout
-            der Webseite basiert auf einem flexiblen Grid-System, das eine
-            einfache Anpassung an verschiedene Bildschirmgr&#246;&#223;en
-            erm&#246;glicht. Das Raster sorgt f&#252;r eine klare Struktur und
-            Ordnung, was die Benutzerf&#252;hrung erleichtert. Die Anordnung der
-            Elemente folgt einem visuellen Fluss, der den Nutzer intuitiv durch
-            die Inhalte f&#252;hrt.
+          <p
+            class="documentation__text"
+            data-i18n="documentation_layout_grid_text"
+          >
+            <strong>Überlegungen zu Layout und Raster:</strong> Das Layout der
+            Webseite basiert auf einem flexiblen Grid-System, das eine einfache
+            Anpassung an verschiedene Bildschirmgrößen ermöglicht. Das Raster
+            sorgt für eine klare Struktur und Ordnung, was die Benutzerführung
+            erleichtert. Die Anordnung der Elemente folgt einem visuellen Fluss,
+            der den Nutzer intuitiv durch die Inhalte führt.
           </p>
         </section>
         <section
           class="documentation__section"
           aria-labelledby="responsive-webdesign"
         >
-          <h2 class="documentation__section-title" id="responsive-webdesign">
+          <h2
+            class="documentation__section-title"
+            id="responsive-webdesign"
+            data-i18n="documentation_responsive_webdesign_title"
+          >
             Responsive Webdesign
           </h2>
-          <p class="documentation__text">
+          <p
+            class="documentation__text"
+            data-i18n="documentation_responsive_webdesign_text"
+          >
             <strong>
-              &#220;berlegungen zum Responsive Webdesign und dessen Umsetzung:
+              Überlegungen zum Responsive Webdesign und dessen Umsetzung:
             </strong>
             Responsive Webdesign war von Anfang an ein zentraler Aspekt unserer
             Gestaltung. Wir haben sichergestellt, dass die Webseite auf
-            verschiedenen Ger&#228;ten und Bildschirmgr&#246;&#223;en gut
-            funktioniert. Das Design ist &#8222;mobile-first&#8220; gestaltet,
-            was bedeutet, dass die mobile Version als Basis dient und f&#252;r
-            gr&#246;&#223;ere Bildschirme erweitert wird. Media Queries wurden
-            verwendet, um Layout-Anpassungen je nach Bildschirmgr&#246;&#223;e
-            vorzunehmen. Elemente wie Navigation, Bilder und Textbl&#246;cke
-            passen sich dynamisch an, um eine optimale Benutzererfahrung zu
-            gew&#228;hrleisten.
+            verschiedenen Geräten und Bildschirmgrößen gut funktioniert. Das
+            Design ist „mobile-first“ gestaltet, was bedeutet, dass die mobile
+            Version als Basis dient und für größere Bildschirme erweitert wird.
+            Media Queries wurden verwendet, um Layout-Anpassungen je nach
+            Bildschirmgröße vorzunehmen. Elemente wie Navigation, Bilder und
+            Textblöcke passen sich dynamisch an, um eine optimale
+            Benutzererfahrung zu gewährleisten.
           </p>
         </section>
       </div>
     </main>
 
     <footer class="footer">
-      <nav class="footer__social-media" aria-label="Soziale Medien">
+      <nav class="footer__social-media" aria-label="Social Media">
         <ul class="social-media__list">
           <li>
             <a href="https://t.me/ledo9913" class="footer__link">
               <img
                 src="../img/icons/telegram.svg"
-                alt="Link zu meinem Telegram-Kanal."
+                alt="Link to my Telegram channel."
+                data-i18n-alt="social_telegram"
               />
             </a>
           </li>
@@ -193,7 +257,8 @@
             >
               <img
                 src="../img/icons/discord.svg"
-                alt="Link zu meinem Discord-Server."
+                alt="Link to my Discord server."
+                data-i18n-alt="social_discord"
               />
             </a>
           </li>
@@ -201,7 +266,8 @@
             <a href="https://dribbble.com/ledo93" class="footer__link">
               <img
                 src="../img/icons/dribbble.svg"
-                alt="Link zu meinem Dribbble-Profil."
+                alt="Link to my Dribbble profile."
+                data-i18n-alt="social_dribbble"
               />
             </a>
           </li>
@@ -209,7 +275,8 @@
             <a href="https://github.com/ledo9315" class="footer__link">
               <img
                 src="../img/icons/github.svg"
-                alt="Link zu meinem GitHub-Repository."
+                alt="Link to my GitHub repository."
+                data-i18n-alt="social_github"
               />
             </a>
           </li>
@@ -220,33 +287,53 @@
             >
               <img
                 src="../img/icons/linkedIn.svg"
-                alt="Link zu meinem LinkedIn-Profil"
+                alt="Link to my LinkedIn profile."
+                data-i18n-alt="social_linkedin"
               />
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="footer__legal" aria-label="Rechtliches">
+      <nav class="footer__legal" aria-label="Legal">
         <ul>
           <li>
-            <a href="../pages/impressum.html" class="footer__link">Impressum</a>
-          </li>
-          <li>
-            <a href="../pages/datenschutz.html" class="footer__link"
-              >Datenschutz</a
+            <a
+              href="../pages/impressum.html"
+              class="footer__link"
+              data-i18n="legal_imprint"
+              >Imprint</a
             >
           </li>
           <li>
-            <a href="../pages/dokumentation.html" class="footer__link"
-              >Dokumentation</a
+            <a
+              href="../pages/datenschutz.html"
+              class="footer__link"
+              data-i18n="legal_privacy"
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <a href="../pages/kolophon.html" class="footer__link">Kolophon</a>
+            <a
+              href="../pages/dokumentation.html"
+              class="footer__link"
+              data-i18n="legal_documentation"
+              >Documentation</a
+            >
           </li>
           <li>
-            <a href="../pages/zeitleiste.html" class="footer__link"
-              >Zeitleiste</a
+            <a
+              href="../pages/kolophon.html"
+              class="footer__link"
+              data-i18n="legal_colophon"
+              >Colophon</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/zeitleiste.html"
+              class="footer__link"
+              data-i18n="legal_timeline"
+              >Timeline</a
             >
           </li>
         </ul>

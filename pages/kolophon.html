@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kolophon</title>
+    <title data-i18n="kolophon_title">Kolophon</title>
     <link rel="stylesheet" href="../css/main.min.css" />
     <noscript>
       <link rel="stylesheet" href="../css/noscript.css" />
@@ -20,18 +20,39 @@
             <a
               href="../index.html#main"
               class="navigation__link"
-              role="menuitem"
+              data-i18n="nav_projects"
               >Projekte</a
             >
           </li>
           <li class="navigation__item" role="none">
-            <a href="./about_me.html" class="navigation__link" role="menuitem"
-              >&#220;ber mich</a
+            <a
+              href="./about_me.html"
+              class="navigation__link"
+              data-i18n="nav_about"
+              >Über mich</a
             >
           </li>
           <li class="navigation__item" role="none">
-            <a href="./contact.html" class="navigation__link" role="menuitem"
+            <a
+              href="./contact.html"
+              class="navigation__link navigation__link--active"
+              data-i18n="nav_contact"
               >Kontakt</a
+            >
+          </li>
+          <li class="navigation__lang">
+            <a
+              href="./kolophon.html"
+              class="navigation__link"
+              onclick="changeLanguage('de')"
+              >DE</a
+            >
+            <span class="navigation__separator">|</span>
+            <a
+              href="./kolophon.html"
+              class="navigation__link"
+              onclick="changeLanguage('en')"
+              >EN</a
             >
           </li>
         </ul>
@@ -45,7 +66,7 @@
 
     <header class="kolophon__header">
       <div class="container">
-        <h1 class="kolophon__title">Kolophon</h1>
+        <h1 class="kolophon__title" data-i18n="kolophon_title">Kolophon</h1>
       </div>
     </header>
 
@@ -55,22 +76,53 @@
           class="kolophon__section kolophon__section--project-info"
           aria-labelledby="project-info"
         >
-          <h2 class="kolophon__section-title" id="project-info">Projektname</h2>
-          <p class="kolophon__text">Leonid Domahalskyy Portfolio</p>
+          <h2
+            class="kolophon__section-title"
+            id="project-info"
+            data-i18n="kolophon_project_info_title"
+          >
+            Projektname
+          </h2>
+          <p class="kolophon__text" data-i18n="kolophon_project_info_text">
+            Leonid Domahalskyy Portfolio
+          </p>
         </section>
         <section
           class="kolophon__section kolophon__section--texts"
           aria-labelledby="texts"
         >
-          <h2 class="kolophon__section-title" id="texts">Texte</h2>
+          <h2
+            class="kolophon__section-title"
+            id="texts"
+            data-i18n="kolophon_texts_title"
+          >
+            Texte
+          </h2>
           <dl class="kolophon__list">
             <div class="kolophon__list-item">
-              <dt class="kolophon__term">Projektbeschreibung</dt>
-              <dd class="kolophon__definition">selbsterstellt</dd>
+              <dt
+                class="kolophon__term"
+                data-i18n="kolophon_project_description"
+              >
+                Projektbeschreibung
+              </dt>
+              <dd
+                class="kolophon__definition"
+                data-i18n="kolophon_self_created"
+              >
+                selbsterstellt
+              </dd>
             </div>
             <div class="kolophon__list-item">
-              <dt class="kolophon__term">Biographie</dt>
-              <dd class="kolophon__definition">selbsterstellt</dd>
+              <dt class="kolophon__term" data-i18n="kolophon_biography">
+                Biographie
+              </dt>
+              <dd
+                class="kolophon__definition"
+                data-i18n="kolophon_self_created"
+              >
+                selbsterstellt
+              </dd>
             </div>
           </dl>
         </section>
@@ -78,22 +130,40 @@
           class="kolophon__section kolophon__section--media"
           aria-labelledby="media"
         >
-          <h2 class="kolophon__section-title" id="media">Abbildungen etc</h2>
+          <h2
+            class="kolophon__section-title"
+            id="media"
+            data-i18n="kolophon_media_title"
+          >
+            Abbildungen etc
+          </h2>
           <dl class="kolophon__list">
             <div class="kolophon__list-item">
-              <dt class="kolophon__term">Video</dt>
-              <dd class="kolophon__definition">
+              <dt class="kolophon__term" data-i18n="kolophon_video">Video</dt>
+              <dd
+                class="kolophon__definition"
+                data-i18n="kolophon_video_source"
+              >
                 Von
                 <a
                   href="https://wannathis.one/products/loops-3d-abstract-animation-kit"
+                  data-i18n="kolophon_video_link"
                   >Wannathis: Loops 3D Abstract Animation Kit</a
                 >
               </dd>
             </div>
             <div class="kolophon__list-item">
-              <dt class="kolophon__term">Icons</dt>
-              <dd class="kolophon__definition">
-                Von <a href="https://www.flaticon.com/">Flaticon</a>
+              <dt class="kolophon__term" data-i18n="kolophon_icons">Icons</dt>
+              <dd
+                class="kolophon__definition"
+                data-i18n="kolophon_icons_source"
+              >
+                Von
+                <a
+                  href="https://www.flaticon.com/"
+                  data-i18n="kolophon_icons_link"
+                  >Flaticon</a
+                >
               </dd>
             </div>
           </dl>
@@ -102,19 +172,35 @@
           class="kolophon__section kolophon__section--fonts"
           aria-labelledby="fonts"
         >
-          <h2 class="kolophon__section-title" id="fonts">Schriften</h2>
+          <h2
+            class="kolophon__section-title"
+            id="fonts"
+            data-i18n="kolophon_fonts_title"
+          >
+            Schriften
+          </h2>
           <dl class="kolophon__list">
             <div class="kolophon__list-item">
-              <dt class="kolophon__term">Montserrat</dt>
-              <dd class="kolophon__definition">
+              <dt class="kolophon__term" data-i18n="kolophon_font_montserrat">
+                Montserrat
+              </dt>
+              <dd
+                class="kolophon__definition"
+                data-i18n="kolophon_font_link_montserrat"
+              >
                 <a href="https://fonts.google.com/specimen/Montserrat"
                   >https://fonts.google.com/<wbr />/Montserrat</a
                 >
               </dd>
             </div>
             <div class="kolophon__list-item">
-              <dt class="kolophon__term">HANSON</dt>
-              <dd class="kolophon__definition">
+              <dt class="kolophon__term" data-i18n="kolophon_font_hanson">
+                HANSON
+              </dt>
+              <dd
+                class="kolophon__definition"
+                data-i18n="kolophon_font_link_hanson"
+              >
                 <a href="https://befonts.com/hanson-bold-font.html"
                   >https://befonts.com/hanson-bold-font.html</a
                 >
@@ -126,13 +212,27 @@
           class="kolophon__section kolophon__section--inspiration"
           aria-labelledby="inspiration"
         >
-          <h2 class="kolophon__section-title" id="inspiration">Inspiration</h2>
+          <h2
+            class="kolophon__section-title"
+            id="inspiration"
+            data-i18n="kolophon_inspiration_title"
+          >
+            Inspiration
+          </h2>
           <ul class="kolophon__list">
             <li class="kolophon__list-item">
-              <a href="https://tomashustoles.cz/">Tomas Hustoles</a>
+              <a
+                href="https://tomashustoles.cz/"
+                data-i18n="kolophon_inspiration_link_1"
+                >Tomas Hustoles</a
+              >
             </li>
             <li class="kolophon__list-item">
-              <a href="https://wannathis.one/">Wannathis</a>
+              <a
+                href="https://wannathis.one/"
+                data-i18n="kolophon_inspiration_link_2"
+                >Wannathis</a
+              >
             </li>
           </ul>
         </section>
@@ -140,13 +240,14 @@
     </main>
 
     <footer class="footer">
-      <nav class="footer__social-media" aria-label="Soziale Medien">
+      <nav class="footer__social-media" aria-label="Social Media">
         <ul class="social-media__list">
           <li>
             <a href="https://t.me/ledo9913" class="footer__link">
               <img
                 src="../img/icons/telegram.svg"
-                alt="Link zu meinem Telegram-Kanal."
+                alt="Link to my Telegram channel."
+                data-i18n-alt="social_telegram"
               />
             </a>
           </li>
@@ -157,7 +258,8 @@
             >
               <img
                 src="../img/icons/discord.svg"
-                alt="Link zu meinem Discord-Server."
+                alt="Link to my Discord server."
+                data-i18n-alt="social_discord"
               />
             </a>
           </li>
@@ -165,7 +267,8 @@
             <a href="https://dribbble.com/ledo93" class="footer__link">
               <img
                 src="../img/icons/dribbble.svg"
-                alt="Link zu meinem Dribbble-Profil."
+                alt="Link to my Dribbble profile."
+                data-i18n-alt="social_dribbble"
               />
             </a>
           </li>
@@ -173,7 +276,8 @@
             <a href="https://github.com/ledo9315" class="footer__link">
               <img
                 src="../img/icons/github.svg"
-                alt="Link zu meinem GitHub-Repository."
+                alt="Link to my GitHub repository."
+                data-i18n-alt="social_github"
               />
             </a>
           </li>
@@ -184,33 +288,53 @@
             >
               <img
                 src="../img/icons/linkedIn.svg"
-                alt="Link zu meinem LinkedIn-Profil"
+                alt="Link to my LinkedIn profile."
+                data-i18n-alt="social_linkedin"
               />
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="footer__legal" aria-label="Rechtliches">
+      <nav class="footer__legal" aria-label="Legal">
         <ul>
           <li>
-            <a href="../pages/impressum.html" class="footer__link">Impressum</a>
-          </li>
-          <li>
-            <a href="../pages/datenschutz.html" class="footer__link"
-              >Datenschutz</a
+            <a
+              href="../pages/impressum.html"
+              class="footer__link"
+              data-i18n="legal_imprint"
+              >Imprint</a
             >
           </li>
           <li>
-            <a href="../pages/dokumentation.html" class="footer__link"
-              >Dokumentation</a
+            <a
+              href="../pages/datenschutz.html"
+              class="footer__link"
+              data-i18n="legal_privacy"
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <a href="../pages/kolophon.html" class="footer__link">Kolophon</a>
+            <a
+              href="../pages/dokumentation.html"
+              class="footer__link"
+              data-i18n="legal_documentation"
+              >Documentation</a
+            >
           </li>
           <li>
-            <a href="../pages/zeitleiste.html" class="footer__link"
-              >Zeitleiste</a
+            <a
+              href="../pages/kolophon.html"
+              class="footer__link"
+              data-i18n="legal_colophon"
+              >Colophon</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/zeitleiste.html"
+              class="footer__link"
+              data-i18n="legal_timeline"
+              >Timeline</a
             >
           </li>
         </ul>

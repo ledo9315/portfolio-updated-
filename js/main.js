@@ -90,3 +90,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// *********** Language Switcher ***********
+
+let path = window.location.pathname;
+let languageFilePath = "";
+
+if (path.includes("index.html")) {
+  languageFilePath = "";
+} else if (path.includes("works")) {
+  languageFilePath = "../../";
+} else {
+  languageFilePath = "../";
+}
+
+// Holen einer Sprachdatei
+async function fetchLanguageData(lang) {
+  const response = await fetch(`${languageFilePath}languages/${lang}.json`);
+  console.log(response);
+  return response.json();
+}
+
+// Event um die Sprache zu wechseln
+function changeLanguage(lang) {
+  localStorage.setItem("language", lang);
+
+  fetchLanguageData(lang).then((languageData) => {
+    updateContent(languageData);
+  });
+}
+
+// Aktualisieren des Inhalts
+function updateContent(languageData) {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    // Alle Elemente mit data-i18n Attribut
+    const key = element.getAttribute("data-i18n"); // z.B. "title"
+    element.innerHTML = languageData[key]; // z.B. "Hallo Welt"
+  });
+}
+
+// Initiales Event um entweder die zuvor gewählte Sprache zu setzen
+// oder Deutsch als Fallback
+document.addEventListener("DOMContentLoaded", async () => {
+  const userPreferredLanguage = localStorage.getItem("language") || "de";
+  const languageData = await fetchLanguageData(userPreferredLanguage);
+  updateContent(languageData);
+});

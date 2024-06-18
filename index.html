@@ -30,16 +30,43 @@
         </a>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#main" class="navigation__link--active">Projekte</a>
+            <a
+              href="#main"
+              class="navigation__link--active"
+              data-i18n="nav_projects"
+              >Projekte</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="./pages/about_me.html" class="navigation__link"
+            <a
+              href="./pages/about_me.html"
+              class="navigation__link"
+              data-i18n="nav_about"
               >&#220;ber mich</a
             >
           </li>
-
           <li class="navigation__item">
-            <a href="./pages/contact.html" class="navigation__link">Kontakt</a>
+            <a
+              href="./pages/contact.html"
+              class="navigation__link"
+              data-i18n="nav_contact"
+              >Kontakt</a
+            >
+          </li>
+          <li class="navigation__lang">
+            <a
+              href="./index.html"
+              class="navigation__link"
+              onclick="changeLanguage('de')"
+              >DE</a
+            >
+            <span class="navigation__separator">|</span>
+            <a
+              href="./index.html"
+              class="navigation__link"
+              onclick="changeLanguage('en')"
+              >EN</a
+            >
           </li>
         </ul>
         <button class="navigation__hamburger" aria-label="Hauptmenü">
@@ -64,7 +91,7 @@
             <img src="./img/fallback-image.webp" alt="Hintergrundvideo" />
           </video>
           <div class="header__headline-wrapper">
-            <div class="header__title">
+            <div class="header__title" data-i18n="header_title">
               Hey<br />
               ich bin Leonid
             </div>
@@ -105,7 +132,13 @@
           id="projects"
           aria-labelledby="projects-title"
         >
-          <h2 class="projects__title" id="projects-title">Projekte</h2>
+          <h2
+            class="projects__title"
+            id="projects-title"
+            data-i18n="projects_title"
+          >
+            Projekte
+          </h2>
           <ul class="projects__list">
             <li class="projects__project">
               <figure>
@@ -179,13 +212,14 @@
     </main>
 
     <footer class="footer">
-      <nav class="footer__social-media" aria-label="Soziale Medien">
+      <nav class="footer__social-media" aria-label="Social Media">
         <ul class="social-media__list">
           <li>
             <a href="https://t.me/ledo9913" class="footer__link">
               <img
                 src="./img/icons/telegram.svg"
-                alt="Link zu meinem Telegram-Kanal"
+                alt="Link to my Telegram channel."
+                data-i18n-alt="social_telegram"
               />
             </a>
           </li>
@@ -196,7 +230,8 @@
             >
               <img
                 src="./img/icons/discord.svg"
-                alt="Link zu meinem Discord-Server"
+                alt="Link to my Discord server."
+                data-i18n-alt="social_discord"
               />
             </a>
           </li>
@@ -204,7 +239,8 @@
             <a href="https://dribbble.com/ledo93" class="footer__link">
               <img
                 src="./img/icons/dribbble.svg"
-                alt="Link zu meinem Dribbble-Profil"
+                alt="Link to my Dribbble profile."
+                data-i18n-alt="social_dribbble"
               />
             </a>
           </li>
@@ -212,7 +248,8 @@
             <a href="https://github.com/ledo9315" class="footer__link">
               <img
                 src="./img/icons/github.svg"
-                alt="Link zu meinem Github-Profil"
+                alt="Link to my GitHub repository."
+                data-i18n-alt="social_github"
               />
             </a>
           </li>
@@ -223,33 +260,53 @@
             >
               <img
                 src="./img/icons/linkedIn.svg"
-                alt="Link zu meinem LinkedIn Profil"
+                alt="Link to my LinkedIn profile."
+                data-i18n-alt="social_linkedin"
               />
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="footer__legal" aria-label="Rechtliches">
+      <nav class="footer__legal" aria-label="Legal">
         <ul>
           <li>
-            <a href="./pages/impressum.html" class="footer__link">Impressum</a>
-          </li>
-          <li>
-            <a href="./pages/datenschutz.html" class="footer__link"
-              >Datenschutz</a
+            <a
+              href="./pages/impressum.html"
+              class="footer__link"
+              data-i18n="legal_imprint"
+              >Imprint</a
             >
           </li>
           <li>
-            <a href="./pages/dokumentation.html" class="footer__link"
-              >Dokumentation</a
+            <a
+              href="./pages/datenschutz.html"
+              class="footer__link"
+              data-i18n="legal_privacy"
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <a href="./pages/kolophon.html" class="footer__link">Kolophon</a>
+            <a
+              href="./pages/dokumentation.html"
+              class="footer__link"
+              data-i18n="legal_documentation"
+              >Documentation</a
+            >
           </li>
           <li>
-            <a href="./pages/zeitleiste.html" class="footer__link"
-              >Zeitleiste</a
+            <a
+              href="./pages/kolophon.html"
+              class="footer__link"
+              data-i18n="legal_colophon"
+              >Colophon</a
+            >
+          </li>
+          <li>
+            <a
+              href="./pages/zeitleiste.html"
+              class="footer__link"
+              data-i18n="legal_timeline"
+              >Timeline</a
             >
           </li>
         </ul>

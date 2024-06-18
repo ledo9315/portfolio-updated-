@@ -539,6 +539,27 @@ pre {
   padding-right: 0;
 }
 
+.navigation__lang {
+  display: flex;
+  row-gap: 0;
+}
+.navigation__lang a {
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+.navigation__lang a:hover {
+  color: var(--accent-color);
+}
+.navigation__lang a:active {
+  transform: translateY(1px);
+}
+
+.navigation__separator {
+  margin: 0 5px;
+  color: var(--accent-color);
+  padding: 10px 0;
+}
+
 .header__container {
   display: grid;
   align-items: center;
@@ -1081,6 +1102,10 @@ pre {
 .project-description__wrapper {
   max-width: 700px;
 }
+.project-description__wrapper aside {
+  display: inline-block;
+  margin-top: 10px;
+}
 
 .project-description__name {
   font-family: var(--font-hanson);
@@ -1366,7 +1391,6 @@ address {
   display: inline-block;
   margin-top: 30px;
   padding: 10px 20px;
-  background-color: var(--background-color-1);
   border-left: 5px solid var(--accent-color);
 }
 .documentation__section aside a {

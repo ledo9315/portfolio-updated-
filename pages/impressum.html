@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datenschutzerkl&#228;rung</title>
+    <title data-i18n="imprint_title">Impressum</title>
     <link rel="stylesheet" href="../css/main.min.css" />
     <noscript>
       <link rel="stylesheet" href="../css/noscript.css" />
@@ -20,18 +20,39 @@
             <a
               href="../index.html#main"
               class="navigation__link"
-              role="menuitem"
+              data-i18n="nav_projects"
               >Projekte</a
             >
           </li>
           <li class="navigation__item" role="none">
-            <a href="./about_me.html" class="navigation__link" role="menuitem"
-              >&#220;ber mich</a
+            <a
+              href="./about_me.html"
+              class="navigation__link"
+              data-i18n="nav_about"
+              >Über mich</a
             >
           </li>
           <li class="navigation__item" role="none">
-            <a href="./contact.html" class="navigation__link" role="menuitem"
+            <a
+              href="./contact.html"
+              class="navigation__link navigation__link--active"
+              data-i18n="nav_contact"
               >Kontakt</a
+            >
+          </li>
+          <li class="navigation__lang">
+            <a
+              href="./impressum.html"
+              class="navigation__link"
+              onclick="changeLanguage('de')"
+              >DE</a
+            >
+            <span class="navigation__separator">|</span>
+            <a
+              href="./impressum.html"
+              class="navigation__link"
+              onclick="changeLanguage('en')"
+              >EN</a
             >
           </li>
         </ul>
@@ -42,18 +63,21 @@
         </button>
       </div>
     </nav>
+
     <main>
       <article class="impressum">
         <div class="container">
           <div class="impressum__wrapper">
-            <h1 class="title">Impressum</h1>
+            <h1 class="title" data-i18n="imprint_title">Impressum</h1>
             <address class="text">
               Leonid Domahalskyy<br />
               Rude 13<br />
               24941 Flensburg
             </address>
             <section>
-              <h2 class="subsection-title">Kontakt</h2>
+              <h2 class="subsection-title" data-i18n="imprint_contact">
+                Kontakt
+              </h2>
               <p class="text">
                 Telefon: 015205892880<br />
                 E-Mail:
@@ -66,14 +90,16 @@
         </div>
       </article>
     </main>
+
     <footer class="footer">
-      <nav class="footer__social-media" aria-label="Soziale Medien">
+      <nav class="footer__social-media" aria-label="Social Media">
         <ul class="social-media__list">
           <li>
             <a href="https://t.me/ledo9913" class="footer__link">
               <img
                 src="../img/icons/telegram.svg"
-                alt="Link zu meinem Telegram-Kanal."
+                alt="Link to my Telegram channel."
+                data-i18n-alt="social_telegram"
               />
             </a>
           </li>
@@ -84,7 +110,8 @@
             >
               <img
                 src="../img/icons/discord.svg"
-                alt="Link zu meinem Discord-Server."
+                alt="Link to my Discord server."
+                data-i18n-alt="social_discord"
               />
             </a>
           </li>
@@ -92,7 +119,8 @@
             <a href="https://dribbble.com/ledo93" class="footer__link">
               <img
                 src="../img/icons/dribbble.svg"
-                alt="Link zu meinem Dribbble-Profil."
+                alt="Link to my Dribbble profile."
+                data-i18n-alt="social_dribbble"
               />
             </a>
           </li>
@@ -100,7 +128,8 @@
             <a href="https://github.com/ledo9315" class="footer__link">
               <img
                 src="../img/icons/github.svg"
-                alt="Link zu meinem GitHub-Repository."
+                alt="Link to my GitHub repository."
+                data-i18n-alt="social_github"
               />
             </a>
           </li>
@@ -111,33 +140,53 @@
             >
               <img
                 src="../img/icons/linkedIn.svg"
-                alt="Link zu meinem LinkedIn-Profil"
+                alt="Link to my LinkedIn profile."
+                data-i18n-alt="social_linkedin"
               />
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="footer__legal" aria-label="Rechtliches">
+      <nav class="footer__legal" aria-label="Legal">
         <ul>
           <li>
-            <a href="../pages/impressum.html" class="footer__link">Impressum</a>
-          </li>
-          <li>
-            <a href="../pages/datenschutz.html" class="footer__link"
-              >Datenschutz</a
+            <a
+              href="../pages/impressum.html"
+              class="footer__link"
+              data-i18n="legal_imprint"
+              >Imprint</a
             >
           </li>
           <li>
-            <a href="../pages/dokumentation.html" class="footer__link"
-              >Dokumentation</a
+            <a
+              href="../pages/datenschutz.html"
+              class="footer__link"
+              data-i18n="legal_privacy"
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <a href="../pages/kolophon.html" class="footer__link">Kolophon</a>
+            <a
+              href="../pages/dokumentation.html"
+              class="footer__link"
+              data-i18n="legal_documentation"
+              >Documentation</a
+            >
           </li>
           <li>
-            <a href="../pages/zeitleiste.html" class="footer__link"
-              >Zeitleiste</a
+            <a
+              href="../pages/kolophon.html"
+              class="footer__link"
+              data-i18n="legal_colophon"
+              >Colophon</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/zeitleiste.html"
+              class="footer__link"
+              data-i18n="legal_timeline"
+              >Timeline</a
             >
           </li>
         </ul>

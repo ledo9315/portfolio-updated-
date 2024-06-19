@@ -105,101 +105,34 @@ if (path.includes("index.html")) {
 
 console.log(`Computed language file path: ${languageFilePath}`);
 
-// Überprüfen, ob localStorage verfügbar ist
-function localStorageAvailable() {
-  try {
-    const test = "__storage_test__";
-    localStorage.setItem(test, test);
-    localStorage.removeItem(test);
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-// Fallback auf Cookies
-function setCookie(name, value, days) {
-  let expires = "";
-  if (days) {
-    const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-function getCookie(name) {
-  const nameEQ = name + "=";
-  const ca = document.cookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) === " ") c = c.substring(1, c.length);
-    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-  }
-  return null;
-}
-
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
   const url = `${languageFilePath}languages/${lang}.json`;
   console.log(`Fetching language data from: ${url}`);
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.statusText}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(`Failed to fetch language data: ${error.message}`);
-    return {};
-  }
+  const response = await fetch(url);
+  return await response.json();
 }
 
 // Event um die Sprache zu wechseln
 function changeLanguage(lang) {
-  console.log(`Setting language to: ${lang}`);
-  if (localStorageAvailable()) {
-    localStorage.setItem("language", lang);
-    console.log(
-      `Language set in localStorage: ${localStorage.getItem("language")}`
-    );
-  } else {
-    setCookie("language", lang, 365);
-    console.log(`Language set in cookie: ${getCookie("language")}`);
-  }
-
-  fetchLanguageData(lang)
-    .then((languageData) => {
-      updateContent(languageData);
-    })
-    .catch((error) => {
-      console.error(`Error during language change: ${error.message}`);
-    });
+  localStorage.setItem("language", lang);
+  fetchLanguageData(lang).then((languageData) => {
+    updateContent(languageData);
+  });
 }
 
 // Aktualisieren des Inhalts
 function updateContent(languageData) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
-    if (languageData[key]) {
-      element.innerHTML = languageData[key];
-      console.log(`Updated ${key} with ${languageData[key]}`);
-    } else {
-      console.warn(`Key ${key} not found in language data`);
-    }
+    element.innerHTML = languageData[key];
   });
 }
 
 // Initiales Event um entweder die zuvor gewählte Sprache zu setzen
 // oder Deutsch als Fallback
 document.addEventListener("DOMContentLoaded", async () => {
-  let userPreferredLanguage;
-  if (localStorageAvailable()) {
-    userPreferredLanguage = localStorage.getItem("language") || "de";
-  } else {
-    userPreferredLanguage = getCookie("language") || "de";
-  }
-  console.log(`User preferred language: ${userPreferredLanguage}`);
+  const userPreferredLanguage = localStorage.getItem("language") || "de";
   const languageData = await fetchLanguageData(userPreferredLanguage);
   updateContent(languageData);
 });

@@ -93,9 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // *********** Language Switcher ***********
 
 let path = window.location.pathname;
+console.log(`Path: ${path}`);
 let languageFilePath = "";
 
-if (path.includes("index.html" || "netlify.app")) {
+if (
+  path.includes(
+    "index.html" ||
+      "#main" ||
+      "index" ||
+      "index.html#main" ||
+      "index#main" ||
+      "#main.html" ||
+      "#"
+  )
+) {
   languageFilePath = "./";
 } else if (path.includes("works")) {
   languageFilePath = "../../";

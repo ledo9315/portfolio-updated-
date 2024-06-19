@@ -95,11 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
 let path = window.location.pathname;
 let languageFilePath = "";
 
-if (path.includes("index.html")) {
+if (path.includes("index.html" || "netlify.app")) {
   languageFilePath = "./";
 } else if (path.includes("works")) {
   languageFilePath = "../../";
-} else {
+} else if (path.includes("pages")) {
   languageFilePath = "../";
 }
 

@@ -103,29 +103,47 @@ if (path.includes("index.html")) {
   languageFilePath = "../";
 }
 
+console.log(`Computed language file path: ${languageFilePath}`);
+
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
-  console.log(`${languageFilePath}languages/${lang}.json`);
-  const response = await fetch(`${languageFilePath}languages/${lang}.json`);
-  return response.json();
+  const url = `${languageFilePath}languages/${lang}.json`;
+  console.log(`Fetching language data from: ${url}`);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(`Failed to fetch language data: ${error.message}`);
+    return {};
+  }
 }
 
 // Event um die Sprache zu wechseln
 function changeLanguage(lang) {
   localStorage.setItem("language", lang);
 
-  fetchLanguageData(lang).then((languageData) => {
-    updateContent(languageData);
-  });
+  fetchLanguageData(lang)
+    .then((languageData) => {
+      updateContent(languageData);
+    })
+    .catch((error) => {
+      console.error(`Error during language change: ${error.message}`);
+    });
 }
 
 // Aktualisieren des Inhalts
 function updateContent(languageData) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    // Alle Elemente mit data-i18n Attribut
-    const key = element.getAttribute("data-i18n"); // z.B. "title"
-    element.innerHTML = languageData[key]; // z.B. "Hallo Welt"
-    console.log(languageData[key]);
+    const key = element.getAttribute("data-i18n");
+    if (languageData[key]) {
+      element.innerHTML = languageData[key];
+      console.log(`Updated ${key} with ${languageData[key]}`);
+    } else {
+      console.warn(`Key ${key} not found in language data`);
+    }
   });
 }
 
@@ -133,6 +151,7 @@ function updateContent(languageData) {
 // oder Deutsch als Fallback
 document.addEventListener("DOMContentLoaded", async () => {
   const userPreferredLanguage = localStorage.getItem("language") || "de";
+  console.log(`User preferred language: ${userPreferredLanguage}`);
   const languageData = await fetchLanguageData(userPreferredLanguage);
   updateContent(languageData);
 });

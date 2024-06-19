@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log(scrollTop);
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
       nav.classList.add("navigation--none");
@@ -126,6 +125,7 @@ function updateContent(languageData) {
     // Alle Elemente mit data-i18n Attribut
     const key = element.getAttribute("data-i18n"); // z.B. "title"
     element.innerHTML = languageData[key]; // z.B. "Hallo Welt"
+    console.log(languageData[key]);
   });
 }
 

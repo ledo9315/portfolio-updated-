@@ -93,10 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // *********** Language Switcher ***********
 
 let path = window.location.pathname;
-console.log(`Path: ${path}`);
 let languageFilePath = "";
 
-if (path.includes("index.html" || "/")) {
+if (path.includes("index.html")) {
   languageFilePath = "./";
 } else if (path.includes("works")) {
   languageFilePath = "../../";
@@ -107,7 +106,6 @@ if (path.includes("index.html" || "/")) {
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
   const url = `${languageFilePath}languages/${lang}.json`;
-  console.log(`Fetching from: ${url}`);
   const response = await fetch(url);
   return await response.json();
 }
@@ -125,7 +123,6 @@ function updateContent(languageData) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
     element.innerHTML = languageData[key];
-    console.log(`key: ${key}, value: ${languageData[key]}`);
   });
 }
 

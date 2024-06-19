@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log(scrollTop);
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
       nav.classList.add("navigation--none");
@@ -97,7 +96,7 @@ let path = window.location.pathname;
 let languageFilePath = "";
 
 if (path.includes("index.html")) {
-  languageFilePath = "";
+  languageFilePath = "./";
 } else if (path.includes("works")) {
   languageFilePath = "../../";
 } else {
@@ -107,7 +106,6 @@ if (path.includes("index.html")) {
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
   const response = await fetch(`${languageFilePath}languages/${lang}.json`);
-  console.log(response);
   return response.json();
 }
 
@@ -125,6 +123,7 @@ function updateContent(languageData) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     // Alle Elemente mit data-i18n Attribut
     const key = element.getAttribute("data-i18n"); // z.B. "title"
+    console.log(`key: ${key}`);
     element.innerHTML = languageData[key]; // z.B. "Hallo Welt"
   });
 }

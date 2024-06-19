@@ -105,6 +105,40 @@ if (path.includes("index.html")) {
 
 console.log(`Computed language file path: ${languageFilePath}`);
 
+// Überprüfen, ob localStorage verfügbar ist
+function localStorageAvailable() {
+  try {
+    const test = "__storage_test__";
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+// Fallback auf Cookies
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
   const url = `${languageFilePath}languages/${lang}.json`;
@@ -123,7 +157,16 @@ async function fetchLanguageData(lang) {
 
 // Event um die Sprache zu wechseln
 function changeLanguage(lang) {
-  localStorage.setItem("language", lang);
+  console.log(`Setting language to: ${lang}`);
+  if (localStorageAvailable()) {
+    localStorage.setItem("language", lang);
+    console.log(
+      `Language set in localStorage: ${localStorage.getItem("language")}`
+    );
+  } else {
+    setCookie("language", lang, 365);
+    console.log(`Language set in cookie: ${getCookie("language")}`);
+  }
 
   fetchLanguageData(lang)
     .then((languageData) => {
@@ -150,7 +193,12 @@ function updateContent(languageData) {
 // Initiales Event um entweder die zuvor gewählte Sprache zu setzen
 // oder Deutsch als Fallback
 document.addEventListener("DOMContentLoaded", async () => {
-  const userPreferredLanguage = localStorage.getItem("language") || "de";
+  let userPreferredLanguage;
+  if (localStorageAvailable()) {
+    userPreferredLanguage = localStorage.getItem("language") || "de";
+  } else {
+    userPreferredLanguage = getCookie("language") || "de";
+  }
   console.log(`User preferred language: ${userPreferredLanguage}`);
   const languageData = await fetchLanguageData(userPreferredLanguage);
   updateContent(languageData);

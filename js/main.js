@@ -105,6 +105,7 @@ if (path.includes("index.html")) {
 
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
+  console.log(`${languageFilePath}languages/${lang}.json`);
   const response = await fetch(`${languageFilePath}languages/${lang}.json`);
   return response.json();
 }
@@ -123,7 +124,6 @@ function updateContent(languageData) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     // Alle Elemente mit data-i18n Attribut
     const key = element.getAttribute("data-i18n"); // z.B. "title"
-    console.log(`key: ${key}`);
     element.innerHTML = languageData[key]; // z.B. "Hallo Welt"
     console.log(languageData[key]);
   });

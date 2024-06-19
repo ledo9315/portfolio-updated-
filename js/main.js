@@ -103,8 +103,6 @@ if (path.includes("index.html")) {
   languageFilePath = "../";
 }
 
-console.log(`Computed language file path: ${languageFilePath}`);
-
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
   const url = `${languageFilePath}languages/${lang}.json`;

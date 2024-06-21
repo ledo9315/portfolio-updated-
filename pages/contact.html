@@ -16,29 +16,21 @@
           <img src="../img/icons/logo.svg" alt="Leonid Domahalskyy Logo" />
         </a>
         <ul class="navigation__list" role="menubar">
-          <li class="navigation__item" role="none">
-            <a
-              href="../index.html#main"
-              class="navigation__link"
-              role="menuitem"
-              >Projekte</a
+          <li class="navigation__item" role="menuitem">
+            <a href="../index.html#main" class="navigation__link">Projekte</a>
+          </li>
+          <li class="navigation__item" role="menuitem">
+            <a href="./about_me.html" class="navigation__link"
+              >&Uuml;ber mich</a
             >
           </li>
-          <li class="navigation__item" role="none">
-            <a href="./about_me.html" class="navigation__link" role="menuitem"
-              >Über mich</a
-            >
-          </li>
-          <li class="navigation__item" role="none">
-            <a
-              href="#"
-              class="navigation__link navigation__link--active"
-              role="menuitem"
+          <li class="navigation__item" role="menuitem">
+            <a href="#" class="navigation__link navigation__link--active"
               >Kontakt</a
             >
           </li>
         </ul>
-        <button class="navigation__hamburger" aria-label="Hauptmenü">
+        <button class="navigation__hamburger" aria-label="Hauptmen&uuml;">
           <span class="navigation__bar"></span>
           <span class="navigation__bar"></span>
           <span class="navigation__bar"></span>
@@ -75,6 +67,7 @@
                         id="first-name"
                         name="first-name"
                         class="contact__input"
+                        autocomplete="given-name"
                         required
                       />
                     </div>
@@ -89,6 +82,7 @@
                         id="last-name"
                         name="last-name"
                         class="contact__input"
+                        autocomplete="family-name"
                         required
                       />
                     </div>
@@ -100,6 +94,7 @@
                       id="email"
                       name="email"
                       class="contact__input"
+                      autocomplete="email"
                       required
                     />
                   </div>
@@ -111,6 +106,7 @@
                       id="message"
                       name="message"
                       class="contact__input contact__textarea"
+                      autocomplete="off"
                       required
                     ></textarea>
                   </div>
@@ -121,7 +117,7 @@
               </div>
               <aside class="contact__info-section">
                 <h2 class="contact__info-title">
-                  Lass uns &#252;ber <span>Projekte</span> sprechen.
+                  Lass uns &uuml;ber <span>Projekte</span> sprechen.
                 </h2>
                 <p class="contact__info-text">
                   Ich bin gespannt auf deine Ideen und freue mich darauf, mit

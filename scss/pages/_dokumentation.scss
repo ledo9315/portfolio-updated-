@@ -70,3 +70,28 @@
   font-style: italic;
   text-decoration: underline;
 }
+
+/* Tabellen-Design */
+.documentation__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+
+  .documentation__section-title {
+    font-size: var(--font-size-h3);
+    font-family: var(--font-hanson);
+    line-height: var(--line-height-heading);
+    margin-bottom: 20px;
+  }
+}
+
+.documentation__table th,
+.documentation__table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.documentation__table tr {
+  border-bottom: 1px solid var(--text-color);
+  transition: background-color 0.3s;
+}

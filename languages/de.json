@@ -10,7 +10,11 @@
     "contact_email_label": "E-Mail",
     "contact_message_label": "Nachricht",
     "contact_submit_button": "Absenden",
+<<<<<<< HEAD
     "contact_info_title": "Lass uns &uuml;ber <span>Projekte</span> sprechen.",
+=======
+    "contact_info_title": "Lass uns &#252;ber <span>Projekte</span> sprechen.",
+>>>>>>> 2a6c8c00c5247e3048944a6c0371dc1100f48198
     "contact_info_text": "Ich bin gespannt auf deine Ideen und freue mich darauf, mit dir zusammenzuarbeiten. Schreib mir einfach eine Nachricht und ich melde mich bei dir.",
     "about_title": "Über mich",
     "about_headline": "Über mich",

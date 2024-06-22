@@ -99,20 +99,20 @@ if (path.includes("index.html")) {
   languageFilePath = "./";
 } else if (path.includes("works")) {
   languageFilePath = "../../";
-} else {
+} else if (path.includes("pages")) {
   languageFilePath = "../";
 }
 
 // Holen einer Sprachdatei
 async function fetchLanguageData(lang) {
-  const response = await fetch(`${languageFilePath}languages/${lang}.json`);
-  return response.json();
+  const url = `${languageFilePath}languages/${lang}.json`;
+  const response = await fetch(url);
+  return await response.json();
 }
 
 // Event um die Sprache zu wechseln
 function changeLanguage(lang) {
   localStorage.setItem("language", lang);
-
   fetchLanguageData(lang).then((languageData) => {
     updateContent(languageData);
   });
@@ -121,10 +121,8 @@ function changeLanguage(lang) {
 // Aktualisieren des Inhalts
 function updateContent(languageData) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    // Alle Elemente mit data-i18n Attribut
-    const key = element.getAttribute("data-i18n"); // z.B. "title"
-    console.log(`key: ${key}`);
-    element.innerHTML = languageData[key]; // z.B. "Hallo Welt"
+    const key = element.getAttribute("data-i18n");
+    element.innerHTML = languageData[key];
   });
 }
 

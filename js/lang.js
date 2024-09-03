@@ -2,7 +2,7 @@ let path = window.location.pathname;
 let languageFilePath = "";
 
 // Bestimmen des Pfads zur Sprachdatei basierend auf dem aktuellen Pfad
-if (path.includes("index.html")) {
+if (path.includes("index.html" || "main")) {
   languageFilePath = "./";
 } else if (path.includes("works")) {
   languageFilePath = "../../";

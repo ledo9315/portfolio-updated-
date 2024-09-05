@@ -2,6 +2,7 @@
   margin-top: 50px;
   max-width: 700px;
   h2 {
+    text-transform: uppercase;
     font-size: var(--font-size-h2);
     font-family: var(--font-hanson);
     margin-top: -10px;
@@ -9,7 +10,7 @@
     line-height: var(--line-height-heading);
 
     @media screen and (min-width: 420px) {
-      font-size: var(--font-size-h1);
+      font-size: 2.5rem;
     }
   }
 
@@ -40,6 +41,7 @@
 .capabilities__h2 {
   font-family: var(--font-hanson);
   font-size: var(--font-size-h3);
+  text-transform: uppercase;
   margin-bottom: 30px;
 
   @media screen and (min-width: 960px) {
@@ -47,13 +49,11 @@
   }
 
   @media screen and (min-width: 420px) {
-    font-size: var(--font-size-h2);
+    font-size: 2rem;
   }
 }
 
 .capabilities__h3 {
-  font-family: var(--font-hanson);
-
   font-size: bold;
   margin-bottom: 20px;
 

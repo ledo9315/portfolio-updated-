@@ -650,12 +650,13 @@ pre {
 .projects__title {
   font-family: var(--font-hanson);
   font-size: var(--font-size-h2);
+  text-transform: uppercase;
   letter-spacing: -0.02em;
   margin-bottom: 50px;
 }
 @media screen and (min-width: 420px) {
   .projects__title {
-    font-size: var(--font-size-h1);
+    font-size: 2.5rem;
   }
 }
 
@@ -785,6 +786,7 @@ pre {
   max-width: 700px;
 }
 .about h2 {
+  text-transform: uppercase;
   font-size: var(--font-size-h2);
   font-family: var(--font-hanson);
   margin-top: -10px;
@@ -793,7 +795,7 @@ pre {
 }
 @media screen and (min-width: 420px) {
   .about h2 {
-    font-size: var(--font-size-h1);
+    font-size: 2.5rem;
   }
 }
 .about p {
@@ -824,6 +826,7 @@ pre {
 .capabilities__h2 {
   font-family: var(--font-hanson);
   font-size: var(--font-size-h3);
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 960px) {
@@ -833,12 +836,11 @@ pre {
 }
 @media screen and (min-width: 420px) {
   .capabilities__h2 {
-    font-size: var(--font-size-h2);
+    font-size: 2rem;
   }
 }
 
 .capabilities__h3 {
-  font-family: var(--font-hanson);
   font-size: bold;
   margin-bottom: 20px;
 }
@@ -1003,6 +1005,7 @@ pre {
 .contact__info-title {
   font-size: var(--font-size-h2);
   font-family: var(--font-hanson);
+  text-transform: uppercase;
   margin-bottom: 20px;
   line-height: var(--line-height-heading);
 }
@@ -1011,7 +1014,7 @@ pre {
 }
 @media screen and (min-width: 420px) {
   .contact__info-title {
-    font-size: var(--font-size-h1);
+    font-size: 2rem;
   }
 }
 
@@ -1109,9 +1112,15 @@ pre {
 
 .project-description__name {
   font-family: var(--font-hanson);
+  text-transform: uppercase;
   font-size: var(--font-size-h1);
   line-height: var(--line-height-heading);
   margin-bottom: 20px;
+}
+@media screen and (min-width: 420px) {
+  .project-description__name {
+    font-size: 2.5rem;
+  }
 }
 
 .project-description__description {

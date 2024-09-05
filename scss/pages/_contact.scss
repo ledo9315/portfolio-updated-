@@ -41,6 +41,7 @@
 .contact__info-title {
   font-size: var(--font-size-h2);
   font-family: var(--font-hanson);
+  text-transform: uppercase;
   margin-bottom: 20px;
   line-height: var(--line-height-heading);
 
@@ -49,7 +50,7 @@
   }
 
   @media screen and (min-width: 420px) {
-    font-size: var(--font-size-h1);
+    font-size: 2rem;
   }
 }
 

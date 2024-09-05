@@ -9,11 +9,12 @@
 .projects__title {
   font-family: var(--font-hanson);
   font-size: var(--font-size-h2);
+  text-transform: uppercase;
   letter-spacing: -0.02em;
   margin-bottom: 50px;
 
   @media screen and (min-width: 420px) {
-    font-size: var(--font-size-h1);
+    font-size: 2.5rem;
   }
 }
 

@@ -1,22 +1,29 @@
 let path = window.location.pathname;
-let languageFilePath = "";
+let languageFilePath = "/"; // Absolute Pfade verwenden, damit es serverunabhängig funktioniert
 
 if (!path.includes("works") && !path.includes("pages")) {
-  languageFilePath = "./";
+  languageFilePath = "/"; // Wurzelverzeichnis
 } else if (path.includes("works")) {
-  languageFilePath = "../../";
+  languageFilePath = "/works/"; // Pfad anpassen
 } else if (path.includes("pages")) {
-  languageFilePath = "../";
+  languageFilePath = "/pages/"; // Pfad anpassen
 }
 
 // Funktion zum Holen einer Sprachdatei
 export async function fetchLanguageData(lang) {
-  const url = `${languageFilePath}languages/${lang}.json`;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Could not fetch language file: ${url}`);
+  // Cache-Busting hinzufügen
+  const url = `${languageFilePath}languages/${lang}.json?${new Date().getTime()}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Could not fetch language file: ${url}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(`Error fetching the language file: ${error.message}`);
+    throw error; // Fehler werfen, um die weitere Verarbeitung zu stoppen
   }
-  return await response.json();
 }
 
 // Funktion zum Wechseln der Sprache

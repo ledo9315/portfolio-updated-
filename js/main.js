@@ -46,8 +46,9 @@ document
 function showToast() {
   const toast = document.getElementById("toast");
   toast.style.display = "block"; // Zeige den Toast an
+  toast.classList.add("bounceInRight");
 
   setTimeout(() => {
     toast.style.display = "none"; // Blende den Toast nach 3 Sekunden aus
-  }, 3000); // Toast nach 3 Sekunden ausblenden
+  }, 3000);
 }

@@ -78,6 +78,7 @@
               <div class="contact__form-section">
                 <form
                   class="contact__form"
+                  id="contactForm"
                   action="https://api.web3forms.com/submit"
                   method="POST"
                 >
@@ -92,7 +93,6 @@
                       <label
                         for="first-name"
                         class="contact__label contact__vorname"
-                        data-i18n="contact_vorname_label"
                         >Vorname</label
                       >
                       <input
@@ -100,7 +100,6 @@
                         id="first-name"
                         name="first-name"
                         class="contact__input"
-                        autocomplete="given-name"
                         required
                       />
                     </div>
@@ -108,7 +107,6 @@
                       <label
                         for="last-name"
                         class="contact__label contact__nachname"
-                        data-i18n="contact_nachname_label"
                         >Nachname</label
                       >
                       <input
@@ -116,67 +114,43 @@
                         id="last-name"
                         name="last-name"
                         class="contact__input"
-                        autocomplete="family-name"
                         required
                       />
                     </div>
                   </div>
 
                   <div class="contact__form-group">
-                    <label
-                      for="email"
-                      class="contact__label"
-                      data-i18n="contact_email_label"
-                      >Email</label
-                    >
+                    <label for="email" class="contact__label">Email</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       class="contact__input"
-                      autocomplete="email"
                       required
                     />
                   </div>
 
                   <div class="contact__form-group">
-                    <label
-                      for="message"
-                      class="contact__label"
-                      data-i18n="contact_message_label"
+                    <label for="message" class="contact__label"
                       >Deine Nachricht</label
                     >
                     <textarea
                       id="message"
                       name="message"
                       class="contact__input contact__textarea"
-                      autocomplete="off"
                       required
                     ></textarea>
                   </div>
 
-                  <input
-                    type="hidden"
-                    name="redirect"
-                    value="https://leonid-domahalskyy.com/pages/contact"
-                  />
-
-                  <input
-                    type="checkbox"
-                    name="botcheck"
-                    class="hidden"
-                    style="display: none"
-                  />
-
-                  <button
-                    type="submit"
-                    name="submit"
-                    class="button contact__button"
-                    data-i18n="contact_submit_button"
-                  >
+                  <button type="submit" class="button contact__button">
                     Senden
                   </button>
                 </form>
+
+                <!-- Toast Notification -->
+                <div id="toast" class="toast" style="display: none">
+                  <p>Danke! Deine Nachricht wurde erfolgreich gesendet.</p>
+                </div>
               </div>
               <aside class="contact__info-section">
                 <h2 class="contact__info-title" data-i18n="contact_info_title">

@@ -1,36 +1,36 @@
 <?php
-if (isset($_POST['submit'])) {
-    // Daten bereinigen
-    $firstName = htmlspecialchars(trim($_POST['first-name']));
-    $lastName = htmlspecialchars(trim($_POST['last-name']));
-    $emailFrom = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars(trim($_POST['message']));
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Formulardaten auslesen
+    $vorname = htmlspecialchars(trim($_POST['first-name']));
+    $nachname = htmlspecialchars(trim($_POST['last-name']));
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $nachricht = htmlspecialchars(trim($_POST['message']));
 
-    // Validierung der E-Mail
-    if (!filter_var($emailFrom, FILTER_VALIDATE_EMAIL)) {
-        // Falls die E-Mail ungültig ist, leitet es zur Fehlerseite um
-        header("Location: index.html?error=invalidemail");
-        exit();
-    }
+    // E-Mail-Adresse des Empfängers
+    $empfaenger = "leonid_domagalsky@outlook.de";
+    
+    // Betreff der E-Mail
+    $betreff = "Neue Nachricht von: $vorname $nachname";
 
-    // Ziel-E-Mail und Betreff
-    $mailTo = "leonid_domagalsky@outlook.de";
-    $subject = "Neue Nachricht von " . $firstName . " " . $lastName;
+    // Inhalt der E-Mail
+    $nachricht_mail = "Du hast eine neue Nachricht über das Kontaktformular erhalten.\n\n";
+    $nachricht_mail .= "Vorname: $vorname\n";
+    $nachricht_mail .= "Nachname: $nachname\n";
+    $nachricht_mail .= "E-Mail: $email\n\n";
+    $nachricht_mail .= "Nachricht:\n$nachricht\n";
 
-    // E-Mail-Inhalt
-    $txt = "Eine E-Mail von: " . $firstName . " " . $lastName . ".\n\n" . $message;
+    // E-Mail-Header
+    $header = "From: $email\r\n";
+    $header .= "Reply-To: $email\r\n";
+    $header .= "X-Mailer: PHP/" . phpversion();
 
-    // Header mit der Absenderadresse
-    $headers = "From: " . $emailFrom;
-
-    // Mail senden
-    if (mail($mailTo, $subject, $txt, $headers)) {
-        // Weiterleitung nach erfolgreichem Versand
-        header("Location: index.html?mailsend=success");
+    // E-Mail senden
+    if (mail($empfaenger, $betreff, $nachricht_mail, $header)) {
+        // Erfolgreiche Nachricht
+        echo "Danke, deine Nachricht wurde gesendet!";
     } else {
-        // Fehlermeldung bei Problemen mit dem Versand
-        header("Location: index.html?mailsend=error");
+        // Fehler beim Senden
+        echo "Fehler: Deine Nachricht konnte nicht gesendet werden.";
     }
-    exit();
 }
 ?>

@@ -78,9 +78,15 @@
               <div class="contact__form-section">
                 <form
                   class="contact__form"
-                  action="contactform.php"
-                  method="post"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
                 >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="ea0f4ee1-6ab8-4cd7-8945-e7f52e5246f8"
+                  />
+
                   <div class="contact__name-wrapper">
                     <div class="contact__form-group">
                       <label
@@ -115,6 +121,7 @@
                       />
                     </div>
                   </div>
+
                   <div class="contact__form-group">
                     <label
                       for="email"
@@ -131,6 +138,7 @@
                       required
                     />
                   </div>
+
                   <div class="contact__form-group">
                     <label
                       for="message"
@@ -146,6 +154,20 @@
                       required
                     ></textarea>
                   </div>
+
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://deine-seite.com/danke.html"
+                  />
+
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="hidden"
+                    style="display: none"
+                  />
+
                   <button
                     type="submit"
                     name="submit"

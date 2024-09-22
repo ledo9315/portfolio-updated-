@@ -14,7 +14,7 @@ window.changeLanguage = changeLanguage;
 document
   .getElementById("contactForm")
   .addEventListener("submit", async function (e) {
-    e.preventDefault(); // Verhindere Standardverhalten des Formulars
+    e.preventDefault(); // Verhindere das Standardverhalten (kein Reload, kein Redirect)
 
     const form = e.target;
     const formData = new FormData(form);
@@ -26,13 +26,13 @@ document
       });
 
       if (response.ok) {
-        // Formular erfolgreich abgeschickt, zeige den Toast
+        // Zeige den Toast bei erfolgreichem Absenden
         showToast();
 
-        // Formular leeren
+        // Formular zurücksetzen
         form.reset();
       } else {
-        // Falls ein Fehler auftritt
+        // Fehlermeldung anzeigen, falls etwas schiefgeht
         alert("Ein Fehler ist aufgetreten. Bitte versuche es erneut.");
       }
     } catch (error) {
@@ -45,9 +45,9 @@ document
 
 function showToast() {
   const toast = document.getElementById("toast");
-  toast.classList.add("show");
+  toast.style.display = "block"; // Zeige den Toast an
 
   setTimeout(() => {
-    toast.classList.remove("show");
+    toast.style.display = "none"; // Blende den Toast nach 3 Sekunden aus
   }, 3000); // Toast nach 3 Sekunden ausblenden
 }

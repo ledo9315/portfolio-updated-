@@ -241,7 +241,7 @@ button {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   border: 0;
 }
 
@@ -303,35 +303,40 @@ pre {
 
 @font-face {
   font-family: "Hanson";
-  src: url("../../fonts/Hanson-Bold.woff2") format("woff2"), url("../../fonts/Hanson-Bold.woff") format("woff");
+  src: url("../../fonts/Hanson-Bold.woff2") format("woff2"),
+    url("../../fonts/Hanson-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Light.woff2") format("woff2"), url("../../fonts/Montserrat-Light.woff") format("woff");
+  src: url("../../fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"), url("../../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Bold.woff2") format("woff2"), url("../../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -339,7 +344,7 @@ pre {
 .navigation__list {
   display: none;
   -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
 }
 @media screen and (min-width: 960px) {
   .navigation__list {
@@ -409,7 +414,8 @@ pre {
 
 /* header Animation */
 @keyframes animation {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
   }
   20% {
@@ -435,7 +441,11 @@ pre {
   }
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -449,7 +459,11 @@ pre {
   animation-name: bounceInRight;
 }
 @keyframes bounceInRight {
-  from, 60%, 75%, 90%, to {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   from {
@@ -621,7 +635,7 @@ pre {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -778,7 +792,7 @@ pre {
 .social-media__list {
   display: flex;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   justify-content: center;
   margin-bottom: 30px;
 }
@@ -794,7 +808,7 @@ pre {
 @media screen and (min-width: 620px) {
   .social-media__list {
     -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
   }
 }
 
@@ -803,7 +817,7 @@ pre {
   flex-wrap: wrap;
   justify-content: center;
   -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 .footer__legal ul li {
   color: var(--light-grey);
@@ -825,7 +839,7 @@ pre {
 @media screen and (min-width: 620px) {
   .footer__legal ul {
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 
@@ -907,7 +921,7 @@ pre {
   grid-template-columns: 1fr;
   row-gap: 100px;
   -moz-column-gap: 60px;
-       column-gap: 60px;
+  column-gap: 60px;
 }
 @media screen and (min-width: 1200px) {
   .capabilities__wrapper {
@@ -941,12 +955,12 @@ pre {
   align-items: center;
   margin-top: 10px;
   -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 @media screen and (min-width: 620px) {
   .item {
     -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
   }
 }
 
@@ -1021,14 +1035,14 @@ pre {
 @media (min-width: 960px) {
   .contact__form-wrapper {
     -moz-column-gap: 100px;
-         column-gap: 100px;
+    column-gap: 100px;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1200px) {
   .contact__form-wrapper {
     -moz-column-gap: 150px;
-         column-gap: 150px;
+    column-gap: 150px;
   }
 }
 
@@ -1083,7 +1097,7 @@ pre {
   .contact__name-wrapper {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 
@@ -1228,7 +1242,7 @@ pre {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #project-image-pw-generator {
@@ -1513,7 +1527,7 @@ address {
 
 .timeline__wrapper {
   -moz-column-gap: 100px;
-       column-gap: 100px;
+  column-gap: 100px;
 }
 @media screen and (min-width: 1400px) {
   .timeline__wrapper {
@@ -1604,4 +1618,4 @@ address {
   .timeline__date {
     font-size: var(--font-size-h2);
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

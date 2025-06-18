@@ -1,10 +1,7 @@
 .navigation {
   position: sticky;
   top: 0;
-  //TODO: Bug mit der Transition im Safari beheben
-  // -webkit-transition: top 0.3s;
-  // transition: opacity 0.5s ease, visibility 0.5s ease,
-  //   background-color 0.5s ease;
+
   z-index: 1009;
 
   &--none {

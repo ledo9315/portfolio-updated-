@@ -1,6 +1,5 @@
 .main-content {
   padding: 120px 0;
-
   @media screen and (min-width: 960px) {
     padding: 180px 0;
   }
@@ -41,6 +40,7 @@
 
 .projects__image {
   display: block;
+  border-radius: 4px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }

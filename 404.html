@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Seite nicht gefunden | Leonid Domahalskyy</title>
+    <meta
+      name="description"
+      content="Die angeforderte Seite konnte nicht gefunden werden."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/css/main.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <style>
+      .error-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-color);
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px;
+      }
+      .error-content {
+        max-width: 600px;
+      }
+      .error-code {
+        font-family: var(--font-hanson);
+        font-size: 8rem;
+        color: var(--accent-color);
+        margin: 0;
+        line-height: 1;
+      }
+      .error-title {
+        font-family: var(--font-hanson);
+        font-size: 2rem;
+        margin: 20px 0;
+        text-transform: uppercase;
+      }
+      .error-message {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.8;
+      }
+      .error-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .error-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: var(--accent-color);
+        color: var(--darkpurple);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .error-btn:hover {
+        background: var(--accent-color-2);
+        transform: translateY(-2px);
+      }
+      .error-btn--secondary {
+        background: transparent;
+        color: var(--text-color);
+        border: 1px solid var(--grey);
+      }
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 6rem;
+        }
+        .error-title {
+          font-size: 1.5rem;
+        }
+        .error-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-page">
+      <div class="error-content">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Seite nicht gefunden</h2>
+        <p class="error-message">
+          Die angeforderte Seite konnte leider nicht gefunden werden.
+          Möglicherweise wurde sie verschoben oder der Link ist veraltet.
+        </p>
+        <div class="error-actions">
+          <a href="/" class="error-btn">Zur Startseite</a>
+          <a
+            href="javascript:history.back()"
+            class="error-btn error-btn--secondary"
+            >Zurück</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Analytics Event für 404 Fehler
+      if (typeof gtag !== "undefined") {
+        gtag("event", "page_not_found", {
+          event_category: "Error",
+          event_label: window.location.pathname,
+          value: 404,
+        });
+      }
+    </script>
+  </body>
+</html>

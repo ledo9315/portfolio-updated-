@@ -1,0 +1,194 @@
+# .htaccess für Leonid Domahalskyy Portfolio - Production Ready
+
+# ==========================================
+# SECURITY HEADERS
+# ==========================================
+
+# Content Security Policy
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self';"
+
+# X-Frame-Options - Schutz vor Clickjacking
+Header always set X-Frame-Options "DENY"
+
+# X-Content-Type-Options - MIME-Type Sniffing verhindern
+Header always set X-Content-Type-Options "nosniff"
+
+# X-XSS-Protection - XSS-Schutz aktivieren
+Header always set X-XSS-Protection "1; mode=block"
+
+# Referrer Policy - Kontrollierte Referrer-Übertragung
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Permissions Policy - Feature-Zugriff kontrollieren
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+
+# Strict Transport Security (HTTPS)
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# ==========================================
+# PERFORMANCE OPTIMIERUNG
+# ==========================================
+
+# Compression aktivieren
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom_xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/x-shockwave-flash
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE application/font-woff
+    AddOutputFilterByType DEFLATE application/font-woff2
+</IfModule>
+
+# Browser Caching aktivieren
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # HTML (kurz cachen wegen Updates)
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # CSS und JavaScript (mittelfristig)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Bilder (langfristig)
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    
+    # Fonts (sehr langfristig)
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # Videos
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
+    
+    # Manifest und Service Worker (kurz)
+    ExpiresByType application/manifest+json "access plus 1 day"
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control Headers für bessere Performance
+<IfModule mod_headers.c>
+    # CSS und JS mit Versionierung
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000, must-revalidate"
+    </FilesMatch>
+    
+    # Bilder
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Fonts
+    <FilesMatch "\.(woff|woff2|eot|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+    
+    # HTML - kurzes Caching für Updates
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+    
+    # Service Worker - nie cachen
+    <FilesMatch "sw\.js$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+</IfModule>
+
+# ==========================================
+# URL REWRITING
+# ==========================================
+
+RewriteEngine On
+
+# HTTPS erzwingen
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www zu non-www weiterleiten (oder umgekehrt)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Trailing Slash entfernen (außer für Verzeichnisse)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} /+[^?]+?/[\s?] [NC]
+RewriteRule ^(.+?)/$ /$1 [R=301,L]
+
+# Clean URLs für HTML-Dateien
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.html [NC,L]
+
+# ==========================================
+# ERROR PAGES
+# ==========================================
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# ==========================================
+# MIME TYPES
+# ==========================================
+
+# WebP Support
+AddType image/webp .webp
+
+# Web App Manifest
+AddType application/manifest+json .webmanifest
+
+# Moderne Font-Formate
+AddType font/woff .woff
+AddType font/woff2 .woff2
+
+# ==========================================
+# HOTLINK PROTECTION
+# ==========================================
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?leonid-domahalskyy\.de [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,L]
+
+# ==========================================
+# BLOCK UNWANTED BOTS
+# ==========================================
+
+# Sensible Dateien blockieren
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# .htaccess selbst schützen
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Node modules und Build-Dateien blockieren
+RedirectMatch 403 /\.git
+RedirectMatch 403 /node_modules
+RedirectMatch 403 /\.env
+RedirectMatch 403 /package\.json
+RedirectMatch 403 /package-lock\.json

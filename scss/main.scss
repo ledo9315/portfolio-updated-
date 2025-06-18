@@ -1,22 +1,22 @@
-// ********* BASE *********
+// Base
 @import "./base/_reset.scss";
+@import "./base/_variables.scss";
 @import "./base/_base.scss";
-@import "./base/variables.scss";
 
-// ********* COMPONENTS *********
+// Components
 @import "./components/_fonts.scss";
-@import "./components/_hamburger.scss";
 @import "./components/_animations.scss";
+@import "./components/_hamburger.scss";
 @import "./components/_toast.scss";
+@import "./components/_update-banner.scss";
 
-// ********* BLOCKS *********
+// Blocks
 @import "./blocks/_header.scss";
-@import "./blocks/main.scss";
+@import "./blocks/_main.scss";
 @import "./blocks/_footer.scss";
 
-// ********* PAGES *********
+// Pages
 @import "./pages/_about_me.scss";
-@import "./pages/contact.scss";
+@import "./pages/_contact.scss";
 @import "./pages/_project.scss";
-@import "./pages/_datenschutz.scss";
-@import "./pages/_impressum.scss";
+@import "./pages/_legal.scss";

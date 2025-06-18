@@ -1,30 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+                            http://www.google.com/schemas/sitemap-image/1.1
+                            http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
+  <!-- Hauptseite -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://www.leonid-domahalskyy.de/img/og-image.jpg</image:loc>
+      <image:title>Leonid Domahalskyy Portfolio</image:title>
+      <image:caption>Webentwickler aus Flensburg - Portfolio</image:caption>
+    </image:image>
+  </url>
 
-<url>
-  <loc>https://leonid-domahalskyy.de/</loc>
-  <lastmod>2023-08-20T12:29:14+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://leonid-domahalskyy.de/index.html</loc>
-  <lastmod>2023-08-20T12:29:14+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://leonid-domahalskyy.de/skills.html</loc>
-  <lastmod>2023-08-20T12:17:26+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://leonid-domahalskyy.de/contacts.html</loc>
-  <lastmod>2023-08-20T12:17:37+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
+  <!-- Über mich Seite -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/about_me.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Kontakt Seite -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/contact.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Projekt: Metropol-Theater -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/works/metropol.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://www.leonid-domahalskyy.de/img/metropol.jpg</image:loc>
+      <image:title>Metropol-Theater Projekt</image:title>
+      <image:caption>Fullstack-Webseite für das Metropol-Theater</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Projekt: Angeles Dance Academy -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/works/angelas-dance-academy.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://www.leonid-domahalskyy.de/img/angeles-dance-academy.webp</image:loc>
+      <image:title>Angeles Dance Academy Projekt</image:title>
+      <image:caption>UI Design und Webseite für die Angeles Dance Academy</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Projekt: Photography Masterclass -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/works/photography.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://www.leonid-domahalskyy.de/img/photography-masterclass.webp</image:loc>
+      <image:title>Photography Masterclass Projekt</image:title>
+      <image:caption>HTML CSS Kurs für Photography Masterclass</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Rechtliche Seiten -->
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/legal.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://www.leonid-domahalskyy.de/pages/privacy-policy.html</loc>
+    <lastmod>2025-06-18T10:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
 
 </urlset>

@@ -1,7 +1,36 @@
-User-agent: *
-Disallow: /img/
-Disallow: /project-page1
-Disallow: /project-page2
-Disallow: /project-page3
+# Robots.txt für Leonid Domahalskyy Portfolio
+# Erlaubt allen Suchmaschinen-Crawlern das Indexieren der Website
 
+User-agent: *
+Allow: /
+
+# Verbiete das Crawlen von sensiblen/technischen Verzeichnissen
+Disallow: /scss/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.vscode/
+Disallow: /package*.json
+
+# Erlaube wichtige Ressourcen für SEO
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /fonts/
+Allow: /video/
+
+# Spezielle Crawler-Regeln
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap-Verweis
 Sitemap: https://www.leonid-domahalskyy.de/sitemap.xml
+
+# Crawl-Delay für langsamere Bots
+User-agent: *
+Crawl-delay: 1

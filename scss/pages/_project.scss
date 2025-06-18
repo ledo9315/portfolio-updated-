@@ -84,14 +84,20 @@
 
 .project-images__thumbnail {
   grid-area: projects__item-thumbnail;
+
+  img {
+    border-radius: 4px;
+  }
 }
 
 .project-images__item {
   img {
+    border-radius: 4px;
     display: block;
   }
 
   &--gif img {
+    border-radius: 4px;
     width: 100%;
     height: 100%;
     object-fit: cover;

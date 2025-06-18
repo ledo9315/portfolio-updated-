@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>500 - Serverfehler | Leonid Domahalskyy</title>
+    <meta
+      name="description"
+      content="Ein interner Serverfehler ist aufgetreten."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/css/main.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <style>
+      .error-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-color);
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px;
+      }
+      .error-content {
+        max-width: 600px;
+      }
+      .error-code {
+        font-family: var(--font-hanson);
+        font-size: 8rem;
+        color: #ff6b6b;
+        margin: 0;
+        line-height: 1;
+      }
+      .error-title {
+        font-family: var(--font-hanson);
+        font-size: 2rem;
+        margin: 20px 0;
+        text-transform: uppercase;
+      }
+      .error-message {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.8;
+      }
+      .error-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .error-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: var(--accent-color);
+        color: var(--darkpurple);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .error-btn:hover {
+        background: var(--accent-color-2);
+        transform: translateY(-2px);
+      }
+      .error-btn--secondary {
+        background: transparent;
+        color: var(--text-color);
+        border: 1px solid var(--grey);
+      }
+      .error-contact {
+        margin-top: 40px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        border-left: 4px solid #ff6b6b;
+      }
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 6rem;
+        }
+        .error-title {
+          font-size: 1.5rem;
+        }
+        .error-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-page">
+      <div class="error-content">
+        <h1 class="error-code">500</h1>
+        <h2 class="error-title">Interner Serverfehler</h2>
+        <p class="error-message">
+          Entschuldigung! Ein unerwarteter Fehler ist aufgetreten. Das Problem
+          wurde automatisch gemeldet und wird schnellstmöglich behoben.
+        </p>
+        <div class="error-actions">
+          <a href="/" class="error-btn">Zur Startseite</a>
+          <a
+            href="javascript:location.reload()"
+            class="error-btn error-btn--secondary"
+            >Seite neu laden</a
+          >
+        </div>
+        <div class="error-contact">
+          <p><strong>Fehler meldet?</strong></p>
+          <p>
+            Falls das Problem weiterhin besteht, kontaktieren Sie mich gerne
+            über die
+            <a href="/pages/contact" style="color: var(--accent-color)"
+              >Kontaktseite</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Analytics Event für 500 Fehler
+      if (typeof gtag !== "undefined") {
+        gtag("event", "server_error", {
+          event_category: "Error",
+          event_label: window.location.pathname,
+          value: 500,
+        });
+      }
+    </script>
+  </body>
+</html>

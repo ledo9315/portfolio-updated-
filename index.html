@@ -5,20 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
+      content="Webentwickler aus Flensburg für ansprechende und moderne Webseiten. Fullstack Developer & UI/UX Designer mit Fokus auf moderne Technologien."
+    />
+    <meta
+      name="keywords"
+      content="Webentwicklung, Fullstack Developer, UI/UX Design, Flensburg, Portfolio"
+    />
+    <meta name="author" content="Leonid Domahalskyy" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.leonid-domahalskyy.de" />
+    <meta property="og:title" content="Leonid Domahalskyy | Portfolio" />
+    <meta
+      property="og:description"
       content="Webentwickler aus Flensburg für ansprechende und moderne Webseiten."
     />
+    <meta
+      property="og:image"
+      content="https://www.leonid-domahalskyy.de/img/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Leonid Domahalskyy Portfolio" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.leonid-domahalskyy.de" />
+    <meta property="twitter:title" content="Leonid Domahalskyy | Portfolio" />
+    <meta
+      property="twitter:description"
+      content="Webentwickler aus Flensburg für ansprechende und moderne Webseiten."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.leonid-domahalskyy.de/img/og-image.jpg"
+    />
+
+    <!-- Zusätzliche Meta-Tags für bessere SEO -->
+    <meta name="theme-color" content="#a196df" />
+    <meta name="msapplication-TileColor" content="#a196df" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="https://www.leonid-domahalskyy.de" />
+
+    <!-- Performance: DNS Prefetch für externe Ressourcen -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+    <!-- Preload kritische Ressourcen -->
+    <link rel="preload" href="./css/main.min.css" as="style" />
+    <link rel="preload" href="./js/main.js" as="script" crossorigin />
+    <link
+      rel="preload"
+      href="./fonts/Hanson-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/Montserrat-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="./video/bg-video.mp4" as="video" />
+
+    <!-- Favicon und App Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#000" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a196df" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Leonid Domahalskyy | Portfolio</title>
+
+    <!-- NoScript CSS -->
     <noscript>
-      <link rel="stylesheet" href="../css/noscript.css" />
+      <link rel="stylesheet" href="./css/noscript.css" />
     </noscript>
+
+    <!-- Structured Data für bessere SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Leonid Domahalskyy",
+        "jobTitle": "Fullstack Developer & UI/UX Designer",
+        "description": "Webentwickler aus Flensburg für ansprechende und moderne Webseiten",
+        "url": "https://www.leonid-domahalskyy.de",
+        "image": "https://www.leonid-domahalskyy.de/img/og-image.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Flensburg",
+          "addressCountry": "DE"
+        },
+        "sameAs": [
+          "https://github.com/ledo9315",
+          "https://www.linkedin.com/in/leonid-domahalskyy-0a6b95206"
+        ],
+        "knowsAbout": [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Node.js",
+          "HTML5",
+          "CSS3",
+          "UI/UX Design",
+          "Webentwicklung"
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -30,43 +130,15 @@
         </a>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a
-              href="#main"
-              class="navigation__link--active"
-              data-i18n="nav_projects"
-              >Projekte</a
+            <a href="#main" class="navigation__link--active">Projekte</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./pages/about_me.html" class="navigation__link"
+              >Über mich</a
             >
           </li>
           <li class="navigation__item">
-            <a
-              href="./pages/about_me.html"
-              class="navigation__link"
-              data-i18n="nav_about"
-              >&#220;ber mich</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a
-              href="./pages/contact.html"
-              class="navigation__link"
-              data-i18n="nav_contact"
-              >Kontakt</a
-            >
-          </li>
-          <li class="navigation__lang">
-            <a
-              href="./index.html"
-              class="navigation__link"
-              onclick="changeLanguage('de')"
-              >DE</a
-            >
-            <span class="navigation__separator">|</span>
-            <a
-              href="./index.html"
-              class="navigation__link"
-              onclick="changeLanguage('en')"
-              >EN</a
-            >
+            <a href="./pages/contact.html" class="navigation__link">Kontakt</a>
           </li>
         </ul>
         <button class="navigation__hamburger" aria-label="Hauptmenü">
@@ -91,7 +163,7 @@
             <img src="./img/fallback-image.webp" alt="Hintergrundvideo" />
           </video>
           <div class="header__headline-wrapper">
-            <div class="header__title" data-i18n="header_title">
+            <div class="header__title">
               Hey<br />
               ich bin Leonid
             </div>
@@ -132,13 +204,7 @@
           id="projects"
           aria-labelledby="projects-title"
         >
-          <h2
-            class="projects__title"
-            id="projects-title"
-            data-i18n="projects_title"
-          >
-            Projekte
-          </h2>
+          <h2 class="projects__title" id="projects-title">Projekte</h2>
           <ul class="projects__list">
             <li class="projects__project">
               <figure>
@@ -258,16 +324,10 @@
               <p>&copy; 2025 Leonid Domahalskyy. Alle Rechte vorbehalten.</p>
             </div>
             <nav class="footer__legal" aria-label="Legal">
-              <a
-                href="./pages/legal.html"
-                class="footer__legal-link"
-                data-i18n="legal_imprint"
+              <a href="./pages/legal.html" class="footer__legal-link"
                 >Impressum</a
               >
-              <a
-                href="./pages/privacy-policy.html"
-                class="footer__legal-link"
-                data-i18n="legal_privacy"
+              <a href="./pages/privacy-policy.html" class="footer__legal-link"
                 >Datenschutz</a
               >
             </nav>
@@ -276,6 +336,21 @@
       </div>
     </footer>
 
+    <!-- JavaScript mit optimiertem Loading -->
     <script type="module" src="./js/main.js"></script>
+
+    <!-- Google Analytics (falls gewünscht) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        'anonymize_ip': true,
+        'cookie_flags': 'secure;samesite=strict'
+      });
+    </script>
+    -->
   </body>
 </html>
